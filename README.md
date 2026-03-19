@@ -6,7 +6,7 @@
 | Sarah Badr | 341366 |
 | Matthias Wyss | 329884 |
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](#milestone-1-20th-march-5pm) • [Milestone 2](#milestone-2-17th-april-5pm) • [Milestone 3](#milestone-3-29th-may-5pm)
 
 ## Milestone 1 (20th March, 5pm)
 
@@ -26,7 +26,7 @@ This project relies on several open datasets describing the Swiss public transpo
 - [Population density grid](https://www.bfs.admin.ch/bfs/fr/home/statistiques/population/effectif-evolution.assetdetail.36249009.html),
 - [Real estate indices statistics](https://www.bfs.admin.ch/bfs/fr/home/statistiques/prix/prix-immobilier.assetdetail.36412303.html), along with the [categorization of municipalities](https://www.bfs.admin.ch/bfs/fr/home/statistiques/prix/prix-immobilier.assetdetail.36409595.html),
 - [Employment distribution](https://www.bfs.admin.ch/bfs/fr/home/services/geostat/geodonnees-statistique-federale/etablissements-emplois/statistique-structurel-entreprises-statent-depuis-2011.assetdetail.36073027.html), and [commune distribution](https://www.agvchapp.bfs.admin.ch/fr/boundaries?SnapshotDate=01.01.2026&Unit=Communes),
-- [Public transport usage indicators](https://www.bfs.admin.ch/bfs/fr/home/statistiques/mobilite-transports/enquetes/oev.assetdetail.36035738.html)
+- [Passengers frequency](https://data.sbb.ch/explore/dataset/passagierfrequenz/export/?disjunctive.kt_ct_cantone&disjunctive.isb_gi&sort=jahr_annee_anno&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6IkNPVU5UIiwiY29sb3IiOiIjOGRhMGNiIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWV9XSwieEF4aXMiOiJjb2RlIiwibWF4cG9pbnRzIjoxMDAsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InBhc3NhZ2llcmZyZXF1ZW56Iiwib3B0aW9ucyI6eyJkaXNqdW5jdGl2ZS5rdF9jdF9jYW50b25lIjp0cnVlLCJkaXNqdW5jdGl2ZS5pc2JfZ2kiOnRydWUsInNvcnQiOiJqYWhyX2FubmVlX2Fubm8ifX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&location=8,46.37157,8.39905&basemap=00c4d6)
 
 
 
@@ -45,7 +45,8 @@ The main objective is to provide an intuitive and data-driven overview of how mo
 
 ### Exploratory Data Analysis
 
-The exploratory data analysis and preprocessing of the datasets are conducted in a dedicated Jupyter notebook located at analysis/analysis.ipynb. This notebook contains all steps required to prepare the data for the visualization, including data loading, cleaning, and transformation.
+The exploratory data analysis and preprocessing of the datasets are conducted in a dedicated Jupyter notebook named `analysis.ipynb`. This notebook contains all steps required to prepare the data for the visualization, including data loading, cleaning, and transformation.
+The GTFS data are explored to understand stops, routes, trips, and the structure of the Swiss public transport network. The notebook also analyses population density by canton, real-estate values by municipality, employment distribution by canton and commune, and passenger frequency per station, providing the groundwork for the final visualization.
 
 ### Related work
 
