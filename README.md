@@ -6,7 +6,7 @@
 | Sarah Badr | 341366 |
 | Matthias Wyss | 329884 |
 
-[Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
+[Milestone 1](#milestone-1-20th-march-5pm) • [Milestone 2](#milestone-2-17th-april-5pm) • [Milestone 3](#milestone-3-29th-may-5pm)
 
 ## Milestone 1 (20th March, 5pm)
 
@@ -45,7 +45,7 @@ The main objective is to provide an intuitive and data-driven overview of how mo
 
 ### Exploratory Data Analysis
 
-The exploratory data analysis and preprocessing of the datasets are conducted in a dedicated Jupyter notebook located at analysis/analysis.ipynb. This notebook contains all steps required to prepare the data for the visualization, including data loading, cleaning, and transformation.
+The exploratory data analysis and preprocessing of the datasets are conducted in a dedicated Jupyter notebook named `analysis.ipynb`. This notebook contains all steps required to prepare the data for the visualization, including data loading, cleaning, and transformation.
 
 ### Related work
 
