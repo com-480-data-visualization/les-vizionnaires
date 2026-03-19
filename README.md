@@ -46,6 +46,7 @@ The main objective is to provide an intuitive and data-driven overview of how mo
 ### Exploratory Data Analysis
 
 The exploratory data analysis and preprocessing of the datasets are conducted in a dedicated Jupyter notebook named `analysis.ipynb`. This notebook contains all steps required to prepare the data for the visualization, including data loading, cleaning, and transformation.
+The GTFS data are explored to understand stops, routes, trips, and the structure of the Swiss public transport network. The notebook also analyses population density by canton, real-estate values by municipality, employment distribution by canton and commune, and passenger frequency per station, providing the groundwork for the final visualization.
 
 ### Related work
 
