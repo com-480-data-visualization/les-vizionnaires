@@ -26,7 +26,7 @@ This project relies on several open datasets describing the Swiss public transpo
 - [Population density grid](https://www.bfs.admin.ch/bfs/fr/home/statistiques/population/effectif-evolution.assetdetail.36249009.html),
 - [Real estate indices statistics](https://www.bfs.admin.ch/bfs/fr/home/statistiques/prix/prix-immobilier.assetdetail.36412303.html), along with the [categorization of municipalities](https://www.bfs.admin.ch/bfs/fr/home/statistiques/prix/prix-immobilier.assetdetail.36409595.html),
 - [Employment distribution](https://www.bfs.admin.ch/bfs/fr/home/services/geostat/geodonnees-statistique-federale/etablissements-emplois/statistique-structurel-entreprises-statent-depuis-2011.assetdetail.36073027.html), and [commune distribution](https://www.agvchapp.bfs.admin.ch/fr/boundaries?SnapshotDate=01.01.2026&Unit=Communes),
-- [Public transport usage indicators](https://www.bfs.admin.ch/bfs/fr/home/statistiques/mobilite-transports/enquetes/oev.assetdetail.36035738.html)
+- [Passengers frequency](https://data.sbb.ch/explore/dataset/passagierfrequenz/export/?disjunctive.kt_ct_cantone&disjunctive.isb_gi&sort=jahr_annee_anno&dataChart=eyJxdWVyaWVzIjpbeyJjaGFydHMiOlt7InR5cGUiOiJsaW5lIiwiZnVuYyI6IkNPVU5UIiwiY29sb3IiOiIjOGRhMGNiIiwic2NpZW50aWZpY0Rpc3BsYXkiOnRydWV9XSwieEF4aXMiOiJjb2RlIiwibWF4cG9pbnRzIjoxMDAsInNvcnQiOiIiLCJjb25maWciOnsiZGF0YXNldCI6InBhc3NhZ2llcmZyZXF1ZW56Iiwib3B0aW9ucyI6eyJkaXNqdW5jdGl2ZS5rdF9jdF9jYW50b25lIjp0cnVlLCJkaXNqdW5jdGl2ZS5pc2JfZ2kiOnRydWUsInNvcnQiOiJqYWhyX2FubmVlX2Fubm8ifX19XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D&location=8,46.37157,8.39905&basemap=00c4d6)
 
 
 
