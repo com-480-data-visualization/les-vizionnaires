@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Accessibility Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet/dist/leaflet.css"
+    />
+
+    <style>
+      html, body {
+        margin: 0;
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 1fr 360px;
+        height: 100vh;
+      }
+
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+
+      #side-panel {
+        border-left: 1px solid #ddd;
+        padding: 16px;
+        overflow-y: auto;
+        background: #fafafa;
+      }
+
+      #side-panel h2 {
+        margin-top: 0;
+      }
+
+      #controls {
+        position: absolute;
+        top: 10px;
+        left: 60px;
+        z-index: 1000;
+        background: white;
+        padding: 8px 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      ol {
+        padding-left: 20px;
+      }
+
+      .legend {
+        background: white;
+        padding: 10px;
+        line-height: 1.4;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .legend-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 6px;
+      }
+
+      .legend-color {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border: 1px solid #999;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <div style="position: relative;">
+        <div id="controls">
+          <button id="toggle-overlay-btn">Show accessibility overlay</button>
+        </div>
+        <div id="map"></div>
+      </div>
+
+      <div id="side-panel">
+        <h2>Reachable destinations</h2>
+        <p>Click an origin point on the map.</p>
+        <div id="reachable-destinations-panel"></div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="test-accessibility.js"></script>
+  </body>
+</html>
