@@ -1,1 +1,41 @@
-Hello
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quick start</title>
+
+  <!-- Include Leaflet CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+        crossorigin integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H">
+
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+  <!-- Element where the map will be attached -->
+  <div id="mapid"></div>
+
+  <!-- Control panel -->
+  <div id="panel">
+    <button id="btn-reset">Reset view</button>
+    <button id="btn-toggle-hubs">Show/Hide IC hubs</button>
+    <button id="btn-foreign-ic-hubs">Hide Foreign IC hubs</button>
+  </div>
+
+  <!-- Include Leaflet and Leaflet.TileLayer.Swiss JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
+          crossorigin integrity="sha384-cxOPjt7s7Iz04uaHJceBmS+qpjv2JkIHNVcuOrM+YHwZOmJGBXI00mdUXEq65HTH">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet-tilelayer-swiss@2.4.0/dist/Leaflet.TileLayer.Swiss.umd.js"
+          crossorigin integrity="sha384-Euk+jolNu4/WKjgaLQzvOYEpbiH0yAN0sErw27A95bn2MnIB1I52o9twSk23yZyL">
+  </script>
+
+  <!-- Include JavaScripts-->
+  <script src="map.js"></script>
+  <script src="controls.js"></script>
+</body>
+
+</html>
+
