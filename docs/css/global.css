@@ -24,10 +24,13 @@ button {
 .app {
   height: 100vh;
   display: grid;
+  grid-template-columns: 1fr 360px;
   grid-template-rows: 96px 1fr;
 }
 
 .topbar {
+  grid-column: 1 / -1;
+  grid-row: 1;
   height: 96px;
   width: 100%;
   display: flex;
@@ -88,7 +91,10 @@ button {
 }
 
 .main-content {
+  grid-column: 1;
+  grid-row: 2;
   min-height: 0;
+  overflow: hidden;
 }
 
 #mapid {

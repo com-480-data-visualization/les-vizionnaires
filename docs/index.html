@@ -11,14 +11,14 @@
         crossorigin integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H">
 
   <!-- Include custom CSS -->
-  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/panels.css">
 
   <!-- Include Phosphor Icons -->
   <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
 
 <body>
-  
   <div class="app">
     <header class="topbar">
       <div class="brand">
@@ -43,6 +43,78 @@
     <main class="main-content">
       <div id="mapid"></div>
     </main>
+
+    <aside class="right-panel">
+      <div class="right-panel__header">
+        <h2>Accessibility Control</h2>
+        <p>Explore reachability and routes</p>
+      </div>
+
+      <div class="right-panel__body">
+        <section class="control-section">
+          <h3>Mode</h3>
+
+          <fieldset class="mode-group">
+            <legend class="sr-only">Accessibility mode</legend>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="fromA" checked>
+              <span class="radio-ui"></span>
+              <span class="radio-label">Where can I go from A?</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="routeAB">
+              <span class="radio-ui"></span>
+              <span class="radio-label">Route from A to B</span>
+            </label>
+          </fieldset>
+        </section>
+
+        <section class="control-section">
+          <label class="field-label" for="pointA">
+            <span class="field-icon">⌖</span>
+            <span>Point A</span>
+          </label>
+
+          <input
+            id="pointA"
+            class="text-input"
+            type="text"
+            placeholder="Click map or search..."
+          >
+        </section>
+
+        <section class="control-section">
+          <label class="field-label">
+            <span class="field-icon">◔</span>
+            <span>Max Travel Time</span>
+          </label>
+
+          <div class="segmented-group" id="travelTimeGroup">
+            <button class="time-chip" type="button" data-time="15">15 min</button>
+            <button class="time-chip active" type="button" data-time="30">30 min</button>
+            <button class="time-chip" type="button" data-time="60">60 min</button>
+          </div>
+        </section>
+
+        <section class="control-section">
+          <label class="field-label" for="departureTime">Departure Time</label>
+           <input
+            id="departureTime"
+            class="text-input time-input"
+            type="time"
+            value="09:00"
+            min="00:00"
+            max="23:59"
+            step="60"
+            required
+          >
+        </section>
+      </div>
+
+      <button class="help-button" type="button" aria-label="Help">?</button>
+    </aside>
   </div>
 
   <script
@@ -51,7 +123,8 @@
     crossorigin=""
   ></script>
 
-  <!-- Include JavaScripts-->
+  <!-- Include custom JS -->
+  <script src="js/controls-right.js"></script>
   <script src="js/map.js"></script>
 </body>
 
