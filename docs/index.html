@@ -1,23 +1,16 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Swiss Transport Accessibility</title>
 
-  <!-- Include Leaflet CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
-        crossorigin integrity="sha384-sHL9NAb7lN7rfvG5lfHpm643Xkcjzp4jFvuavGOndn6pjVqS6ny56CAt3nsEVT4H">
-
-  <!-- Include custom CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/panels.css">
-
-  <!-- Include Phosphor Icons -->
+  <link rel="stylesheet" href="css/analysis.css">
   <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
-
 <body>
   <div class="app">
     <header class="topbar">
@@ -29,22 +22,22 @@
       </div>
 
       <div class="topbar-nav">
-        <button class="view-tab active" type="button">
+        <button class="view-tab active" type="button" data-view="map">
           <i class="ph-map-trifold"></i>
           <span>Map View</span>
         </button>
-        <button class="view-tab" type="button">
+        <button class="view-tab" type="button" data-view="analysis">
           <i class="ph-chart-bar"></i>
           <span>Analysis</span>
         </button>
       </div>
     </header>
 
-    <main class="main-content">
+    <main class="main-content view-screen active" id="map-view">
       <div id="mapid"></div>
     </main>
 
-    <aside class="right-panel">
+    <aside class="right-panel view-screen active" id="controls-view">
       <div class="right-panel__header">
         <h2>Accessibility Control</h2>
         <p>Explore reachability and routes</p>
@@ -100,11 +93,11 @@
 
         <section class="control-section">
           <label class="field-label" for="departureTime">Departure Time</label>
-           <input
+          <input
             id="departureTime"
             class="text-input time-input"
             type="time"
-            value="09:00"
+            value="10:00"
             min="00:00"
             max="23:59"
             step="60"
@@ -115,18 +108,70 @@
 
       <button class="help-button" type="button" aria-label="Help">?</button>
     </aside>
+
+    <section class="analysis-view view-screen" id="analysis-view">
+      <div class="analysis-hero">
+        <h2>Accessibility Analysis</h2>
+        <p>Statistical insights into Swiss public transport accessibility patterns and inequalities</p>
+      </div>
+
+      <div class="analysis-stats">
+        <article class="stat-card">
+          <p class="stat-label">Best Access</p>
+          <h3>Zürich City</h3>
+          <span>5 min avg</span>
+        </article>
+
+        <article class="stat-card">
+          <p class="stat-label">Worst Access</p>
+          <h3>Graubünden Rural</h3>
+          <span>65 min avg</span>
+        </article>
+
+        <article class="stat-card">
+          <p class="stat-label">Avg Urban</p>
+          <h3>7.8 min</h3>
+          <span>to nearest IC</span>
+        </article>
+
+        <article class="stat-card">
+          <p class="stat-label">Avg Rural</p>
+          <h3>48.5 min</h3>
+          <span>to nearest IC</span>
+        </article>
+      </div>
+
+      <div class="analysis-grid">
+       <article class="chart-card">
+        <img
+          class="chart-card__image"
+          src="../../images/sbb-stations.png"
+          alt="Daily users of SBB stations chart"
+          width="1200"
+          height="700"
+          loading="lazy"
+        >
+        <h3>Daily users of SBB Stations</h3>
+      </article>
+
+      <article class="chart-card">
+        <img
+          class="chart-card__image"
+          src="../../images/real-estate.png"
+          alt="Real estate by municipality chart"
+          width="1200"
+          height="700"
+          loading="lazy"
+        >
+        <h3>Real estate by municipality</h3>
+      </article>
+      </div>
+    </section>
   </div>
 
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
-
-  <!-- Include custom JS -->
-  <script src="js/controls-right.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/controls-right.js"></script>
+  <script src="js/views.js"></script>
 </body>
-
 </html>
-
