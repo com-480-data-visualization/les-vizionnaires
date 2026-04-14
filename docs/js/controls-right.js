@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     mode: "fromA",
     maxTravelTime: 30,
     pointA: "",
-    departureTime: "09 : 00"
+    departureTime: "09:00"
   };
 
   const modeInputs = document.querySelectorAll('input[name="mode"]');
@@ -12,12 +12,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const departureTimeInput = document.getElementById("departureTime");
   const helpButton = document.querySelector(".help-button");
 
+  function isValidTimeString(value) {
+    return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
+  }
+
+ async function applyMode(mode) {
+  if (mode === "nearestIC") {
+    if (window.showNearestICOverlay) {
+      await window.showNearestICOverlay();
+    }
+  } else {
+    if (window.hideNearestICOverlay) {
+      window.hideNearestICOverlay();
+    }
+  }
+}
+
   modeInputs.forEach((input) => {
-    input.addEventListener("change", () => {
-      if (input.checked) {
-        rightPanelState.mode = input.value;
-        console.log("Selected mode:", rightPanelState.mode);
-      }
+    input.addEventListener("change", async () => {
+      if (!input.checked) return;
+
+      rightPanelState.mode = input.value;
+      console.log("Selected mode:", rightPanelState.mode);
+
+      await applyMode(rightPanelState.mode);
     });
   });
 
@@ -38,8 +56,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (departureTimeInput) {
-    departureTimeInput.addEventListener("input", (event) => {
-      rightPanelState.departureTime = event.target.value;
+    departureTimeInput.addEventListener("change", (event) => {
+      const value = event.target.value;
+
+      if (!isValidTimeString(value)) {
+        event.target.value = "09:00";
+        rightPanelState.departureTime = "09:00";
+        return;
+      }
+
+      rightPanelState.departureTime = value;
       console.log("Departure time:", rightPanelState.departureTime);
     });
   }
@@ -52,23 +78,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.rightPanelState = rightPanelState;
 });
-
-// Validate time input in HH:MM format
-function isValidTimeString(value) {
-  return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
-}
-
-const departureTimeInput = document.getElementById("departureTime");
-
-if (departureTimeInput) {
-  departureTimeInput.addEventListener("change", (event) => {
-    const value = event.target.value;
-
-    if (!isValidTimeString(value)) {
-      event.target.value = "09:00";
-      return;
-    }
-
-    rightPanelState.departureTime = value;
-  });
-}

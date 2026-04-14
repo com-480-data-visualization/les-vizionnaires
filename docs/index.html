@@ -61,6 +61,12 @@
               <span class="radio-ui"></span>
               <span class="radio-label">Route from A to B</span>
             </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="nearestIC" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Nearest IC travel time</span>
+            </label>
           </fieldset>
         </section>
 
@@ -97,15 +103,13 @@
             id="departureTime"
             class="text-input time-input"
             type="time"
-            value="10:00"
+            value="09:00"
             min="00:00"
             max="23:59"
             step="60"
             required
           >
         </section>
-      </div>
-
       <button class="help-button" type="button" aria-label="Help">?</button>
     </aside>
 
@@ -171,6 +175,7 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/map.js"></script>
+  <script src="js/test-accessibility.js"></script>
   <script src="js/controls-right.js"></script>
   <script src="js/views.js"></script>
 </body>
