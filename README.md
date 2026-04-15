@@ -81,7 +81,7 @@ Nothing to report.
 ### 1. Project Goal
 The primary objective of this project is to visualize and analyze the spatial accessibility of the Swiss public transport network, specifically focusing on the time required to reach major InterCity (IC) railway hubs. While Switzerland is renowned for its dense transport network, significant regional disparities exist. 
 
-By layering transport accessibility with socioeconomic indicators (real estate prices, employment density, and passenger frequency), we aim to provide an interactive tool that reveals how connectivity correlates with urban development and territorial inequalities. Users should be able to identify "undervalued" regions (good accessibility but lower prices) or "isolated" hubs through an intuitive map-based interface and statistical analysis.
+By layering transport accessibility with socioeconomic indicators (real estate prices, employment density, average salary and passenger frequency), we aim to provide an interactive tool that reveals how connectivity correlates with urban development and territorial inequalities. Users should be able to identify "undervalued" regions (good accessibility but lower prices) or "isolated" hubs through an intuitive map-based interface and statistical analysis.
 
 ### 2. Visual Design & Sketches
 
@@ -95,7 +95,8 @@ The main interface features a full-screen interactive map of Switzerland. We hav
     1. **Travel Time to IC:** Proximity to major hubs.
     2. **Real Estate:** Average price per m².
     3. **Employment:** Concentration of jobs.
-    4. **Adoption Rate:** SBB station daily usage.
+    4. **Salary:** Average salary per m².
+    5. **Adoption Rate:** SBB station daily usage.
 - **Interactions:** A sidebar includes sliders to adjust precomputed time-steps (e.g., 08:00, 12:00, 17:00, 22:00) and the maximum travel time threshold (30min to 4h). Clicking a point triggers a **Detail-on-Demand** popup.
 
 #### Analysis View (The Statistical Dimension)
@@ -135,7 +136,7 @@ This view moves away from geography to focus on abstract data relationships usin
 
 #### Extra Features (Milestone 3)
 - **Multi-temporal Data:** Precomputing slots for 12:00, 17:00, and 22:00.
-- **Socioeconomic Layers:** Integration of Real Estate, Employment, and Adoption datasets as switchable map layers.
+- **Socioeconomic Layers:** Integration of Real Estate, Employment, Salary and Adoption datasets as switchable map layers.
 - **Advanced Analysis View:** Full D3.js suite with linked highlighting between charts and the map.
 - **Visual Refinement:** Polishing the UI and potentially transitioning to hexagonal binning for better aesthetic density.
 
