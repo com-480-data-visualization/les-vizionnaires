@@ -10,6 +10,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const departureTimeInput = document.getElementById("departureTime");
   const helpButton = document.querySelector(".help-button");
 
+
+  const slider = document.getElementById("maxTravelTime");
+  const sliderLabel = document.getElementById("maxTravelTimeLabel");
+
+  const sliderSteps = [
+    30,   // 0 → 30 min
+    60,   // 1 → 1 h
+    90,   // 2 → 1 h 30
+    120,  // 3 → 2 h
+    150,  // 4 → 2 h 30
+    180,  // 5 → 3 h
+    210,  // 6 → 3 h 30
+    240   // 7 → 4 h
+  ];
+
+  function formatMinutes(minutes) {
+    if (minutes < 60) return `${minutes} min`;
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (m === 0) return `${h} h`;
+    return `${h} h ${m}`;
+  }
+
+  function updateSliderState(index) {
+    const minutes = sliderSteps[index];
+    rightPanelState.maxTravelTime = minutes;
+    if (sliderLabel) {
+      sliderLabel.textContent = formatMinutes(minutes);
+    }
+    console.log("Max travel time:", rightPanelState.maxTravelTime);
+  }
+
+  if (slider) {
+    updateSliderState(parseInt(slider.value, 10));
+
+    slider.addEventListener("input", (event) => {
+      const index = parseInt(event.target.value, 10);
+      updateSliderState(index);
+    });
+  }
+
+
   function isValidTimeString(value) {
     return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
   }

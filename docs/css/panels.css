@@ -347,3 +347,65 @@
 .reachable-info-list::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.time-slider {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 999px;
+  background: #fee2e2; /* light red track background */
+  outline: none;
+}
+
+/* filled track for WebKit */
+.time-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #fee2e2;
+}
+
+.time-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;              /* red thumb */
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #ef4444;     /* red ring around thumb */
+  cursor: pointer;
+  margin-top: -6px;
+}
+
+/* Firefox */
+.time-slider::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: #fee2e2;
+}
+
+.time-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ef4444;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 0 2px #ef4444;
+  cursor: pointer;
+}
+
+.time-slider-label {
+  min-width: 64px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: #334155;
+}

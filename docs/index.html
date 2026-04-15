@@ -82,18 +82,24 @@
           </fieldset>
         </section>
 
-        <section class="control-section">
-          <label class="field-label">
-            <span class="field-icon">◔</span>
-            <span>Max Travel Time</span>
-          </label>
+       <section class="control-section">
+        <label class="field-label" for="maxTravelTime">
+          <span class="field-icon">◔</span>
+          <span>Max Travel Time</span>
+        </label>
 
-          <div class="segmented-group" id="travelTimeGroup">
-            <button class="time-chip" type="button" data-time="15">15 min</button>
-            <button class="time-chip active" type="button" data-time="30">30 min</button>
-            <button class="time-chip" type="button" data-time="60">60 min</button>
-          </div>
-        </section>
+        <div class="slider-row">
+          <input
+            id="maxTravelTime"
+            class="time-slider"
+            type="range"
+            min="0"
+            max="7"
+            step="1"
+            value="1"
+          >
+          <div id="maxTravelTimeLabel" class="time-slider-label">30 min</div>
+      </section>
 
         <section class="control-section">
           <label class="field-label" for="departureTime">Departure Time</label>
