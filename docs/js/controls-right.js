@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const rightPanelState = {
     mode: "nearestIC",
-    maxTravelTime: 30,
+    maxTravelTime: 240,
     departureTime: "09:00"
   };
 
@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const departureTimeInput = document.getElementById("departureTime");
   const helpButton = document.querySelector(".help-button");
 
-
   const slider = document.getElementById("maxTravelTime");
   const sliderLabel = document.getElementById("maxTravelTimeLabel");
+  const sliderGroup = document.getElementById("maxTravelTimeGroup");
 
   const sliderSteps = [
     30,   // 0 → 30 min
@@ -51,6 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  function updateMaxTravelTimeVisibility(mode) {
+  if (!sliderGroup) return;
+  sliderGroup.style.display = mode === "nearestIC" ? "" : "none";
+}
 
   function isValidTimeString(value) {
     return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
@@ -73,11 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!input.checked) return;
 
       rightPanelState.mode = input.value;
-      console.log("Selected mode:", rightPanelState.mode);
-
+      updateMaxTravelTimeVisibility(rightPanelState.mode);
       await applyMode(rightPanelState.mode);
-    });
-  });
+      });
+ });
 
   timeButtons.forEach((button) => {
     button.addEventListener("click", () => {
