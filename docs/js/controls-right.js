@@ -1,14 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const rightPanelState = {
-    mode: "fromA",
+    mode: "nearestIC",
     maxTravelTime: 30,
-    pointA: "",
     departureTime: "09:00"
   };
 
   const modeInputs = document.querySelectorAll('input[name="mode"]');
   const timeButtons = document.querySelectorAll(".time-chip");
-  const pointAInput = document.getElementById("pointA");
   const departureTimeInput = document.getElementById("departureTime");
   const helpButton = document.querySelector(".help-button");
 
@@ -47,13 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("Max travel time:", rightPanelState.maxTravelTime);
     });
   });
-
-  if (pointAInput) {
-    pointAInput.addEventListener("input", (event) => {
-      rightPanelState.pointA = event.target.value;
-      console.log("Point A:", rightPanelState.pointA);
-    });
-  }
 
   if (departureTimeInput) {
     departureTimeInput.addEventListener("change", (event) => {
