@@ -409,3 +409,34 @@
   font-weight: 600;
   color: #334155;
 }
+
+/*Departure time select styles*/
+.departure-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.departure-chip {
+  height: 30px;
+  border: 2px solid #d8e2ef;
+  border-radius: 18px;
+  background: #f8fafc;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.departure-chip:hover {
+  border-color: #cbd5e1;
+  background: #f1f5f9;
+}
+
+.departure-chip.active {
+  background: #ff0d14;
+  border-color: #ff0d14;
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(255, 13, 20, 0.18);
+}

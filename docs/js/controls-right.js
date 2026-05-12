@@ -7,7 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const modeInputs = document.querySelectorAll('input[name="mode"]');
   const timeButtons = document.querySelectorAll(".time-chip");
-  const departureTimeInput = document.getElementById("departureTime");
+  const departureButtons = document.querySelectorAll(".departure-chip");
+  const departureTimeGroup = document.getElementById("departureTimeGroup");
   const helpButton = document.querySelector(".help-button");
 
   const slider = document.getElementById("maxTravelTime");
@@ -51,13 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  function updateMaxTravelTimeVisibility(mode) {
-  if (!sliderGroup) return;
-  sliderGroup.style.display = mode === "nearestIC" ? "" : "none";
-}
+  function updateNearestICControlsVisibility(mode) {
+    const isNearestIC = mode === "nearestIC";
 
-  function isValidTimeString(value) {
-    return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
+    if (sliderGroup) {
+      sliderGroup.style.display = isNearestIC ? "" : "none";
+    }
+
+    if (departureTimeGroup) {
+      departureTimeGroup.style.display = isNearestIC ? "" : "none";
+    }
   }
 
  async function applyMode(mode) {
@@ -77,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!input.checked) return;
 
       rightPanelState.mode = input.value;
-      updateMaxTravelTimeVisibility(rightPanelState.mode);
+      updateNearestICControlsVisibility(rightPanelState.mode);
       await applyMode(rightPanelState.mode);
       });
  });
@@ -91,20 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  if (departureTimeInput) {
-    departureTimeInput.addEventListener("change", (event) => {
-      const value = event.target.value;
-
-      if (!isValidTimeString(value)) {
-        event.target.value = "09:00";
-        rightPanelState.departureTime = "09:00";
-        return;
-      }
-
-      rightPanelState.departureTime = value;
+  departureButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      departureButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      rightPanelState.departureTime = button.dataset.time;
       console.log("Departure time:", rightPanelState.departureTime);
     });
-  }
+  });
 
   if (helpButton) {
     helpButton.addEventListener("click", () => {

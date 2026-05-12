@@ -102,19 +102,19 @@
         </div>
       </section>
 
-        <section class="control-section">
-          <label class="field-label" for="departureTime">Departure Time</label>
-          <input
-            id="departureTime"
-            class="text-input time-input"
-            type="time"
-            value="09:00"
-            min="00:00"
-            max="23:59"
-            step="60"
-            required
-          >
-        </section>
+      <div class="control-section" id="departureTimeGroup">
+        <label class="field-label">
+          <span class="field-icon">🕒</span>
+          Departure time
+        </label>
+
+        <div class="departure-grid">
+          <button type="button" class="departure-chip active" data-time="09:00">09:00</button>
+          <button type="button" class="departure-chip" data-time="12:00">12:00</button>
+          <button type="button" class="departure-chip" data-time="17:00">17:00</button>
+          <button type="button" class="departure-chip" data-time="22:00">22:00</button>
+        </div>
+      </div>
       <button class="help-button" type="button" aria-label="Help">?</button>
     </aside>
 
