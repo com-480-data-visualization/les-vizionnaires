@@ -22,28 +22,45 @@ let reachableInfoState = {
   nearestIcMinutes: null
 };
 
+const TRAVEL_TIME_BUCKETS = [
+  { key: "30", label: "≤ 30 min", color: "#1a9850", min: 0, max: 30 },
+  { key: "60", label: "31–60 min", color: "#91cf60", min: 31, max: 60 },
+  { key: "120", label: "61–120 min", color: "#d9ef8b", min: 61, max: 120 },
+  { key: "180", label: "121–180 min", color: "#fee08b", min: 121, max: 180 },
+  { key: "240", label: "181–240 min", color: "#fc8d59", min: 181, max: 240 },
+  { key: "999", label: "> 240 min", color: "#d73027", min: 241, max: Infinity },
+  { key: "nodata", label: "No data", color: "#bdbdbd", min: null, max: null }
+];
+
+function getBucketByKey(key) {
+  return TRAVEL_TIME_BUCKETS.find((bucket) => bucket.key === key) || null;
+}
 
 function getBucketLabel(bucket) {
-  switch (bucket) {
-    case "30": return "≤ 30 min";
-    case "60": return "31–60 min";
-    case "120": return "1h-2h";
-    case "180": return "2h-3h";
-    case "240": return "3h-4h";
-    case "999": return "> 4h";
-    default: return "All";
-  }
+  if (bucket === "all") return "All";
+  return getBucketByKey(bucket)?.label ?? "All";
 }
 
 function matchesBucket(minutes, bucket) {
   if (bucket === "all") return true;
-  if (bucket === "30") return minutes <= 30;
-  if (bucket === "60") return minutes > 30 && minutes <= 60;
-  if (bucket === "120") return minutes > 60 && minutes <= 120;
-  if (bucket === "180") return minutes > 120 && minutes <= 180;
-  if (bucket === "240") return minutes > 180 && minutes <= 240;
-  if (bucket === "999") return minutes > 240;
-  return true;
+  if (minutes == null || Number.isNaN(minutes)) return false;
+
+  const bucketDef = getBucketByKey(bucket);
+  if (!bucketDef || bucketDef.key === "nodata") return false;
+
+  return minutes >= bucketDef.min && minutes <= bucketDef.max;
+}
+
+function getTravelTimeColor(value) {
+  if (value == null || Number.isNaN(value)) {
+    return getBucketByKey("nodata").color;
+  }
+
+  const bucket = TRAVEL_TIME_BUCKETS.find(
+    (b) => b.key !== "nodata" && value >= b.min && value <= b.max
+  );
+
+  return bucket ? bucket.color : getBucketByKey("nodata").color;
 }
 
 function escapeHtml(value) {
@@ -154,18 +171,6 @@ function renderReachableInfo() {
   }
 }
 
-
-
-function getTravelTimeColor(value) {
-  if (value == null || Number.isNaN(value)) return "#bdbdbd";
-  if (value <= 30) return "#1a9850";
-  if (value <= 60) return "#91cf60";
-  if (value <= 120) return "#d9ef8b";
-  if (value <= 180) return "#fee08b";
-  if (value <= 240) return "#fc8d59";
-  return "#d73027";
-}
-
 function clearSelection() {
   if (selectedOriginLayer) {
     map.removeLayer(selectedOriginLayer);
@@ -200,24 +205,24 @@ function ensureReachableInfoControl() {
   reachableInfoControl.addTo(map);
 }
 
-function updateReachableInfo(data) {
+function updateReachableInfo(data, feature = null) {
   const box = document.getElementById("reachable-info-box");
   if (!box) return;
 
   const normalized = normalizeDestinations(data.destinations || []);
+  const fallbackOriginId = feature?.properties?.id ?? null;
 
   reachableInfoState = {
     allDestinations: normalized,
     filteredDestinations: normalized,
     activeBucket: "all",
     expanded: false,
-    originId: data.origin_id,
+    originId: data.origin_id ?? fallbackOriginId,
     nearestIcMinutes: data.nearest_ic_minutes ?? null
   };
 
   renderReachableInfo();
 }
-
 function updateReachableInfoEmpty(originId) {
   const box = document.getElementById("reachable-info-box");
   if (!box) return;
@@ -354,15 +359,19 @@ function addLegend() {
 
   legendControl.onAdd = function () {
     const div = L.DomUtil.create("div", "legend");
+
+    const rows = TRAVEL_TIME_BUCKETS.map(
+      (bucket) => `
+        <div class="legend-row">
+          <span class="legend-color" style="background:${bucket.color}"></span>
+          ${bucket.label}
+        </div>
+      `
+    ).join("");
+
     div.innerHTML = `
       <strong>Nearest IC travel time</strong>
-      <div class="legend-row"><span class="legend-color" style="background:#1a9850"></span>≤ 30 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#91cf60"></span>31–60 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#d9ef8b"></span>61–120 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#fee08b"></span>121–180 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#fc8d59"></span>181–240 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#d73027"></span>&gt; 240 min</div>
-      <div class="legend-row"><span class="legend-color" style="background:#bdbdbd"></span>No data</div>
+      ${rows}
     `;
     return div;
   };
