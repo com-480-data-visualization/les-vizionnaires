@@ -25,10 +25,10 @@ let reachableInfoState = {
 const TRAVEL_TIME_BUCKETS = [
   { key: "30", label: "≤ 30 min", color: "#1a9850", min: 0, max: 30 },
   { key: "60", label: "31–60 min", color: "#91cf60", min: 31, max: 60 },
-  { key: "120", label: "61–120 min", color: "#d9ef8b", min: 61, max: 120 },
-  { key: "180", label: "121–180 min", color: "#fee08b", min: 121, max: 180 },
-  { key: "240", label: "181–240 min", color: "#fc8d59", min: 181, max: 240 },
-  { key: "999", label: "> 240 min", color: "#d73027", min: 241, max: Infinity },
+  { key: "120", label: "1h-2h", color: "#d9ef8b", min: 61, max: 120 },
+  { key: "180", label: "2h-3h", color: "#fee08b", min: 121, max: 180 },
+  { key: "240", label: "3h-4h", color: "#fc8d59", min: 181, max: 240 },
+  { key: "999", label: "> 4h", color: "#d73027", min: 241, max: Infinity },
   { key: "nodata", label: "No data", color: "#bdbdbd", min: null, max: null }
 ];
 
@@ -183,6 +183,42 @@ function clearSelection() {
   }
 }
 
+function dimAccessibilityLayer() {
+  if (!accessibilityLayer) return;
+
+  accessibilityLayer.eachLayer((layer) => {
+    if (!layer.setStyle || !layer.feature) return;
+
+    const t = layer.feature.properties.min_travel_time_to_ic;
+
+    layer.setStyle({
+      radius: 4,
+      color: "rgba(120, 130, 150, 0.56)",
+      weight: 0.3,
+      fillColor: getTravelTimeColor(t),
+      fillOpacity: 0.4
+    });
+  });
+}
+
+function resetAccessibilityLayerStyle() {
+  if (!accessibilityLayer) return;
+
+  accessibilityLayer.eachLayer((layer) => {
+    if (!layer.setStyle || !layer.feature) return;
+
+    const t = layer.feature.properties.min_travel_time_to_ic;
+
+    layer.setStyle({
+      radius: 4,
+      color: "#444",
+      weight: 0.4,
+      fillColor: getTravelTimeColor(t),
+      fillOpacity: 0.75
+    });
+  });
+}
+
 function ensureReachableInfoControl() {
   if (reachableInfoControl) return;
 
@@ -302,12 +338,13 @@ async function onOriginClick(feature) {
   const [lon, lat] = feature.geometry.coordinates;
 
   clearSelection();
+  dimAccessibilityLayer();
 
   selectedOriginLayer = L.circleMarker([lat, lon], {
-    radius: 8,
-    color: "#000",
-    weight: 2,
-    fillColor: "#ffeb3b",
+    radius: 10,
+    color: "#ffffff",
+    weight: 3,
+    fillColor: "#ff8c00",
     fillOpacity: 1
   }).addTo(map);
 
@@ -328,11 +365,11 @@ async function onOriginClick(feature) {
     reachableDestinationsLayer = L.layerGroup(
       data.destinations.map(dest =>
         L.circleMarker([dest.lat, dest.lon], {
-          radius: 4,
+          radius: 5,
           color: "#8b0000",
-          weight: 1,
+          weight: 1.5,
           fillColor: "#d73027",
-          fillOpacity: 0.85
+          fillOpacity: 0.95
         }).bindPopup(`
           <strong>${dest.stop_name ?? dest.to_id}</strong><br/>
           Travel time: ${dest.travel_time} min
@@ -348,7 +385,7 @@ async function onOriginClick(feature) {
       <p><strong>Origin:</strong> ${originId}</p>
       <p>Could not load saved destinations for this origin.</p>
     `;
-    updateReachableInfo("Error", feature);
+    updateReachableInfoEmpty(originId);
   }
 }
 
@@ -430,7 +467,10 @@ async function showAccessibilityOverlay() {
     resetReachableInfo();
   }
 }
+
 function hideAccessibilityOverlay() {
+  resetAccessibilityLayerStyle();
+
   if (accessibilityLayer && overlayVisible) {
     map.removeLayer(accessibilityLayer);
     overlayVisible = false;
@@ -454,6 +494,7 @@ function hideAccessibilityOverlay() {
     panel.innerHTML = "";
   }
 }
+
 window.showNearestICOverlay = showAccessibilityOverlay;
 window.hideNearestICOverlay = hideAccessibilityOverlay;
 
