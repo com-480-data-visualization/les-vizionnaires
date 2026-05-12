@@ -13,6 +13,148 @@ let reachableDestinationsLayer = null;
 let reachableFromAll = null;
 let legendControl = null;
 let reachableInfoControl = null;
+let reachableInfoState = {
+  allDestinations: [],
+  filteredDestinations: [],
+  activeBucket: "all",
+  expanded: false,
+  originId: null,
+  nearestIcMinutes: null
+};
+
+
+function getBucketLabel(bucket) {
+  switch (bucket) {
+    case "30": return "≤ 30 min";
+    case "60": return "31–60 min";
+    case "120": return "1h-2h";
+    case "180": return "2h-3h";
+    case "240": return "3h-4h";
+    case "999": return "> 4h";
+    default: return "All";
+  }
+}
+
+function matchesBucket(minutes, bucket) {
+  if (bucket === "all") return true;
+  if (bucket === "30") return minutes <= 30;
+  if (bucket === "60") return minutes > 30 && minutes <= 60;
+  if (bucket === "120") return minutes > 60 && minutes <= 120;
+  if (bucket === "180") return minutes > 120 && minutes <= 180;
+  if (bucket === "240") return minutes > 180 && minutes <= 240;
+  if (bucket === "999") return minutes > 240;
+  return true;
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function normalizeDestinations(destinations) {
+  return destinations
+    .map((dest) => ({
+      name: dest.name || dest.stop_name || dest.destination_name || `Stop ${dest.id ?? ""}`,
+      minutes: Number(dest.travel_time ?? dest.minutes ?? dest.duration ?? NaN)
+    }))
+    .filter((dest) => Number.isFinite(dest.minutes) && dest.name)
+    .sort((a, b) => a.minutes - b.minutes);
+}
+
+function renderReachableInfo() {
+  const box = document.getElementById("reachable-info-box");
+  if (!box) return;
+
+  const buckets = ["all", "30", "60", "120", "180", "240", "999"];
+  const filtered = reachableInfoState.allDestinations.filter((dest) =>
+    matchesBucket(dest.minutes, reachableInfoState.activeBucket)
+  );
+
+  reachableInfoState.filteredDestinations = filtered;
+
+  const visibleItems = reachableInfoState.expanded
+    ? filtered
+    : filtered.slice(0, 10);
+
+  const chipsHtml = buckets
+    .map((bucket) => {
+      const count = reachableInfoState.allDestinations.filter((dest) =>
+        matchesBucket(dest.minutes, bucket)
+      ).length;
+
+      return `
+        <button
+          type="button"
+          class="reachable-filter-chip ${reachableInfoState.activeBucket === bucket ? "active" : ""}"
+          data-bucket="${bucket}"
+        >
+          ${getBucketLabel(bucket)} <span>${count}</span>
+        </button>
+      `;
+    })
+    .join("");
+
+  const itemsHtml = visibleItems.length
+    ? visibleItems
+        .map(
+          (dest) => `
+            <li class="reachable-info-item">
+              <span class="reachable-info-stop">${escapeHtml(dest.name)}</span>
+              <span class="reachable-info-time">${dest.minutes} min</span>
+            </li>
+          `
+        )
+        .join("")
+    : `<div class="reachable-info-empty-muted">No destinations in this time range.</div>`;
+
+  const showToggle =
+    filtered.length > 10
+      ? `
+        <button type="button" class="reachable-show-more" data-action="toggle-expand">
+          ${reachableInfoState.expanded ? "Show fewer" : `Show all ${filtered.length}`}
+        </button>
+      `
+      : "";
+
+  box.innerHTML = `
+    <div class="reachable-info-origin">Origin ${escapeHtml(reachableInfoState.originId)}</div>
+    <div class="reachable-info-count">
+      ${filtered.length} destination${filtered.length === 1 ? "" : "s"}${reachableInfoState.activeBucket === "all" ? " within 4h" : ""}
+    </div>
+
+    <div class="reachable-info-filters">
+      ${chipsHtml}
+    </div>
+
+    <ul class="reachable-info-list">
+      ${itemsHtml}
+    </ul>
+
+    ${showToggle}
+  `;
+
+  box.querySelectorAll(".reachable-filter-chip").forEach((button) => {
+    button.addEventListener("click", () => {
+      reachableInfoState.activeBucket = button.dataset.bucket;
+      reachableInfoState.expanded = false;
+      renderReachableInfo();
+    });
+  });
+
+  const toggleButton = box.querySelector('[data-action="toggle-expand"]');
+  if (toggleButton) {
+    toggleButton.addEventListener("click", () => {
+      reachableInfoState.expanded = !reachableInfoState.expanded;
+      renderReachableInfo();
+    });
+  }
+}
+
+
 
 function getTravelTimeColor(value) {
   if (value == null || Number.isNaN(value)) return "#bdbdbd";
@@ -58,43 +200,41 @@ function ensureReachableInfoControl() {
   reachableInfoControl.addTo(map);
 }
 
-function updateReachableInfo(data, feature = null) {
-  ensureReachableInfoControl();
+function updateReachableInfo(data) {
   const box = document.getElementById("reachable-info-box");
   if (!box) return;
 
-  const destinations = data?.destinations ?? [];
-  const originId = data?.origin_id ?? feature?.properties?.id ?? "Unknown";
+  const normalized = normalizeDestinations(data.destinations || []);
 
-  if (!destinations.length) {
-    box.innerHTML = `
-      <div class="reachable-info-title">Reachable destinations</div>
-      <div class="reachable-info-origin">Origin ${originId}</div>
-      <div class="reachable-info-count">0 destinations within 4h</div>
-      <div class="reachable-info-empty-muted">No reachable destinations</div>
-    `;
-    return;
-  }
+  reachableInfoState = {
+    allDestinations: normalized,
+    filteredDestinations: normalized,
+    activeBucket: "all",
+    expanded: false,
+    originId: data.origin_id,
+    nearestIcMinutes: data.nearest_ic_minutes ?? null
+  };
 
-  const items = destinations
-    .slice(0, 50)
-    .map(
-      (dest) => `
-        >
-          <span class="reachable-info-stop">${dest.stop_name ?? dest.to_id}</span>
-          <span class="reachable-info-time">${dest.travel_time} min</span>
-        </li>
-      `
-    )
-    .join("");
+  renderReachableInfo();
+}
+
+function updateReachableInfoEmpty(originId) {
+  const box = document.getElementById("reachable-info-box");
+  if (!box) return;
+
+  reachableInfoState = {
+    allDestinations: [],
+    filteredDestinations: [],
+    activeBucket: "all",
+    expanded: false,
+    originId,
+    nearestIcMinutes: null
+  };
 
   box.innerHTML = `
-    <div class="reachable-info-title">Reachable destinations</div>
-    <div class="reachable-info-origin">Origin ${originId}</div>
-    <div class="reachable-info-count">${destinations.length} destinations within 4h</div>
-    <ol class="reachable-info-list">
-      ${items}
-    </ol>
+    <div class="reachable-info-origin">Origin ${escapeHtml(originId)}</div>
+    <div class="reachable-info-empty">0 destinations</div>
+    <div class="reachable-info-empty-muted">No reachable destinations within the selected limit.</div>
   `;
 }
 
