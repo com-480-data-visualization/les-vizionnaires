@@ -245,14 +245,13 @@
   border: 1px solid rgba(15, 23, 42, 0.12);
   flex: 0 0 14px;
 }
-
 .reachable-info {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1px solid #dbe4f0;
+  background: rgba(255, 255, 255, 0.094);
+  border: 1px solid rgba(219, 228, 240, 0.72);
   border-radius: 22px;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.10);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 18px 18px 16px;
   width: 340px;
   max-width: calc(100vw - 32px);
@@ -278,8 +277,8 @@
 
 .reachable-info-empty-muted {
   font-size: 14px;
-  line-height: 1.35;
-  color: #64748b;
+  line-height: 1.4;
+  color: #475569;
 }
 
 .reachable-info-origin {
@@ -296,7 +295,7 @@
   font-weight: 800;
   line-height: 1.2;
   color: #172033;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .reachable-info-list {
@@ -312,8 +311,8 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
-  padding: 8px 0;
-  border-top: 1px solid #eef2f7;
+  padding: 10px 0;
+  border-top: 1px solid rgba(232, 237, 244, 0.75);
 }
 
 .reachable-info-item:first-child {
@@ -323,14 +322,14 @@
 
 .reachable-info-stop {
   font-size: 14px;
-  line-height: 1.35;
+  line-height: 1.45;
   color: #172033;
   flex: 1;
 }
 
 .reachable-info-time {
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 800;
   color: #ef4444;
   white-space: nowrap;
 }
@@ -340,7 +339,7 @@
 }
 
 .reachable-info-list::-webkit-scrollbar-thumb {
-  background: #dbe4f0;
+  background: rgba(148, 163, 184, 0.7);
   border-radius: 999px;
 }
 
