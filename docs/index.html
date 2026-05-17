@@ -52,33 +52,39 @@
             <legend class="sr-only">Accessibility mode</legend>
 
             <label class="radio-card">
-              <input type="radio" name="mode" value="nearestIC" />
+              <input type="radio" name="mode" value="nearestIC" checked/>
               <span class="radio-ui"></span>
-              <span class="radio-label">Nearest IC travel time</span>
+              <span class="radio-label">Nearest IC Travel Time</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="publicTransport" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Public transport usage</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="populationDensity" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Population Density</span>
             </label>
 
             <label class="radio-card">
               <input type="radio" name="mode" value="employment" />
               <span class="radio-ui"></span>
-              <span class="radio-label">Employment rate</span>
+              <span class="radio-label">Employment Volume</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="taxableIncome" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Avg Taxable Income</span>
             </label>
 
             <label class="radio-card">
               <input type="radio" name="mode" value="realEstate" />
               <span class="radio-ui"></span>
-              <span class="radio-label">Real estate values</span>
-            </label>
-
-            <label class="radio-card">
-              <input type="radio" name="mode" value="salary" />
-              <span class="radio-ui"></span>
-              <span class="radio-label">Salary levels</span>
-            </label>
-
-             <label class="radio-card">
-              <input type="radio" name="mode" value="publicTransport" />
-              <span class="radio-ui"></span>
-              <span class="radio-label">Public transport usage</span>
+              <span class="radio-label">Real Estate Prices</span>
             </label>
           </fieldset>
         </section>
@@ -184,5 +190,10 @@
   <script src="js/nearestIC.js"></script>
   <script src="js/controls-right.js"></script>
   <script src="js/views.js"></script>
+  <script src="js/real-estate.js"></script>
+  <script src="js/employment.js"></script>
+  <script src="js/taxable-income.js"></script>
+  <script src="js/population-density.js"></script>
+  <script src="js/public-transport.js"></script> </body>
 </body>
 </html>

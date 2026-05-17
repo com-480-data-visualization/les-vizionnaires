@@ -191,12 +191,13 @@ function dimAccessibilityLayer() {
 
     const t = layer.feature.properties.min_travel_time_to_ic;
 
+    // Reste aligné sur le style nominal pour éviter l'effet flouté / effacé
     layer.setStyle({
       radius: 4,
-      color: "rgba(120, 130, 150, 0.56)",
-      weight: 0.3,
+      color: "#444",         // Contour d'origine net
+      weight: 0.4,          // Épaisseur d'origine nette
       fillColor: getTravelTimeColor(t),
-      fillOpacity: 0.4
+      fillOpacity: 0.75      // Garde sa vivacité d'origine
     });
   });
 }

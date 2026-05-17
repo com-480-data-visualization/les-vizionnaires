@@ -1,2 +1,15 @@
 *.DS_Store
 data/*
+gtfs_fp2026_20260314.zip
+hs_err_pid54453.log
+notebooks/data/gtfs/agency.txt
+notebooks/data/gtfs/calendar_dates.txt
+notebooks/data/gtfs/calendar.txt
+notebooks/data/gtfs/feed_info.txt
+notebooks/data/gtfs/frequencies.txt
+notebooks/data/gtfs/gtfs_fp2026.zip
+notebooks/data/gtfs/routes.txt
+notebooks/data/gtfs/stop_times.txt
+notebooks/data/gtfs/stops.txt
+notebooks/data/gtfs/transfers.txt
+notebooks/data/gtfs/trips.txt
