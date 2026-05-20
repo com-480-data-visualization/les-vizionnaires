@@ -1,0 +1,323 @@
+{
+  "departures": [
+    {
+      "label": "09:00",
+      "value": "0900"
+    },
+    {
+      "label": "12:00",
+      "value": "1200"
+    },
+    {
+      "label": "17:00",
+      "value": "1700"
+    },
+    {
+      "label": "22:00",
+      "value": "2200"
+    }
+  ],
+  "max_times": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240
+  ],
+  "default_departure": "0900",
+  "default_max_time": 30,
+  "files": {
+    "0900_030min": {
+      "departure_label": "0900",
+      "max_time_minutes": 30,
+      "accessibility": "ptA_IC/accessibility_0900_030min.geojson",
+      "reachable": "ptA_IC/reachable_0900_030min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 113,
+      "od_pair_count": 125
+    },
+    "0900_060min": {
+      "departure_label": "0900",
+      "max_time_minutes": 60,
+      "accessibility": "ptA_IC/accessibility_0900_060min.geojson",
+      "reachable": "ptA_IC/reachable_0900_060min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 761,
+      "od_pair_count": 1508
+    },
+    "0900_090min": {
+      "departure_label": "0900",
+      "max_time_minutes": 90,
+      "accessibility": "ptA_IC/accessibility_0900_090min.geojson",
+      "reachable": "ptA_IC/reachable_0900_090min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 1713,
+      "od_pair_count": 6988
+    },
+    "0900_120min": {
+      "departure_label": "0900",
+      "max_time_minutes": 120,
+      "accessibility": "ptA_IC/accessibility_0900_120min.geojson",
+      "reachable": "ptA_IC/reachable_0900_120min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2353,
+      "od_pair_count": 19496
+    },
+    "0900_150min": {
+      "departure_label": "0900",
+      "max_time_minutes": 150,
+      "accessibility": "ptA_IC/accessibility_0900_150min.geojson",
+      "reachable": "ptA_IC/reachable_0900_150min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2896,
+      "od_pair_count": 40468
+    },
+    "0900_180min": {
+      "departure_label": "0900",
+      "max_time_minutes": 180,
+      "accessibility": "ptA_IC/accessibility_0900_180min.geojson",
+      "reachable": "ptA_IC/reachable_0900_180min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3382,
+      "od_pair_count": 68014
+    },
+    "0900_210min": {
+      "departure_label": "0900",
+      "max_time_minutes": 210,
+      "accessibility": "ptA_IC/accessibility_0900_210min.geojson",
+      "reachable": "ptA_IC/reachable_0900_210min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3791,
+      "od_pair_count": 100712
+    },
+    "0900_240min": {
+      "departure_label": "0900",
+      "max_time_minutes": 240,
+      "accessibility": "ptA_IC/accessibility_0900_240min.geojson",
+      "reachable": "ptA_IC/reachable_0900_240min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 4064,
+      "od_pair_count": 135570
+    },
+    "1200_030min": {
+      "departure_label": "1200",
+      "max_time_minutes": 30,
+      "accessibility": "ptA_IC/accessibility_1200_030min.geojson",
+      "reachable": "ptA_IC/reachable_1200_030min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 113,
+      "od_pair_count": 125
+    },
+    "1200_060min": {
+      "departure_label": "1200",
+      "max_time_minutes": 60,
+      "accessibility": "ptA_IC/accessibility_1200_060min.geojson",
+      "reachable": "ptA_IC/reachable_1200_060min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 801,
+      "od_pair_count": 1577
+    },
+    "1200_090min": {
+      "departure_label": "1200",
+      "max_time_minutes": 90,
+      "accessibility": "ptA_IC/accessibility_1200_090min.geojson",
+      "reachable": "ptA_IC/reachable_1200_090min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 1785,
+      "od_pair_count": 7226
+    },
+    "1200_120min": {
+      "departure_label": "1200",
+      "max_time_minutes": 120,
+      "accessibility": "ptA_IC/accessibility_1200_120min.geojson",
+      "reachable": "ptA_IC/reachable_1200_120min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2437,
+      "od_pair_count": 20305
+    },
+    "1200_150min": {
+      "departure_label": "1200",
+      "max_time_minutes": 150,
+      "accessibility": "ptA_IC/accessibility_1200_150min.geojson",
+      "reachable": "ptA_IC/reachable_1200_150min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2929,
+      "od_pair_count": 41907
+    },
+    "1200_180min": {
+      "departure_label": "1200",
+      "max_time_minutes": 180,
+      "accessibility": "ptA_IC/accessibility_1200_180min.geojson",
+      "reachable": "ptA_IC/reachable_1200_180min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3378,
+      "od_pair_count": 70126
+    },
+    "1200_210min": {
+      "departure_label": "1200",
+      "max_time_minutes": 210,
+      "accessibility": "ptA_IC/accessibility_1200_210min.geojson",
+      "reachable": "ptA_IC/reachable_1200_210min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3770,
+      "od_pair_count": 102809
+    },
+    "1200_240min": {
+      "departure_label": "1200",
+      "max_time_minutes": 240,
+      "accessibility": "ptA_IC/accessibility_1200_240min.geojson",
+      "reachable": "ptA_IC/reachable_1200_240min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 4062,
+      "od_pair_count": 137590
+    },
+    "1700_030min": {
+      "departure_label": "1700",
+      "max_time_minutes": 30,
+      "accessibility": "ptA_IC/accessibility_1700_030min.geojson",
+      "reachable": "ptA_IC/reachable_1700_030min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 123,
+      "od_pair_count": 136
+    },
+    "1700_060min": {
+      "departure_label": "1700",
+      "max_time_minutes": 60,
+      "accessibility": "ptA_IC/accessibility_1700_060min.geojson",
+      "reachable": "ptA_IC/reachable_1700_060min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 858,
+      "od_pair_count": 1698
+    },
+    "1700_090min": {
+      "departure_label": "1700",
+      "max_time_minutes": 90,
+      "accessibility": "ptA_IC/accessibility_1700_090min.geojson",
+      "reachable": "ptA_IC/reachable_1700_090min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 1835,
+      "od_pair_count": 7686
+    },
+    "1700_120min": {
+      "departure_label": "1700",
+      "max_time_minutes": 120,
+      "accessibility": "ptA_IC/accessibility_1700_120min.geojson",
+      "reachable": "ptA_IC/reachable_1700_120min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2452,
+      "od_pair_count": 21164
+    },
+    "1700_150min": {
+      "departure_label": "1700",
+      "max_time_minutes": 150,
+      "accessibility": "ptA_IC/accessibility_1700_150min.geojson",
+      "reachable": "ptA_IC/reachable_1700_150min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2900,
+      "od_pair_count": 43114
+    },
+    "1700_180min": {
+      "departure_label": "1700",
+      "max_time_minutes": 180,
+      "accessibility": "ptA_IC/accessibility_1700_180min.geojson",
+      "reachable": "ptA_IC/reachable_1700_180min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3328,
+      "od_pair_count": 71511
+    },
+    "1700_210min": {
+      "departure_label": "1700",
+      "max_time_minutes": 210,
+      "accessibility": "ptA_IC/accessibility_1700_210min.geojson",
+      "reachable": "ptA_IC/reachable_1700_210min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3672,
+      "od_pair_count": 103371
+    },
+    "1700_240min": {
+      "departure_label": "1700",
+      "max_time_minutes": 240,
+      "accessibility": "ptA_IC/accessibility_1700_240min.geojson",
+      "reachable": "ptA_IC/reachable_1700_240min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 3914,
+      "od_pair_count": 135928
+    },
+    "2200_030min": {
+      "departure_label": "2200",
+      "max_time_minutes": 30,
+      "accessibility": "ptA_IC/accessibility_2200_030min.geojson",
+      "reachable": "ptA_IC/reachable_2200_030min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 86,
+      "od_pair_count": 93
+    },
+    "2200_060min": {
+      "departure_label": "2200",
+      "max_time_minutes": 60,
+      "accessibility": "ptA_IC/accessibility_2200_060min.geojson",
+      "reachable": "ptA_IC/reachable_2200_060min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 636,
+      "od_pair_count": 1192
+    },
+    "2200_090min": {
+      "departure_label": "2200",
+      "max_time_minutes": 90,
+      "accessibility": "ptA_IC/accessibility_2200_090min.geojson",
+      "reachable": "ptA_IC/reachable_2200_090min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 1425,
+      "od_pair_count": 5158
+    },
+    "2200_120min": {
+      "departure_label": "2200",
+      "max_time_minutes": 120,
+      "accessibility": "ptA_IC/accessibility_2200_120min.geojson",
+      "reachable": "ptA_IC/reachable_2200_120min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 1969,
+      "od_pair_count": 13388
+    },
+    "2200_150min": {
+      "departure_label": "2200",
+      "max_time_minutes": 150,
+      "accessibility": "ptA_IC/accessibility_2200_150min.geojson",
+      "reachable": "ptA_IC/reachable_2200_150min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2340,
+      "od_pair_count": 25159
+    },
+    "2200_180min": {
+      "departure_label": "2200",
+      "max_time_minutes": 180,
+      "accessibility": "ptA_IC/accessibility_2200_180min.geojson",
+      "reachable": "ptA_IC/reachable_2200_180min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2591,
+      "od_pair_count": 37304
+    },
+    "2200_210min": {
+      "departure_label": "2200",
+      "max_time_minutes": 210,
+      "accessibility": "ptA_IC/accessibility_2200_210min.geojson",
+      "reachable": "ptA_IC/reachable_2200_210min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2775,
+      "od_pair_count": 47639
+    },
+    "2200_240min": {
+      "departure_label": "2200",
+      "max_time_minutes": 240,
+      "accessibility": "ptA_IC/accessibility_2200_240min.geojson",
+      "reachable": "ptA_IC/reachable_2200_240min.json",
+      "feature_count": 4626,
+      "reachable_origin_count": 2902,
+      "od_pair_count": 55190
+    }
+  },
+  "ic_hubs": "ptA_IC/ic_hubs.geojson"
+}
