@@ -1,3 +1,5 @@
+// js/controls-right.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const rightPanelState = {
     mode: "nearestIC",
@@ -6,24 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const modeInputs = document.querySelectorAll('input[name="mode"]');
-  const timeButtons = document.querySelectorAll(".time-chip");
-  const departureTimeInput = document.getElementById("departureTime");
+  const departureButtons = document.querySelectorAll(".departure-chip");
+  const departureTimeGroup = document.getElementById("departureTimeGroup");
   const helpButton = document.querySelector(".help-button");
 
   const slider = document.getElementById("maxTravelTime");
   const sliderLabel = document.getElementById("maxTravelTimeLabel");
   const sliderGroup = document.getElementById("maxTravelTimeGroup");
 
-  const sliderSteps = [
-    30,   // 0 → 30 min
-    60,   // 1 → 1 h
-    90,   // 2 → 1 h 30
-    120,  // 3 → 2 h
-    150,  // 4 → 2 h 30
-    180,  // 5 → 3 h
-    210,  // 6 → 3 h 30
-    240   // 7 → 4 h
-  ];
+  const sliderSteps = [30, 60, 90, 120, 150, 180, 210, 240];
 
   function formatMinutes(minutes) {
     if (minutes < 60) return `${minutes} min`;
@@ -33,83 +26,77 @@ document.addEventListener("DOMContentLoaded", () => {
     return `${h} h ${m}`;
   }
 
+  if (slider) {
+    updateSliderState(parseInt(slider.value, 10));
+    slider.addEventListener("input", (event) => {
+      updateSliderState(parseInt(event.target.value, 10));
+    });
+  }
+
   function updateSliderState(index) {
     const minutes = sliderSteps[index];
     rightPanelState.maxTravelTime = minutes;
     if (sliderLabel) {
       sliderLabel.textContent = formatMinutes(minutes);
     }
-    console.log("Max travel time:", rightPanelState.maxTravelTime);
   }
 
-  if (slider) {
-    updateSliderState(parseInt(slider.value, 10));
-
-    slider.addEventListener("input", (event) => {
-      const index = parseInt(event.target.value, 10);
-      updateSliderState(index);
-    });
+  function hideAllOverlays() {
+    if (typeof window.hideNearestICOverlay === 'function') window.hideNearestICOverlay();
+    if (typeof window.hideRealEstateOverlay === 'function') window.hideRealEstateOverlay();
+    if (typeof window.hideEmploymentOverlay === 'function') window.hideEmploymentOverlay();
+    if (typeof window.hideTaxableIncomeOverlay === 'function') window.hideTaxableIncomeOverlay();
+    if (typeof window.hidePopulationDensityOverlay === 'function') window.hidePopulationDensityOverlay();
+    if (typeof window.hidePublicTransportOverlay === 'function') window.hidePublicTransportOverlay(); // Ajouté ici
   }
 
-  function updateMaxTravelTimeVisibility(mode) {
-  if (!sliderGroup) return;
-  sliderGroup.style.display = mode === "nearestIC" ? "" : "none";
-}
+  async function applyMode(mode) {
+    hideAllOverlays();
 
-  function isValidTimeString(value) {
-    return /^([01]\d|2[0-3]):([0-5]\d)$/.test(value);
-  }
+    const isNearestIC = mode === "nearestIC";
+    if (sliderGroup) sliderGroup.style.display = isNearestIC ? "" : "none";
+    if (departureTimeGroup) departureTimeGroup.style.display = isNearestIC ? "" : "none";
 
- async function applyMode(mode) {
-  if (mode === "nearestIC") {
-    if (window.showNearestICOverlay) {
+    if (mode === "nearestIC" && typeof window.showNearestICOverlay === 'function') {
       await window.showNearestICOverlay();
-    }
-  } else {
-    if (window.hideNearestICOverlay) {
-      window.hideNearestICOverlay();
+    } else if (mode === "realEstate" && typeof window.showRealEstateOverlay === 'function') {
+      await window.showRealEstateOverlay();
+    } else if (mode === "employment" && typeof window.showEmploymentOverlay === 'function') {
+      await window.showEmploymentOverlay();
+    } else if (mode === "taxableIncome" && typeof window.showTaxableIncomeOverlay === 'function') {
+      await window.showTaxableIncomeOverlay();
+    } else if (mode === "populationDensity" && typeof window.showPopulationDensityOverlay === 'function') {
+      await window.showPopulationDensityOverlay();
+    } else if (mode === "publicTransport" && typeof window.showPublicTransportOverlay === 'function') {
+    await window.showPublicTransportOverlay();
     }
   }
-}
 
   modeInputs.forEach((input) => {
     input.addEventListener("change", async () => {
       if (!input.checked) return;
-
       rightPanelState.mode = input.value;
-      updateMaxTravelTimeVisibility(rightPanelState.mode);
       await applyMode(rightPanelState.mode);
-      });
- });
-
-  timeButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      timeButtons.forEach((btn) => btn.classList.remove("active"));
-      button.classList.add("active");
-      rightPanelState.maxTravelTime = Number(button.dataset.time);
-      console.log("Max travel time:", rightPanelState.maxTravelTime);
     });
   });
 
-  if (departureTimeInput) {
-    departureTimeInput.addEventListener("change", (event) => {
-      const value = event.target.value;
-
-      if (!isValidTimeString(value)) {
-        event.target.value = "09:00";
-        rightPanelState.departureTime = "09:00";
-        return;
-      }
-
-      rightPanelState.departureTime = value;
-      console.log("Departure time:", rightPanelState.departureTime);
+  departureButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      departureButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      rightPanelState.departureTime = button.dataset.time;
     });
-  }
+  });
 
   if (helpButton) {
     helpButton.addEventListener("click", () => {
-      alert("Use the controls to choose a mode, point, and travel time.");
+      alert("Select an indicator mode to explore geographic metrics across Switzerland.");
     });
+  }
+
+  const defaultRadio = document.querySelector('input[name="mode"]:checked');
+  if (defaultRadio) {
+    applyMode(defaultRadio.value);
   }
 
   window.rightPanelState = rightPanelState;

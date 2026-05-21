@@ -7,6 +7,7 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/nearestIC.css">
   <link rel="stylesheet" href="css/panels.css">
   <link rel="stylesheet" href="css/analysis.css">
   <script src="https://unpkg.com/phosphor-icons"></script>
@@ -51,33 +52,39 @@
             <legend class="sr-only">Accessibility mode</legend>
 
             <label class="radio-card">
-              <input type="radio" name="mode" value="nearestIC" />
+              <input type="radio" name="mode" value="nearestIC" checked/>
               <span class="radio-ui"></span>
-              <span class="radio-label">Nearest IC travel time</span>
+              <span class="radio-label">Nearest IC Travel Time</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="publicTransport" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Public transport usage</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="populationDensity" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Population Density</span>
             </label>
 
             <label class="radio-card">
               <input type="radio" name="mode" value="employment" />
               <span class="radio-ui"></span>
-              <span class="radio-label">Employment rate</span>
+              <span class="radio-label">Employment Volume</span>
+            </label>
+
+            <label class="radio-card">
+              <input type="radio" name="mode" value="taxableIncome" />
+              <span class="radio-ui"></span>
+              <span class="radio-label">Avg Taxable Income</span>
             </label>
 
             <label class="radio-card">
               <input type="radio" name="mode" value="realEstate" />
               <span class="radio-ui"></span>
-              <span class="radio-label">Real estate values</span>
-            </label>
-
-            <label class="radio-card">
-              <input type="radio" name="mode" value="salary" />
-              <span class="radio-ui"></span>
-              <span class="radio-label">Salary levels</span>
-            </label>
-
-             <label class="radio-card">
-              <input type="radio" name="mode" value="publicTransport" />
-              <span class="radio-ui"></span>
-              <span class="radio-label">Public transport usage</span>
+              <span class="radio-label">Real Estate Prices</span>
             </label>
           </fieldset>
         </section>
@@ -102,19 +109,19 @@
         </div>
       </section>
 
-        <section class="control-section">
-          <label class="field-label" for="departureTime">Departure Time</label>
-          <input
-            id="departureTime"
-            class="text-input time-input"
-            type="time"
-            value="09:00"
-            min="00:00"
-            max="23:59"
-            step="60"
-            required
-          >
-        </section>
+      <div class="control-section" id="departureTimeGroup">
+        <label class="field-label">
+          <span class="field-icon">🕒</span>
+          Departure time
+        </label>
+
+        <div class="departure-grid">
+          <button type="button" class="departure-chip active" data-time="09:00">09:00</button>
+          <button type="button" class="departure-chip" data-time="12:00">12:00</button>
+          <button type="button" class="departure-chip" data-time="17:00">17:00</button>
+          <button type="button" class="departure-chip" data-time="22:00">22:00</button>
+        </div>
+      </div>
       <button class="help-button" type="button" aria-label="Help">?</button>
     </aside>
 
@@ -180,8 +187,13 @@
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="js/map.js"></script>
-  <script src="js/test-accessibility.js"></script>
+  <script src="js/nearestIC.js"></script>
   <script src="js/controls-right.js"></script>
   <script src="js/views.js"></script>
+  <script src="js/real-estate.js"></script>
+  <script src="js/employment.js"></script>
+  <script src="js/taxable-income.js"></script>
+  <script src="js/population-density.js"></script>
+  <script src="js/public-transport.js"></script> </body>
 </body>
 </html>
