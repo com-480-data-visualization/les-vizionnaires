@@ -38,6 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
     mapView.style.display = "none";
     controlsView.style.display = "none";
     analysisView.style.display = "block";
+
+    // Initialize charts when analysis view is shown
+    setTimeout(() => {
+      if (typeof renderScatterPlot !== 'undefined') {
+        renderScatterPlot('chart-scatter', 'data/correlations/scatter_accessibility_realestate.json');
+      }
+      if (typeof renderEmploymentChart !== 'undefined') {
+        renderEmploymentChart('chart-employment', 'data/correlations/employment_connectivity.json');
+      }
+      if (typeof renderWealthChart !== 'undefined') {
+        renderWealthChart('chart-wealth', 'data/correlations/wealth_gaps_canton.json');
+      }
+      if (typeof renderDensityChart !== 'undefined') {
+        renderDensityChart('chart-density', 'data/correlations/density_isolation.json');
+      }
+    }, 100);
   }
 
   tabs.forEach((tab) => {

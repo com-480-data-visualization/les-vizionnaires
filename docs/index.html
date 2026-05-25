@@ -136,70 +136,107 @@
       </div>
 
       <button class="help-button" type="button" aria-label="Help">?</button>
+      </div>
     </aside>
 
     <section class="analysis-view view-screen" id="analysis-view">
       <div class="analysis-hero">
         <h2>Accessibility Analysis</h2>
         <p>Statistical insights into Swiss public transport accessibility patterns and inequalities</p>
-      </div>
-
-      <div class="analysis-stats">
-        <article class="stat-card">
-          <p class="stat-label">Best Access</p>
-          <h3>Zürich City</h3>
-          <span>5 min avg</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Worst Access</p>
-          <h3>Graubünden Rural</h3>
-          <span>65 min avg</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Avg Urban</p>
-          <h3>7.8 min</h3>
-          <span>to nearest IC</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Avg Rural</p>
-          <h3>48.5 min</h3>
-          <span>to nearest IC</span>
-        </article>
+        
+        <div class="methodology-box">
+          <p><strong>Methodology:</strong> IC hub accessibility is measured as average travel time from municipality centroids using public transit. Analysis includes scenarios with max 240-minute travel windows and departures during peak hours (12 PM). Data aggregated at municipal level (2,110+ municipalities) and cantonal level for correlation analysis. Real estate prices, taxable income, and employment density sourced from official Swiss statistical records.</p>
+        </div>
       </div>
 
       <div class="analysis-grid">
-       <article class="chart-card">
-        <img
-          class="chart-card__image"
-          src="../../images/sbb-stations.png"
-          alt="Daily users of SBB stations chart"
-          width="1200"
-          height="700"
-          loading="lazy"
-        >
-        <h3>Daily users of SBB Stations</h3>
-      </article>
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Do major employment centers benefit from privileged access to railway hubs?</p>
+            <p>
+              The data reveals a clear geographic hierarchy. Economic powerhouses and densely populated cantons (such as Zurich, Zug, and Geneva) cluster on the right side of the distribution, boasting the fastest average travel times to IC hubs (often under 60 minutes).
+            </p>
+            <p>
+              In contrast, geographically expansive or mountainous cantons face significantly longer transit times, highlighting a structural challenge. While the Swiss rail network is dense, businesses in Alpine or peripheral regions must still contend with a "distance penalty" when connecting to the national intercity spine.
+            </p>
+            <p class="chart-note">Full ranking of all cantons by average travel time</p>
+          </div>
+          <div id="chart-employment" class="chart-container"></div>
+        </article>
 
-      <article class="chart-card">
-        <img
-          class="chart-card__image"
-          src="../../images/real-estate.png"
-          alt="Real estate by municipality chart"
-          width="1200"
-          height="700"
-          loading="lazy"
-        >
-        <h3>Real estate by municipality</h3>
-      </article>
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does prosperity correlate with better transport access?</p>
+            <p>
+              The real geospatial data reveals a clear economic-geographic convergence across Swiss cantons. High-income cantons (such as Zug, Zurich, and Geneva) systematically cluster in the high-accessibility zone, boasting significantly shorter average travel times to IC hubs. 
+            </p>
+            <p>
+              Conversely, cantons with lower average taxable incomes tend to be geographically peripheral or mountainous, resulting in longer transit times. This demonstrates that economic prosperity and premier rail connectivity are deeply intertwined, reflecting how Switzerland's main economic engines naturally serve as the primary anchors for major infrastructure investments.
+            </p>
+            <p class="chart-note">Canton-level analysis: average taxable income vs. average travel time</p>
+          </div>
+          <div id="chart-wealth" class="chart-container"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does population density guarantee or prevent isolation?</p>
+            <p>
+              The statistical analysis confirms a strong agglomeration effect, showing a significant negative correlation between population density and travel time. Denser municipalities systematically enjoy shorter travel times because Switzerland's InterCity network is structurally designed to link major urban centers.
+            </p>
+            <p>
+              However, the interactive view uncovers compelling intra-cantonal nuances: even within highly urbanized cantons, low-density peripheral municipalities experience a steep accessibility penalty. This highlights that localized geographic placement matters just as much as overall urbanization levels.
+            </p>
+            <p class="chart-note">Interactive: Select a canton to explore municipal density vs. travel time</p>
+          </div>
+          <div id="chart-density" class="chart-container"></div>
+        </article>
+
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Do better connections guarantee higher prices?</p>
+            <p>The best connections do not always mean the highest prices. Certain rural areas with excellent IC access have significantly lower property values than isolated suburban regions.</p>
+            <p class="chart-note">Hover the map to explore your municipality</p>
+          </div>
+          <div id="chart-scatter" class="chart-container"></div>
+        </article>
+
+        </div>
+          <section class="analysis-conclusion">
+          <h3>Conclusion: Accessibility as a Territorial Pivot</h3>
+          <p>
+            At the end of this multidimensional exploration, a clear structural dynamic emerges: <strong>accessibility to the InterCity (IC) network acts as the primary backbone of Swiss territorial development</strong>, though it yields unexpected market behaviors.
+          </p>
+          <p>The correlations across our datasets reveal three major insights:</p>
+          <ul style="margin-bottom: 20px; padding-left: 20px; line-height: 1.8;">
+            <li style="margin-bottom: 10px;">
+              <strong>1. The Core-Periphery Divide:</strong> The data confirms a profound economic-geographic convergence. The nation's economic powerhouses and highest-income cantons (Zurich, Zug, Geneva) are inextricably linked to hyper-efficient IC access, while mountainous and peripheral regions face a persistent "distance penalty" that limits wealth concentration.
+            </li>
+            <li style="margin-bottom: 10px;">
+              <strong>2. The Density Agglomeration Effect:</strong> While population density mechanically favors better transport access, the equation is fragile. Steep accessibility drop-offs exist even within the borders of highly urbanized cantons, emphasizing the hyper-localized nature of transit inequalities.
+            </li>
+            <li>
+              <strong>3. The Real Estate Paradox:</strong> Unlike cantonal wealth and corporate employment, local property values are not strictly dictated by IC travel times. Excellent connectivity does not guarantee premium prices, demonstrating that local amenities, tax rates, and suburban appeal often override pure national rail proximity.
+            </li>
+          </ul>
+          <p>
+            In summary, Swiss rail infrastructure is far more than a mobility tool. It is the fundamental framework that dictates corporate clustering and regional wealth distribution, even as local housing markets play by their own highly localized rules.
+          </p>
+        </section>
       </div>
     </section>
   </div>
 
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/h3-js@4.1.0/dist/h3-js.umd.js"></script>
+  
+  <script src="js/correlations.js"></script>
+  <script src="js/viz-scatter.js"></script>
+  <script src="js/viz-employment.js"></script>
+  <script src="js/viz-wealth.js"></script>
+  <script src="js/viz-density.js"></script>
+
   <script src="js/map.js"></script>
   <script type="module" src="js/nearestIC/overlay.js"></script>
   <script src="js/controls-right.js"></script>
@@ -208,6 +245,35 @@
   <script src="js/employment.js"></script>
   <script src="js/taxable-income.js"></script>
   <script src="js/population-density.js"></script>
-  <script src="js/public-transport.js"></script> </body>
+  <script src="js/public-transport.js"></script> 
+
+  <script>
+    // Flag to track if charts have already been rendered
+    let analysisRendered = false;
+
+    // Initialize D3 visualizations when the analysis view is requested
+    document.addEventListener('DOMContentLoaded', function() {
+      const viewTabs = document.querySelectorAll('.view-tab');
+      
+      viewTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Check if tab is 'analysis' AND if it hasn't been rendered yet
+          if (this.getAttribute('data-view') === 'analysis' && !analysisRendered) {
+            
+            // Lock the flag immediately so it can never be triggered again
+            analysisRendered = true; 
+
+            // Slight timeout ensures the container is fully visible before D3 calculates dimensions
+            setTimeout(function() {
+              renderScatterPlot('chart-scatter', 'data/correlations/scatter_accessibility_realestate.json');
+              renderEmploymentChart('chart-employment', 'data/correlations/employment_connectivity.json');
+              renderWealthChart('chart-wealth', 'data/correlations/wealth_gaps_canton.json');
+              renderDensityChart('chart-density', 'data/correlations/density_isolation.json');
+            }, 100);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
