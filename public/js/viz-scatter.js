@@ -4,8 +4,13 @@
  */
 
 function renderScatterPlot(containerId, dataUrl) {
-  const margin = { top: 20, right: 20, bottom: 60, left: 70 };
   const container = document.getElementById(containerId);
+  if (!container) return;
+  
+  // Clear previous content
+  container.innerHTML = '';
+  
+  const margin = { top: 20, right: 20, bottom: 60, left: 70 };
   const width = Math.min(container.clientWidth - 30, 500) - margin.left - margin.right;
   const height = 380 - margin.top - margin.bottom;
 
@@ -59,7 +64,7 @@ function renderScatterPlot(containerId, dataUrl) {
         .attr('text-anchor', 'middle')
         .attr('font-size', '12px')
         .attr('fill', '#475569')
-        .text('Real Estate Price (CHF/m²)');
+        .text('Real Estate Price (CHF/))');m
 
       // Points
       svg.selectAll('.point')

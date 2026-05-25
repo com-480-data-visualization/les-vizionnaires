@@ -1,9 +1,15 @@
 /**
  * Density vs Isolation
- * Faceted scatter plots by canton with selector
+ * Interactive canton selector for density-accessibility analysis
  */
 
 function renderDensityChart(containerId, dataUrl) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+  
+  // Clear previous content
+  container.innerHTML = '';
+  
   const margin = { top: 20, right: 15, bottom: 50, left: 60 };
   const chartWidth = 450 - margin.left - margin.right;
   const chartHeight = 350 - margin.top - margin.bottom;
@@ -13,8 +19,8 @@ function renderDensityChart(containerId, dataUrl) {
     .then(data => {
       if (!data.data || data.data.length === 0) return;
 
-      const container_el = document.getElementById(containerId);
-      const cantons = data.major_cantons || [];
+      // Get all unique cantons from data
+      const allCantons = Array.from(new Set(data.data.map(d => d.canton))).sort();
       
       // Create selector
       const selectorDiv = document.createElement('div');
@@ -29,7 +35,7 @@ function renderDensityChart(containerId, dataUrl) {
       select.style.fontSize = '14px';
       select.style.cursor = 'pointer';
       
-      cantons.forEach(canton => {
+      allCantons.forEach(canton => {
         const option = document.createElement('option');
         option.value = canton;
         option.textContent = canton;
@@ -37,12 +43,12 @@ function renderDensityChart(containerId, dataUrl) {
       });
       
       selectorDiv.appendChild(select);
-      container_el.appendChild(selectorDiv);
+      container.appendChild(selectorDiv);
       
       // Create chart container
       const chartDiv = document.createElement('div');
       chartDiv.id = 'density-chart';
-      container_el.appendChild(chartDiv);
+      container.appendChild(chartDiv);
       
       const cantonData = {};
       data.data.forEach(d => {
@@ -105,6 +111,7 @@ function renderDensityChart(containerId, dataUrl) {
           .attr('y', chartHeight + 40)
           .attr('text-anchor', 'middle')
           .attr('font-size', '12px')
+          .attr('fill', '#475569')
           .text('Population Density (per km²)');
 
         // Y axis
@@ -118,11 +125,12 @@ function renderDensityChart(containerId, dataUrl) {
           .attr('y', -45)
           .attr('text-anchor', 'middle')
           .attr('font-size', '12px')
+          .attr('fill', '#475569')
           .text('Travel Time to IC (min)');
       }
 
       // Initial render
-      renderCantonChart(cantons[0]);
+      renderCantonChart(allCantons[0]);
 
       // Selector listener
       select.addEventListener('change', function() {
@@ -131,9 +139,7 @@ function renderDensityChart(containerId, dataUrl) {
 
       const stats = document.createElement('div');
       stats.className = 'correlation-stats';
-      stats.innerHTML = '<strong>Cantons Analyzed:</strong> ' + cantons.length + '<br/><strong>Total Sample:</strong> ' + data.n_data + ' municipalities';
-      container_el.appendChild(stats);
+      stats.innerHTML = '<strong>All Cantons Available:</strong> ' + allCantons.length + '<br/><strong>Total Sample:</strong> ' + data.n_data + ' municipalities';
+      container.appendChild(stats);
     });
 }
-
-
