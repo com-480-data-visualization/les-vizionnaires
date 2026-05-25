@@ -223,6 +223,20 @@
   height: auto;
 }
 
+.methodology-box {
+  background: #f0f4f8;
+  border-left: 4px solid #3b82f6;
+  padding: 16px 20px;
+  margin: 24px 0;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #475569;
+}
+
+.methodology-box p {
+  margin: 0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .analysis-grid {

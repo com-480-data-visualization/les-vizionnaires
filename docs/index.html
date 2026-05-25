@@ -123,68 +123,83 @@
         </div>
       </div>
       <button class="help-button" type="button" aria-label="Help">?</button>
+      </div>
     </aside>
 
     <section class="analysis-view view-screen" id="analysis-view">
       <div class="analysis-hero">
         <h2>Accessibility Analysis</h2>
         <p>Statistical insights into Swiss public transport accessibility patterns and inequalities</p>
+        
+        <div class="methodology-box">
+          <p><strong>Methodology:</strong> IC hub accessibility is measured as average travel time from municipality centroids using public transit. Analysis includes scenarios with max 240-minute travel windows and departures during peak hours (12 PM). Data aggregated at municipal level (2,110+ municipalities) and cantonal level for correlation analysis. Real estate prices, taxable income, and employment density sourced from official Swiss statistical records.</p>
+        </div>
       </div>
 
       <div class="analysis-grid">
-        <!-- 1. Accessibility Paradox -->
         <article class="chart-card">
           <div class="chart-narrative">
-            <p><strong>Question:</strong> Do better connections guarantee higher prices?</p>            <h3>
-            <p>Real estate prices vary enormously across Swiss municipalities (CHF 800-31,000/m²), yet travel times show surprisingly modest correlation. Some expensive areas have long travel times to IC hubs; some remote areas offer affordability with excellent access.</p>
-            <p class="chart-note">Hover to see municipality details (379 municipalities with real estate data)</p>
+            <p><strong>Question:</strong> Do better connections guarantee higher prices?</p>
+            <p>The best connections do not always mean the highest prices. Certain rural areas with excellent IC access have significantly lower property values than isolated suburban regions.</p>
+            <p class="chart-note">Hover the map to explore your municipality</p>
           </div>
           <div id="chart-scatter" class="chart-container"></div>
         </article>
 
-        <!-- 2. Employment Hubs -->
         <article class="chart-card">
           <div class="chart-narrative">
-            <p><strong>Question:</strong> Are job centers well connected to IC hubs?</p>            <h3>
-            <p>Striking finding: All 25 Swiss cantons show remarkably uniform travel times to IC hubs (173-177 minutes average). Employment distribution appears independent of rail accessibility—suggesting Swiss rail infrastructure provides equitable connectivity nationwide regardless of canton size or economic weight.</p>
-            <p class="chart-note">All 25 cantons sorted by average travel time</p>
+            <p><strong>Question:</strong> Do major employment centers benefit from privileged access to railway hubs?</p>
+            <p>
+              The data reveals a clear geographic hierarchy. Economic powerhouses and densely populated cantons (such as Zurich, Zug, and Geneva) cluster on the left side of the distribution, boasting the fastest average travel times to IC hubs (often under 60 minutes).
+            </p>
+            <p>
+              In contrast, geographically expansive or mountainous cantons face significantly longer transit times, highlighting a structural challenge. While the Swiss rail network is dense, businesses in Alpine or peripheral regions must still contend with a "distance penalty" when connecting to the national intercity spine.
+            </p>
+            <p class="chart-note">Full ranking of all cantons by average travel time</p>
           </div>
           <div id="chart-employment" class="chart-container"></div>
         </article>
 
-        <!-- 3. Wealth Gaps -->
         <article class="chart-card">
           <div class="chart-narrative">
-            <p><strong>Question:</strong> Does prosperity correlate with better transport access?</p>            <h3>
-            <p>Income varies across Swiss cantons (CHF 70,800-78,600 per capita), but IC accessibility remains nearly constant (~175 minutes). Regional wealth does not predict rail connectivity. Geographic location, not economic prosperity, determines IC accessibility across Switzerland's 25 cantons.</p>
-            <p class="chart-note">Canton-level analysis: income vs. average travel time</p>
+            <p><strong>Question:</strong> Does prosperity correlate with better transport access?</p>
+            <p>
+              The real geospatial data reveals a clear economic-geographic convergence across Swiss cantons. High-income cantons (such as Zug, Zurich, and Geneva) systematically cluster in the high-accessibility zone, boasting significantly shorter average travel times to IC hubs. 
+            </p>
+            <p>
+              Conversely, cantons with lower average taxable incomes tend to be geographically peripheral or mountainous, resulting in longer transit times. This demonstrates that economic prosperity and premier rail connectivity are deeply intertwined, reflecting how Switzerland's main economic engines naturally serve as the primary anchors for major infrastructure investments.
+            </p>
+            <p class="chart-note">Canton-level analysis: average taxable income vs. average travel time</p>
           </div>
           <div id="chart-wealth" class="chart-container"></div>
         </article>
 
-        <!-- 4. Density Trade-off -->
         <article class="chart-card">
           <div class="chart-narrative">
-            <p><strong>Question:</strong> Does density guarantee or prevent isolation?</p>            <h3>
-            <p>Population density does not uniformly predict IC accessibility. Some dense urban cantons achieve short commutes; others require longer travel. Conversely, sparse rural areas show varied patterns. Geography and infrastructure design matter more than urbanization level.</p>
-            <p class="chart-note">Interactive: Select any canton to explore the density-accessibility relationship</p>
+            <p><strong>Question:</strong> Does population density guarantee or prevent isolation?</p>
+            <p>
+              The statistical analysis confirms a strong agglomeration effect, showing a significant negative correlation between population density and travel time. Denser municipalities systematically enjoy shorter travel times because Switzerland's InterCity network is structurally designed to link major urban centers.
+            </p>
+            <p>
+              However, the interactive view uncovers compelling intra-cantonal nuances: even within highly urbanized cantons, low-density peripheral municipalities experience a steep accessibility penalty. This highlights that localized geographic placement matters just as much as overall urbanization levels.
+            </p>
+            <p class="chart-note">Interactive: Select a canton to explore municipal density vs. travel time</p>
           </div>
           <div id="chart-density" class="chart-container"></div>
         </article>
       </div>
-
-      <script src="https://d3js.org/d3.v7.min.js"></script>
-      <script src="js/correlations.js"></script>
-      <script src="js/viz-scatter.js"></script>
-      <script src="js/viz-employment.js"></script>
-      <script src="js/viz-wealth.js"></script>
-      <script src="js/viz-density.js"></script>
-
-      
-</section>
+    </section>
   </div>
 
+  <script src="https://d3js.org/d3.v7.min.js"></script>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <script src="js/correlations.js"></script>
+  <script src="js/viz-scatter.js"></script>
+  <script src="js/viz-employment.js"></script>
+  <script src="js/viz-wealth.js"></script>
+  <script src="js/viz-density.js"></script>
+
   <script src="js/map.js"></script>
   <script src="js/nearestIC.js"></script>
   <script src="js/controls-right.js"></script>
@@ -193,6 +208,35 @@
   <script src="js/employment.js"></script>
   <script src="js/taxable-income.js"></script>
   <script src="js/population-density.js"></script>
-  <script src="js/public-transport.js"></script> </body>
+  <script src="js/public-transport.js"></script> 
+
+  <script>
+    // Flag to track if charts have already been rendered
+    let analysisRendered = false;
+
+    // Initialize D3 visualizations when the analysis view is requested
+    document.addEventListener('DOMContentLoaded', function() {
+      const viewTabs = document.querySelectorAll('.view-tab');
+      
+      viewTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          // Check if tab is 'analysis' AND if it hasn't been rendered yet
+          if (this.getAttribute('data-view') === 'analysis' && !analysisRendered) {
+            
+            // Lock the flag immediately so it can never be triggered again
+            analysisRendered = true; 
+
+            // Slight timeout ensures the container is fully visible before D3 calculates dimensions
+            setTimeout(function() {
+              renderScatterPlot('chart-scatter', 'data/correlations/scatter_accessibility_realestate.json');
+              renderEmploymentChart('chart-employment', 'data/correlations/employment_connectivity.json');
+              renderWealthChart('chart-wealth', 'data/correlations/wealth_gaps_canton.json');
+              renderDensityChart('chart-density', 'data/correlations/density_isolation.json');
+            }, 100);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
