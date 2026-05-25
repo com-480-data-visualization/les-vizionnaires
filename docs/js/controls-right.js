@@ -4,12 +4,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const rightPanelState = {
     mode: "nearestIC",
     maxTravelTime: 240,
-    departureTime: "09:00"
+    departureTime: "09:00",
+    dayType: "weekday"
   };
 
   const modeInputs = document.querySelectorAll('input[name="mode"]');
   const departureButtons = document.querySelectorAll(".departure-chip");
+  const dayButtons = document.querySelectorAll(".day-chip");
   const departureTimeGroup = document.getElementById("departureTimeGroup");
+  const dayTypeGroup = document.getElementById("dayTypeGroup");
   const helpButton = document.querySelector(".help-button");
 
   const slider = document.getElementById("maxTravelTime");
@@ -30,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSliderState(parseInt(slider.value, 10));
     slider.addEventListener("input", (event) => {
       updateSliderState(parseInt(event.target.value, 10));
+      if (typeof window.updateNearestICOverlay === 'function') {
+        window.updateNearestICOverlay(rightPanelState);
+      }
     });
   }
 
@@ -47,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof window.hideEmploymentOverlay === 'function') window.hideEmploymentOverlay();
     if (typeof window.hideTaxableIncomeOverlay === 'function') window.hideTaxableIncomeOverlay();
     if (typeof window.hidePopulationDensityOverlay === 'function') window.hidePopulationDensityOverlay();
-    if (typeof window.hidePublicTransportOverlay === 'function') window.hidePublicTransportOverlay(); // Ajouté ici
+    if (typeof window.hidePublicTransportOverlay === 'function') window.hidePublicTransportOverlay();
   }
 
   async function applyMode(mode) {
@@ -56,9 +62,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const isNearestIC = mode === "nearestIC";
     if (sliderGroup) sliderGroup.style.display = isNearestIC ? "" : "none";
     if (departureTimeGroup) departureTimeGroup.style.display = isNearestIC ? "" : "none";
+    if (dayTypeGroup) dayTypeGroup.style.display = isNearestIC ? "" : "none";
 
     if (mode === "nearestIC" && typeof window.showNearestICOverlay === 'function') {
-      await window.showNearestICOverlay();
+      await window.showNearestICOverlay(rightPanelState);
     } else if (mode === "realEstate" && typeof window.showRealEstateOverlay === 'function') {
       await window.showRealEstateOverlay();
     } else if (mode === "employment" && typeof window.showEmploymentOverlay === 'function') {
@@ -68,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (mode === "populationDensity" && typeof window.showPopulationDensityOverlay === 'function') {
       await window.showPopulationDensityOverlay();
     } else if (mode === "publicTransport" && typeof window.showPublicTransportOverlay === 'function') {
-    await window.showPublicTransportOverlay();
+      await window.showPublicTransportOverlay();
     }
   }
 
@@ -85,6 +92,20 @@ document.addEventListener("DOMContentLoaded", () => {
       departureButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
       rightPanelState.departureTime = button.dataset.time;
+      if (typeof window.updateNearestICOverlay === 'function') {
+        window.updateNearestICOverlay(rightPanelState);
+      }
+    });
+  });
+
+  dayButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      dayButtons.forEach((btn) => btn.classList.remove("active"));
+      button.classList.add("active");
+      rightPanelState.dayType = button.dataset.day;
+      if (typeof window.updateNearestICOverlay === 'function') {
+        window.updateNearestICOverlay(rightPanelState);
+      }
     });
   });
 
