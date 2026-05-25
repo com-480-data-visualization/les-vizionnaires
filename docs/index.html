@@ -131,58 +131,57 @@
         <p>Statistical insights into Swiss public transport accessibility patterns and inequalities</p>
       </div>
 
-      <div class="analysis-stats">
-        <article class="stat-card">
-          <p class="stat-label">Best Access</p>
-          <h3>Zürich City</h3>
-          <span>5 min avg</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Worst Access</p>
-          <h3>Graubünden Rural</h3>
-          <span>65 min avg</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Avg Urban</p>
-          <h3>7.8 min</h3>
-          <span>to nearest IC</span>
-        </article>
-
-        <article class="stat-card">
-          <p class="stat-label">Avg Rural</p>
-          <h3>48.5 min</h3>
-          <span>to nearest IC</span>
-        </article>
-      </div>
-
       <div class="analysis-grid">
-       <article class="chart-card">
-        <img
-          class="chart-card__image"
-          src="../../images/sbb-stations.png"
-          alt="Daily users of SBB stations chart"
-          width="1200"
-          height="700"
-          loading="lazy"
-        >
-        <h3>Daily users of SBB Stations</h3>
-      </article>
+        <!-- 1. Accessibility Paradox -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Do better connections guarantee higher prices?</p>            <h3>
+            <p>The best connections do not always mean the highest prices. Certain rural areas with excellent IC access have significantly lower property values than isolated suburban regions.</p>
+            <p class="chart-note">Click the map to explore your region</p>
+          </div>
+          <div id="chart-scatter" class="chart-container"></div>
+        </article>
 
-      <article class="chart-card">
-        <img
-          class="chart-card__image"
-          src="../../images/real-estate.png"
-          alt="Real estate by municipality chart"
-          width="1200"
-          height="700"
-          loading="lazy"
-        >
-        <h3>Real estate by municipality</h3>
-      </article>
+        <!-- 2. Employment Hubs -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Are job centers well connected to IC hubs?</p>            <h3>
+            <p>High employment concentration does not guarantee good accessibility to IC hubs. Workers in some job centers face long commutes despite significant employment activity.</p>
+            <p class="chart-note">Showing top 10 cantons by employment</p>
+          </div>
+          <div id="chart-employment" class="chart-container"></div>
+        </article>
+
+        <!-- 3. Wealth Gaps -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does prosperity correlate with better transport access?</p>            <h3>
+            <p>Wealthier cantons do not always enjoy better IC accessibility. Some prosperous regions are geographically isolated, while some lower-income areas benefit from excellent transport networks.</p>
+            <p class="chart-note">Canton-level analysis across Switzerland</p>
+          </div>
+          <div id="chart-wealth" class="chart-container"></div>
+        </article>
+
+        <!-- 4. Density Trade-off -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does density guarantee or prevent isolation?</p>            <h3>
+            <p>Dense urban areas are not always more isolated. Some regions show that high population density correlates with better IC access, while others show the opposite pattern.</p>
+            <p class="chart-note">Faceted analysis by major canton</p>
+          </div>
+          <div id="chart-density" class="chart-container"></div>
+        </article>
       </div>
-    </section>
+
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="js/correlations.js"></script>
+      <script src="js/viz-scatter.js"></script>
+      <script src="js/viz-employment.js"></script>
+      <script src="js/viz-wealth.js"></script>
+      <script src="js/viz-density.js"></script>
+
+      
+</section>
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

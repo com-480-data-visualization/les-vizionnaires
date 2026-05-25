@@ -1,0 +1,67 @@
+      <div class="analysis-grid">
+        <!-- 1. Accessibility Paradox -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Do better connections guarantee higher prices?</p>            <h3>
+            <p>The best connections do not always mean the highest prices. Certain rural areas with excellent IC access have significantly lower property values than isolated suburban regions.</p>
+            <p class="chart-note">Click the map to explore your region</p>
+          </div>
+          <div id="chart-scatter" class="chart-container"></div>
+        </article>
+
+        <!-- 2. Employment Hubs -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Are job centers well connected to IC hubs?</p>            <h3>
+            <p>High employment concentration does not guarantee good accessibility to IC hubs. Workers in some job centers face long commutes despite significant employment activity.</p>
+            <p class="chart-note">Showing top 10 cantons by employment</p>
+          </div>
+          <div id="chart-employment" class="chart-container"></div>
+        </article>
+
+        <!-- 3. Wealth Gaps -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does prosperity correlate with better transport access?</p>            <h3>
+            <p>Wealthier cantons do not always enjoy better IC accessibility. Some prosperous regions are geographically isolated, while some lower-income areas benefit from excellent transport networks.</p>
+            <p class="chart-note">Canton-level analysis across Switzerland</p>
+          </div>
+          <div id="chart-wealth" class="chart-container"></div>
+        </article>
+
+        <!-- 4. Density Trade-off -->
+        <article class="chart-card">
+          <div class="chart-narrative">
+            <p><strong>Question:</strong> Does density guarantee or prevent isolation?</p>            <h3>
+            <p>Dense urban areas are not always more isolated. Some regions show that high population density correlates with better IC access, while others show the opposite pattern.</p>
+            <p class="chart-note">Faceted analysis by major canton</p>
+          </div>
+          <div id="chart-density" class="chart-container"></div>
+        </article>
+      </div>
+
+      <script src="https://d3js.org/d3.v7.min.js"></script>
+      <script src="js/correlations.js"></script>
+      <script src="js/viz-scatter.js"></script>
+      <script src="js/viz-employment.js"></script>
+      <script src="js/viz-wealth.js"></script>
+      <script src="js/viz-density.js"></script>
+
+      <script>
+        // Initialize visualizations when analysis view is shown
+        document.addEventListener('DOMContentLoaded', function() {
+          const viewTabs = document.querySelectorAll('.view-tab');
+          viewTabs.forEach(tab => {
+            tab.addEventListener('click', function() {
+              if (this.getAttribute('data-view') === 'analysis') {
+                setTimeout(function() {
+                  renderScatterPlot('chart-scatter', 'data/correlations/scatter_accessibility_realestate.json');
+                  renderEmploymentChart('chart-employment', 'data/correlations/employment_connectivity.json');
+                  renderWealthChart('chart-wealth', 'data/correlations/wealth_gaps_canton.json');
+                  renderDensityChart('chart-density', 'data/correlations/density_isolation.json');
+                }, 100);
+              }
+            });
+          });
+        });
+      </script>
