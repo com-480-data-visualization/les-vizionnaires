@@ -91,7 +91,7 @@
 
        <section class="control-section" id="maxTravelTimeGroup">
         <label class="field-label" for="maxTravelTime">
-          <span class="field-icon">◔</span>
+          <i class="ph-hourglass-high field-icon"></i>
           <span>Max Travel Time</span>
         </label>
 
@@ -103,15 +103,15 @@
             min="0"
             max="7"
             step="1"
-            value="1"
+            value="7"
           >
-          <div id="maxTravelTimeLabel" class="time-slider-label">30 min</div>
+          <div id="maxTravelTimeLabel" class="time-slider-label">4 h</div>
         </div>
       </section>
 
       <div class="control-section" id="departureTimeGroup">
         <label class="field-label">
-          <span class="field-icon">🕒</span>
+          <i class="ph-clock field-icon"></i>
           Departure time
         </label>
 
@@ -122,6 +122,19 @@
           <button type="button" class="departure-chip" data-time="22:00">22:00</button>
         </div>
       </div>
+
+      <div class="control-section" id="dayTypeGroup">
+        <label class="field-label">
+          <i class="ph-calendar field-icon"></i>
+          Day type
+        </label>
+
+        <div class="day-grid">
+          <button type="button" class="day-chip active" data-day="weekday">Weekday</button>
+          <button type="button" class="day-chip" data-day="weekend">Weekend</button>
+        </div>
+      </div>
+
       <button class="help-button" type="button" aria-label="Help">?</button>
     </aside>
 
@@ -186,8 +199,9 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/h3-js@4.1.0/dist/h3-js.umd.js"></script>
   <script src="js/map.js"></script>
-  <script src="js/nearestIC.js"></script>
+  <script type="module" src="js/nearestIC/overlay.js"></script>
   <script src="js/controls-right.js"></script>
   <script src="js/views.js"></script>
   <script src="js/real-estate.js"></script>
