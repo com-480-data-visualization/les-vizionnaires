@@ -59,6 +59,14 @@
   margin-bottom: 10px;
 }
 
+.reachable-info-origin {
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
 .reachable-info-empty {
   font-size: 20px;
   font-weight: 800;
@@ -70,15 +78,6 @@
   font-size: 14px;
   line-height: 1.4;
   color: #475569;
-}
-
-.reachable-info-origin {
-  font-size: 13px;
-  font-weight: 700;
-  color: #64748b;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 6px;
 }
 
 .reachable-info-count {
