@@ -134,7 +134,7 @@ function renderEmploymentChart(containerId, dataUrl) {
       stats.className = 'correlation-stats';
       stats.innerHTML = `
         <strong>Distribution:</strong> Uniform coverage<br/>
-        <strong>Sample:</strong> ${cantonData.length} cantons analyzed
+        <strong>Sample:</strong> ${cantonData.length} cantons
       `;
       container.appendChild(stats);
       

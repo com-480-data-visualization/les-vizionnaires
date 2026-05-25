@@ -224,8 +224,8 @@
 }
 
 .methodology-box {
-  background: #f0f4f8;
-  border-left: 4px solid #3b82f6;
+  background: #f8fafc;
+  border-left: 6px solid #2563eb;
   padding: 16px 20px;
   margin: 24px 0;
   border-radius: 4px;
@@ -235,6 +235,28 @@
 
 .methodology-box p {
   margin: 0;
+}
+
+.analysis-conclusion {
+  margin-top: 50px;
+  padding: 30px;
+  background: #ffffff;
+  border: 1px solid #dbe4f0;
+  border-radius: 20px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  border-left: 6px solid #2563eb;
+  line-height: 1.7;
+  color: #334155;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.analysis-conclusion h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #1e293b;
+  font-size: 1.5rem;
 }
 
 /* Responsive adjustments */
