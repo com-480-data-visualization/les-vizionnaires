@@ -4,15 +4,18 @@
  */
 
 function renderScatterPlot(containerId, dataUrl) {
-  const margin = { top: 20, right: 20, bottom: 50, left: 60 };
+  const margin = { top: 20, right: 20, bottom: 60, left: 70 };
   const container = document.getElementById(containerId);
-  const width = container.clientWidth - margin.left - margin.right;
-  const height = 400 - margin.top - margin.bottom;
+  const width = Math.min(container.clientWidth - 30, 500) - margin.left - margin.right;
+  const height = 380 - margin.top - margin.bottom;
 
   fetch(dataUrl)
     .then(res => res.json())
     .then(data => {
       if (!data.data || data.data.length === 0) return;
+
+      // Filter out null prices
+      const validData = data.data.filter(d => d.Price_per_m2 != null && !isNaN(d.Price_per_m2) && d.Price_per_m2 > 0);
 
       const svg = d3.select('#' + containerId)
         .append('svg')
@@ -23,41 +26,46 @@ function renderScatterPlot(containerId, dataUrl) {
 
       // Scales
       const xScale = d3.scaleLinear()
-        .domain([0, d3.max(data.data, d => d.avg_travel_time_ic)])
+        .domain([0, d3.max(validData, d => d.avg_travel_time_ic)])
         .range([0, width]);
 
       const yScale = d3.scaleLinear()
-        .domain([0, d3.max(data.data, d => d.Price_per_m2)])
+        .domain([0, d3.max(validData, d => d.Price_per_m2)])
         .range([height, 0]);
 
-      // Axes
+      // X axis
       svg.append('g')
         .attr('transform', 'translate(0,' + height + ')')
-        .call(d3.axisBottom(xScale))
-        .append('text')
+        .call(d3.axisBottom(xScale).ticks(5))
+        .attr('font-size', '12px');
+      
+      svg.append('text')
         .attr('x', width / 2)
-        .attr('y', 40)
-        .attr('fill', 'black')
+        .attr('y', height + 50)
         .attr('text-anchor', 'middle')
+        .attr('font-size', '12px')
+        .attr('fill', '#475569')
         .text('Travel Time to IC (minutes)');
 
+      // Y axis
       svg.append('g')
-        .call(d3.axisLeft(yScale))
-        .append('text')
+        .call(d3.axisLeft(yScale).ticks(5))
+        .attr('font-size', '12px');
+      
+      svg.append('text')
         .attr('transform', 'rotate(-90)')
-        .attr('y', 0 - margin.left)
-        .attr('x', 0 - (height / 2))
-        .attr('dy', '1em')
-        .attr('fill', 'black')
+        .attr('x', -height / 2)
+        .attr('y', -55)
         .attr('text-anchor', 'middle')
-        .text('Real Estate Price (CHF/))');m
+        .attr('font-size', '12px')
+        .attr('fill', '#475569')
+        .text('Real Estate Price (CHF/m²)');
 
       // Points
       svg.selectAll('.point')
-        .data(data.data)
+        .data(validData)
         .enter()
         .append('circle')
-        .attr('class', 'point')
         .attr('cx', d => xScale(d.avg_travel_time_ic))
         .attr('cy', d => yScale(d.Price_per_m2))
         .attr('r', 4)
@@ -74,14 +82,8 @@ function renderScatterPlot(containerId, dataUrl) {
         })
         .on('mouseout', function() {
           d3.select(this).attr('r', 4).attr('opacity', 0.6);
-          document.querySelectorAll('.tooltip').forEach(t => t.remove());
+          const tooltips = document.querySelectorAll('.tooltip');
+          tooltips.forEach(t => t.remove());
         });
-
-      // Stats
-      const stats = document.createElement('div');
-      stats.className = 'correlation-stats';
-      stats.innerHTML = `<strong>Correlation:</strong> r = ${data.correlation.toFixed(3)}<br/><strong>Sample:</strong> ${data.n_data} municipalities`;
-      container.appendChild(stats);
     });
 }
-
