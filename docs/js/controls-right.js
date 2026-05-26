@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     updateSliderState(parseInt(slider.value, 10));
     slider.addEventListener("input", (event) => {
       updateSliderState(parseInt(event.target.value, 10));
-      if (typeof window.updateNearestICOverlay === 'function') {
+      if (rightPanelState.mode === "pointToPoint" && typeof window.updatePointToPointOverlay === 'function') {
+        window.updatePointToPointOverlay(rightPanelState);
+      } else if (typeof window.updateNearestICOverlay === 'function') {
         window.updateNearestICOverlay(rightPanelState);
       }
     });
@@ -49,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideAllOverlays() {
     if (typeof window.hideNearestICOverlay === 'function') window.hideNearestICOverlay();
+    if (typeof window.hidePointToPointOverlay === 'function') window.hidePointToPointOverlay();
     if (typeof window.hideRealEstateOverlay === 'function') window.hideRealEstateOverlay();
     if (typeof window.hideEmploymentOverlay === 'function') window.hideEmploymentOverlay();
     if (typeof window.hideTaxableIncomeOverlay === 'function') window.hideTaxableIncomeOverlay();
@@ -60,12 +63,16 @@ document.addEventListener("DOMContentLoaded", () => {
     hideAllOverlays();
 
     const isNearestIC = mode === "nearestIC";
-    if (sliderGroup) sliderGroup.style.display = isNearestIC ? "" : "none";
-    if (departureTimeGroup) departureTimeGroup.style.display = isNearestIC ? "" : "none";
+    const isPointToPoint = mode === "pointToPoint";
+    const isTravelMode = isNearestIC || isPointToPoint;
+    if (sliderGroup) sliderGroup.style.display = isTravelMode ? "" : "none";
+    if (departureTimeGroup) departureTimeGroup.style.display = isTravelMode ? "" : "none";
     if (dayTypeGroup) dayTypeGroup.style.display = isNearestIC ? "" : "none";
 
     if (mode === "nearestIC" && typeof window.showNearestICOverlay === 'function') {
       await window.showNearestICOverlay(rightPanelState);
+    } else if (mode === "pointToPoint" && typeof window.showPointToPointOverlay === 'function') {
+      await window.showPointToPointOverlay(rightPanelState);
     } else if (mode === "realEstate" && typeof window.showRealEstateOverlay === 'function') {
       await window.showRealEstateOverlay();
     } else if (mode === "employment" && typeof window.showEmploymentOverlay === 'function') {
@@ -92,7 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
       departureButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
       rightPanelState.departureTime = button.dataset.time;
-      if (typeof window.updateNearestICOverlay === 'function') {
+      if (rightPanelState.mode === "pointToPoint" && typeof window.updatePointToPointOverlay === 'function') {
+        window.updatePointToPointOverlay(rightPanelState);
+      } else if (typeof window.updateNearestICOverlay === 'function') {
         window.updateNearestICOverlay(rightPanelState);
       }
     });
