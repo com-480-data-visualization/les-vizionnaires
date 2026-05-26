@@ -115,6 +115,13 @@ function clearSelection() {
   state.travelTimesFromA = null;
 }
 
+function resetToInitialSurface() {
+  clearSelection();
+  drawPolygonSurface();
+  renderInitialInfo();
+  pointToPointMap.closePopup();
+}
+
 function renderInfo(html) {
   const box = document.getElementById("point-to-point-info-box");
   if (box) box.innerHTML = html;
@@ -373,7 +380,7 @@ function selectPointB(feature) {
 async function handlePointClick(feature) {
   try {
     if (state.pointA && state.pointB) {
-      await selectPointA(feature);
+      resetToInitialSurface();
     } else if (!state.pointA) {
       await selectPointA(feature);
     } else {
