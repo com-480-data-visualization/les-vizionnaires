@@ -145,9 +145,12 @@ function reachableCount() {
 }
 
 function renderPointAInfo() {
+  const [lonA, latA] = state.pointA.geometry.coordinates;
+  const coordsA = `${latA.toFixed(4)}, ${lonA.toFixed(4)}`;
+  
   renderInfo(`
     <div class="reachable-info-title">Point A-B travel time</div>
-    <div class="reachable-info-origin">Point A ${state.pointA.properties.id}</div>
+    <div class="reachable-info-origin">Point A: ${coordsA}</div>
     <div class="reachable-info-empty">Select point B</div>
     <div class="reachable-info-empty-muted">
       ${reachableCount()} points reachable within ${formatMinutes(state.maxTravelTime)}.
@@ -157,11 +160,15 @@ function renderPointAInfo() {
 
 function renderResultInfo(minutes) {
   const reachable = minutes != null && minutes <= state.maxTravelTime;
+  const [lonA, latA] = state.pointA.geometry.coordinates;
+  const [lonB, latB] = state.pointB.geometry.coordinates;
+  const coordsA = `${latA.toFixed(4)}, ${lonA.toFixed(4)}`;
+  const coordsB = `${latB.toFixed(4)}, ${lonB.toFixed(4)}`;
 
   renderInfo(`
     <div class="reachable-info-title">Point A-B travel time</div>
     <div class="reachable-info-origin">
-      A ${state.pointA.properties.id} to B ${state.pointB.properties.id}
+      A ${coordsA}<br>B ${coordsB}
     </div>
     <div class="reachable-info-empty" style="color:${reachable ? COLORS.selectedBReachable : COLORS.selectedBUnreachable}">
       ${reachable ? "Reachable" : "Not reachable"}

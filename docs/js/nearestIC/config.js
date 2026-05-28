@@ -31,5 +31,7 @@ export const DEFAULT_REACHABLE_INFO_STATE = {
   activeBucket: "all",
   expanded: false,
   originId: null,
+  originLat: null,
+  originLon: null,
   nearestIcMinutes: null
 };

@@ -93,8 +93,12 @@ export function renderReachableInfo() {
       `
       : "";
 
+  const originDisplayText = state.reachableInfoState.originLat !== null && state.reachableInfoState.originLon !== null
+    ? `${state.reachableInfoState.originLat.toFixed(4)}, ${state.reachableInfoState.originLon.toFixed(4)}`
+    : `Origin ${escapeHtml(state.reachableInfoState.originId)}`;
+
   box.innerHTML = `
-    <div class="reachable-info-origin">Origin ${escapeHtml(state.reachableInfoState.originId)}</div>
+    <div class="reachable-info-origin">${originDisplayText}</div>
     <div class="reachable-info-count">
       ${filtered.length} destination${filtered.length === 1 ? "" : "s"}${state.reachableInfoState.activeBucket === "all" ? ` within ${formatMaxTimeForDisplay(state.currentState.maxTravelTime)}` : ""}
     </div>
@@ -133,6 +137,7 @@ export function updateReachableInfo(data, feature = null, maxTravelTime = 240) {
 
   const normalized = normalizeDestinations(data.destinations || [], maxTravelTime);
   const fallbackOriginId = feature?.properties?.id ?? null;
+  const [originLon, originLat] = feature?.geometry?.coordinates ?? [null, null];
 
   state.reachableInfoState = {
     allDestinations: normalized,
@@ -140,6 +145,8 @@ export function updateReachableInfo(data, feature = null, maxTravelTime = 240) {
     activeBucket: "all",
     expanded: false,
     originId: data.origin_id ?? fallbackOriginId,
+    originLat: originLat,
+    originLon: originLon,
     nearestIcMinutes: data.nearest_ic_minutes ?? null
   };
 
@@ -156,6 +163,8 @@ export function updateReachableInfoEmpty(originId) {
     activeBucket: "all",
     expanded: false,
     originId,
+    originLat: null,
+    originLon: null,
     nearestIcMinutes: null
   };
 
