@@ -203,3 +203,26 @@
 .reachable-info-list::-webkit-scrollbar-track {
   background: transparent;
 }
+
+/* Leaflet popup municipality list scroll */
+.leaflet-popup-content ul {
+  max-height: 140px;
+  overflow-y: auto;
+  margin: 4px 0 6px 16px;
+  padding: 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(148, 163, 184, 0.7) transparent;
+}
+
+.leaflet-popup-content ul::-webkit-scrollbar {
+  width: 6px;
+}
+
+.leaflet-popup-content ul::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.7);
+  border-radius: 999px;
+}
+
+.leaflet-popup-content ul::-webkit-scrollbar-track {
+  background: transparent;
+}
