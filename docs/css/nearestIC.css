@@ -226,3 +226,10 @@
 .leaflet-popup-content ul::-webkit-scrollbar-track {
   background: transparent;
 }
+
+.reachable-info-coords {
+  font-size: 11px;
+  font-weight: 400;
+  color: #94a3b8;
+  letter-spacing: 0.01em;
+}
