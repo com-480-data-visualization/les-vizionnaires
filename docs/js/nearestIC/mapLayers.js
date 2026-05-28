@@ -146,17 +146,28 @@ export function buildHexLayer(onOriginClick) {
     polygon._hexValue = entry.value;
     polygon._hexFeatures = entry.features;
 
-    const count = entry.features.length;
+    const municipalityNames = [...new Set(
+      entry.features
+        .map((f) => f.properties.GDENAME)
+        .filter(Boolean)
+    )].sort();
+
+    const count = municipalityNames.length || entry.features.length;
     const valueText = entry.value == null ? "N/A" : `${Math.round(entry.value)} min`;
+
+    const namesHtml = municipalityNames.length
+      ? municipalityNames.map((n) => `<li>${n}</li>`).join("")
+      : "";
 
     polygon.bindPopup(
       entry.interpolated
         ? `<strong>No municipality in this cell</strong><br/>
-           Estimated nearest IC: ${valueText}<br/>
-           <em>Click to select the nearest origin</em>`
+          Estimated nearest IC: ${valueText}<br/>
+          <em>Click to select the nearest origin</em>`
         : `<strong>${count} municipalit${count === 1 ? "y" : "ies"} in this area</strong><br/>
-           Avg nearest IC: ${valueText}<br/>
-           <em>Click to select the nearest origin</em>`
+          Avg nearest IC: ${valueText}<br/>
+          ${namesHtml ? `<ul style="margin: 4px 0 4px 16px; padding: 0;">${namesHtml}</ul>` : ""}
+          <em>Click to select the nearest origin</em>`
     );
 
     polygon.on("click", (event) => {

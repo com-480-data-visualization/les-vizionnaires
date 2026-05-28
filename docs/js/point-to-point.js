@@ -188,9 +188,17 @@ function reachableCount() {
 }
 
 function renderPointAInfo() {
+  const [lonA, latA] = state.pointA.geometry.coordinates;
+  const coordsA = `${latA.toFixed(4)}, ${lonA.toFixed(4)}`;
+  const { gdename, ktname } = muniForFeature(state.pointA);
+  const originLabel = gdename ? `${gdename}, ${ktname ?? ""}` : coordsA;
+  const labelA = gdename
+  ? `${gdename}, ${ktname ?? ""}<br><span class="reachable-info-coords">${coordsA}</span>`
+  : coordsA;
+
   renderInfo(`
     <div class="reachable-info-title">Point A-B travel time</div>
-    <div class="reachable-info-origin">Point A ${state.pointA.properties.id}</div>
+    <div class="reachable-info-origin">Point A: ${labelA}</div>
     <div class="reachable-info-empty">Select point B</div>
     <div class="reachable-info-empty-muted">
       ${reachableCount()} points reachable within ${formatMinutes(state.maxTravelTime)}.
@@ -200,11 +208,25 @@ function renderPointAInfo() {
 
 function renderResultInfo(minutes) {
   const reachable = minutes != null && minutes <= state.maxTravelTime;
+  const [lonA, latA] = state.pointA.geometry.coordinates;
+  const [lonB, latB] = state.pointB.geometry.coordinates;
+  const { gdename: gdnA, ktname: ktnA } = muniForFeature(state.pointA);
+  const { gdename: gdnB, ktname: ktnB } = muniForFeature(state.pointB);
+
+  const coordsA = `${latA.toFixed(4)}, ${lonA.toFixed(4)}`;
+  const coordsB = `${latB.toFixed(4)}, ${lonB.toFixed(4)}`;
+
+  const labelA = gdnA
+    ? `${gdnA}, ${ktnA ?? ""}<br><span class="reachable-info-coords">${coordsA}</span>`
+    : coordsA;
+  const labelB = gdnB
+    ? `${gdnB}, ${ktnB ?? ""}<br><span class="reachable-info-coords">${coordsB}</span>`
+    : coordsB;
 
   renderInfo(`
     <div class="reachable-info-title">Point A-B travel time</div>
     <div class="reachable-info-origin">
-      A ${state.pointA.properties.id} to B ${state.pointB.properties.id}
+      A: ${labelA}<br><br>B: ${labelB}
     </div>
     <div class="reachable-info-empty" style="color:${reachable ? COLORS.selectedBReachable : COLORS.selectedBUnreachable}">
       ${reachable ? "Reachable" : "Not reachable"}
@@ -307,7 +329,17 @@ async function loadTravelTimes(originId) {
     chunkCache[chunkKey] = await res.json();
   }
 
-  return chunkCache[chunkKey][String(originId)] || {};
+  const entry = chunkCache[chunkKey][String(originId)];
+  if (!entry) return {};
+  return entry.destinations ?? entry; // fallback for old flat structure
+}
+
+function muniForFeature(feature) {
+  if (!feature) return { gdename: null, ktname: null };
+  return {
+    gdename: feature.properties?.GDENAME ?? null,
+    ktname: feature.properties?.KTNAME ?? null
+  };
 }
 
 function averageReachableTime(features) {
@@ -419,12 +451,21 @@ function drawPolygonSurface() {
       renderer: tileRenderer
     });
 
+    const municipalityNames = [...new Set(
+      entry.features.map((feature) => feature.properties.GDENAME).filter(Boolean)
+    )].sort();
+
+    const namesHtml = municipalityNames.length
+      ? `<ul style="margin:4px 0 4px 16px;padding:0;">${municipalityNames.map((n) => `<li>${n}</li>`).join("")}</ul>`
+      : "";
+
     polygon.bindPopup(`
       <strong>${
         entry.interpolated
           ? "3 km hex area"
           : `${entry.features.length} source tile${entry.features.length === 1 ? "" : "s"}`
       }</strong><br/>
+      ${namesHtml}
       ${
         state.pointA
           ? entry.value == null
@@ -499,9 +540,10 @@ function drawSelectedPoints(minutes = null) {
 
 async function selectPointA(feature) {
   clearSelection();
+  chunkCache = {};
   state.pointA = feature;
   state.travelTimesFromA = await loadTravelTimes(feature.properties.id);
-
+  console.log("travelTimesFromA sample:", Object.entries(state.travelTimesFromA).slice(0, 3));
   drawPolygonSurface();
   drawSelectedPoints();
   renderPointAInfo();
