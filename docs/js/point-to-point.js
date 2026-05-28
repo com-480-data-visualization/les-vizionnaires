@@ -45,6 +45,12 @@ let cellsByFeatureId = {};
 let currentHexResolution = null;
 const tileRenderer = L.canvas({ padding: 0.5 });
 
+function setRendererPointerEvents(renderer, value) {
+  if (renderer._container) {
+    renderer._container.style.pointerEvents = value;
+  }
+}
+
 function hourKey() {
   return state.departureTime.replace(":", "");
 }
@@ -148,6 +154,21 @@ function clearSelectionLayer() {
   if (selectedLayer) {
     pointToPointMap.removeLayer(selectedLayer);
     selectedLayer = null;
+  }
+}
+
+function clearPolygonSurface(removeRenderer = false) {
+  if (polygonLayer) {
+    pointToPointMap.removeLayer(polygonLayer);
+    polygonLayer = null;
+  }
+
+  if (removeRenderer) {
+    setRendererPointerEvents(tileRenderer, "none");
+  }
+
+  if (removeRenderer && pointToPointMap.hasLayer(tileRenderer)) {
+    pointToPointMap.removeLayer(tileRenderer);
   }
 }
 
@@ -401,10 +422,8 @@ function fillHexGaps(cells, resolution) {
 function drawPolygonSurface() {
   if (!state.visible || !gridFeatures.length || typeof h3 === "undefined") return;
 
-  if (polygonLayer) {
-    pointToPointMap.removeLayer(polygonLayer);
-    polygonLayer = null;
-  }
+  clearPolygonSurface();
+  setRendererPointerEvents(tileRenderer, "auto");
 
   const resolution = hexResolutionForZoom(pointToPointMap.getZoom());
   currentHexResolution = resolution;
@@ -543,7 +562,6 @@ async function selectPointA(feature) {
   chunkCache = {};
   state.pointA = feature;
   state.travelTimesFromA = await loadTravelTimes(feature.properties.id);
-  console.log("travelTimesFromA sample:", Object.entries(state.travelTimesFromA).slice(0, 3));
   drawPolygonSurface();
   drawSelectedPoints();
   renderPointAInfo();
@@ -596,11 +614,8 @@ function hidePointToPointOverlay() {
   state.visible = false;
   clearSelection();
   pointToPointMap.closePopup();
-
-  if (polygonLayer) {
-    pointToPointMap.removeLayer(polygonLayer);
-    polygonLayer = null;
-  }
+  clearPolygonSurface(true);
+  currentHexResolution = null;
 
   if (infoControl) {
     pointToPointMap.removeControl(infoControl);

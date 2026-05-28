@@ -12,6 +12,12 @@ if (!map) {
 
 export const hexRenderer = L.canvas({ padding: 0.5 });
 
+function setRendererPointerEvents(renderer, value) {
+  if (renderer._container) {
+    renderer._container.style.pointerEvents = value;
+  }
+}
+
 export function clearSelection() {
   if (state.selectedOriginLayer) {
     map.removeLayer(state.selectedOriginLayer);
@@ -118,6 +124,7 @@ export function buildHexLayer(onOriginClick) {
     map.removeLayer(state.accessibilityLayer);
     state.accessibilityLayer = null;
   }
+  setRendererPointerEvents(hexRenderer, "auto");
 
   const cells = new Map();
   state.accessibilityFeatures.forEach((feature) => {
@@ -183,6 +190,9 @@ export function buildHexLayer(onOriginClick) {
 
   if (state.overlayVisible) {
     state.accessibilityLayer.addTo(map);
+    state.accessibilityLayer.eachLayer((layer) => {
+      if (layer.bringToFront) layer.bringToFront();
+    });
   }
 }
 
@@ -282,11 +292,19 @@ export function fitToAccessibilityBounds() {
 }
 
 export function removeAccessibilityLayer() {
-  if (state.accessibilityLayer && state.overlayVisible) {
+  if (state.accessibilityLayer) {
     map.removeLayer(state.accessibilityLayer);
     state.accessibilityLayer = null;
-    state.overlayVisible = false;
   }
+
+  setRendererPointerEvents(hexRenderer, "none");
+
+  if (map.hasLayer(hexRenderer)) {
+    map.removeLayer(hexRenderer);
+  }
+
+  state.currentHexRes = null;
+  state.overlayVisible = false;
 }
 
 export function closeMapPopup() {

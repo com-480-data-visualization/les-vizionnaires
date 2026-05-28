@@ -152,9 +152,12 @@ export async function showAccessibilityOverlay(nextState = {}) {
   await loadAccessibilityData(dayType, departureTime, maxTravelTime);
   await loadReachableData(dayType, departureTime, maxTravelTime);
 
+  clearSelection();
+  closeMapPopup();
+  state.accessibilityDimmed = false;
+
   if (!state.overlayVisible) {
     state.overlayVisible = true;
-    state.accessibilityDimmed = false;
 
     buildHexLayer(onOriginClick);
     bindZoom(zoomHandler);
