@@ -93,12 +93,22 @@ export function renderReachableInfo() {
       `
       : "";
 
-  const originDisplayText = state.reachableInfoState.originLat !== null && state.reachableInfoState.originLon !== null
-    ? `${state.reachableInfoState.originLat.toFixed(4)}, ${state.reachableInfoState.originLon.toFixed(4)}`
-    : `Origin ${escapeHtml(state.reachableInfoState.originId)}`;
+  const gdename = state.reachableInfoState.gdename;
+  const ktname = state.reachableInfoState.ktname;
+
+  const originDisplayText = gdename
+    ? `${escapeHtml(gdename)}, ${escapeHtml(ktname ?? "")}`
+    : state.reachableInfoState.originLat !== null
+      ? `${state.reachableInfoState.originLat.toFixed(4)}, ${state.reachableInfoState.originLon.toFixed(4)}`
+      : `Origin ${escapeHtml(state.reachableInfoState.originId)}`;
+
+  const originSubText = gdename && state.reachableInfoState.originLat !== null
+    ? `<div class="reachable-info-coords">${state.reachableInfoState.originLat.toFixed(4)}, ${state.reachableInfoState.originLon.toFixed(4)}</div>`
+    : "";
 
   box.innerHTML = `
     <div class="reachable-info-origin">${originDisplayText}</div>
+    ${originSubText}
     <div class="reachable-info-count">
       ${filtered.length} destination${filtered.length === 1 ? "" : "s"}${state.reachableInfoState.activeBucket === "all" ? ` within ${formatMaxTimeForDisplay(state.currentState.maxTravelTime)}` : ""}
     </div>
@@ -147,8 +157,10 @@ export function updateReachableInfo(data, feature = null, maxTravelTime = 240) {
     originId: data.origin_id ?? fallbackOriginId,
     originLat: originLat,
     originLon: originLon,
-    nearestIcMinutes: data.nearest_ic_minutes ?? null
-  };
+    nearestIcMinutes: data.nearest_ic_minutes ?? null,
+    gdename: feature?.properties?.GDENAME ?? null,      
+    ktname: feature?.properties?.KTNAME ?? null,        
+};
 
   renderReachableInfo();
 }
@@ -165,9 +177,10 @@ export function updateReachableInfoEmpty(originId) {
     originId,
     originLat: null,
     originLon: null,
-    nearestIcMinutes: null
-  };
-
+    nearestIcMinutes: null,
+    gdename: null,       
+    ktname: null,        
+};
   box.innerHTML = `
     <div class="reachable-info-origin">Origin ${escapeHtml(originId)}</div>
     <div class="reachable-info-empty">0 destinations</div>
