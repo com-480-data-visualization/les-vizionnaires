@@ -1,7 +1,22 @@
 *.DS_Store
-data/*
-gtfs_fp2026_20260314.zip
+
 hs_err_pid54453.log
+
+
+# Fichiers d'archives et de cartes de plus de 100MB
+gtfs_fp2026_20260314.zip
+data/data.zip
+data/gtfs/gtfs_fp2026.zip
+data/processed/gtfs_filtered_no_taxi.zip
+data/switzerland-latest.osm.pbf
+
+# Gros fichiers de données spécifiques
+data/STATENT_2023.csv
+data/gtfs/calendar_dates.txt
+data/gtfs/stop_times.txt
+data/gtfs/trips.txt
+
+# Fichiers GTFS dupliqués dans notebooks
 notebooks/data/gtfs/agency.txt
 notebooks/data/gtfs/calendar_dates.txt
 notebooks/data/gtfs/calendar.txt

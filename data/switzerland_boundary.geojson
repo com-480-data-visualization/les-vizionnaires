@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "switzerland_boundary",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "GDENAME": "Vionnaz", "GDEHISTID": 10078, "GDENR": 6158, "KTNAME": "Valais / Wallis", "KTNR": 23, "KTKZ": "VS" }, "geometry": null }
+]
+}

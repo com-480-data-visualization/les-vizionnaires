@@ -1,0 +1,2116 @@
+﻿GEO_ID,GEO_NAME,TYP_ID,TYP
+1,Aeugst am Albis,23,Commune rurale
+2,Affoltern am Albis,11,Commune urbaine d'une grande agglomération
+3,Bonstetten,22,Commune intermédiaire
+4,Hausen am Albis,22,Commune intermédiaire
+5,Hedingen,11,Commune urbaine d'une grande agglomération
+6,Kappel am Albis,23,Commune rurale
+7,Knonau,22,Commune intermédiaire
+8,Maschwanden,23,Commune rurale
+9,Mettmenstetten,22,Commune intermédiaire
+10,Obfelden,21,Commune intermédiaire
+11,Ottenbach,22,Commune intermédiaire
+12,Rifferswil,23,Commune rurale
+13,Stallikon,22,Commune intermédiaire
+14,Wettswil am Albis,21,Commune intermédiaire
+22,Benken (ZH),23,Commune rurale
+23,Berg am Irchel,22,Commune intermédiaire
+24,Buch am Irchel,23,Commune rurale
+25,Dachsen,22,Commune intermédiaire
+26,Dorf,23,Commune rurale
+27,Feuerthalen,12,Commune urbaine d'une agglomération moyenne
+28,Flaach,22,Commune intermédiaire
+29,Flurlingen,12,Commune urbaine d'une agglomération moyenne
+31,Henggart,22,Commune intermédiaire
+33,Kleinandelfingen,21,Commune intermédiaire
+34,Laufen-Uhwiesen,22,Commune intermédiaire
+35,Marthalen,22,Commune intermédiaire
+37,Ossingen,23,Commune rurale
+38,Rheinau,23,Commune rurale
+39,Thalheim an der Thur,23,Commune rurale
+40,Trüllikon,23,Commune rurale
+41,Truttikon,23,Commune rurale
+43,Volken,22,Commune intermédiaire
+51,Bachenbülach,11,Commune urbaine d'une grande agglomération
+52,Bassersdorf,11,Commune urbaine d'une grande agglomération
+53,Bülach,11,Commune urbaine d'une grande agglomération
+54,Dietlikon,11,Commune urbaine d'une grande agglomération
+55,Eglisau,21,Commune intermédiaire
+56,Embrach,11,Commune urbaine d'une grande agglomération
+57,Freienstein-Teufen,11,Commune urbaine d'une grande agglomération
+58,Glattfelden,22,Commune intermédiaire
+59,Hochfelden,22,Commune intermédiaire
+60,Höri,11,Commune urbaine d'une grande agglomération
+61,Hüntwangen,23,Commune rurale
+62,Kloten,11,Commune urbaine d'une grande agglomération
+63,Lufingen,22,Commune intermédiaire
+64,Nürensdorf,22,Commune intermédiaire
+65,Oberembrach,23,Commune rurale
+66,Opfikon,11,Commune urbaine d'une grande agglomération
+67,Rafz,22,Commune intermédiaire
+68,Rorbas,11,Commune urbaine d'une grande agglomération
+69,Wallisellen,11,Commune urbaine d'une grande agglomération
+70,Wasterkingen,23,Commune rurale
+71,Wil (ZH),23,Commune rurale
+72,Winkel,11,Commune urbaine d'une grande agglomération
+81,Bachs,23,Commune rurale
+82,Boppelsen,23,Commune rurale
+83,Buchs (ZH),11,Commune urbaine d'une grande agglomération
+84,Dällikon,11,Commune urbaine d'une grande agglomération
+85,Dänikon,22,Commune intermédiaire
+86,Dielsdorf,21,Commune intermédiaire
+87,Hüttikon,22,Commune intermédiaire
+88,Neerach,22,Commune intermédiaire
+89,Niederglatt,11,Commune urbaine d'une grande agglomération
+90,Niederhasli,11,Commune urbaine d'une grande agglomération
+91,Niederweningen,22,Commune intermédiaire
+92,Oberglatt,11,Commune urbaine d'une grande agglomération
+93,Oberweningen,22,Commune intermédiaire
+94,Otelfingen,22,Commune intermédiaire
+95,Regensberg,22,Commune intermédiaire
+96,Regensdorf,11,Commune urbaine d'une grande agglomération
+97,Rümlang,21,Commune intermédiaire
+98,Schleinikon,22,Commune intermédiaire
+99,Schöfflisdorf,22,Commune intermédiaire
+100,Stadel,22,Commune intermédiaire
+101,Steinmaur,21,Commune intermédiaire
+102,Weiach,22,Commune intermédiaire
+111,Bäretswil,22,Commune intermédiaire
+112,Bubikon,21,Commune intermédiaire
+113,Dürnten,13,Commune urbaine d'une petite ou hors agglomération
+114,Fischenthal,32,Commune rurale
+115,Gossau (ZH),21,Commune intermédiaire
+116,Grüningen,22,Commune intermédiaire
+117,Hinwil,21,Commune intermédiaire
+118,Rüti (ZH),13,Commune urbaine d'une petite ou hors agglomération
+119,Seegräben,22,Commune intermédiaire
+120,Wald (ZH),21,Commune intermédiaire
+121,Wetzikon (ZH),11,Commune urbaine d'une grande agglomération
+131,Adliswil,11,Commune urbaine d'une grande agglomération
+135,Kilchberg (ZH),11,Commune urbaine d'une grande agglomération
+136,Langnau am Albis,11,Commune urbaine d'une grande agglomération
+137,Oberrieden,11,Commune urbaine d'une grande agglomération
+138,Richterswil,11,Commune urbaine d'une grande agglomération
+139,Rüschlikon,11,Commune urbaine d'une grande agglomération
+141,Thalwil,11,Commune urbaine d'une grande agglomération
+151,Erlenbach (ZH),11,Commune urbaine d'une grande agglomération
+152,Herrliberg,11,Commune urbaine d'une grande agglomération
+153,Hombrechtikon,21,Commune intermédiaire
+154,Küsnacht (ZH),11,Commune urbaine d'une grande agglomération
+155,Männedorf,11,Commune urbaine d'une grande agglomération
+156,Meilen,11,Commune urbaine d'une grande agglomération
+157,Oetwil am See,21,Commune intermédiaire
+158,Stäfa,11,Commune urbaine d'une grande agglomération
+159,Uetikon am See,11,Commune urbaine d'une grande agglomération
+160,Zumikon,11,Commune urbaine d'une grande agglomération
+161,Zollikon,11,Commune urbaine d'une grande agglomération
+172,Fehraltorf,21,Commune intermédiaire
+173,Hittnau,22,Commune intermédiaire
+176,Lindau,22,Commune intermédiaire
+177,Pfäffikon,11,Commune urbaine d'une grande agglomération
+178,Russikon,22,Commune intermédiaire
+180,Weisslingen,22,Commune intermédiaire
+181,Wila,22,Commune intermédiaire
+182,Wildberg,23,Commune rurale
+191,Dübendorf,11,Commune urbaine d'une grande agglomération
+192,Egg,21,Commune intermédiaire
+193,Fällanden,11,Commune urbaine d'une grande agglomération
+194,Greifensee,11,Commune urbaine d'une grande agglomération
+195,Maur,22,Commune intermédiaire
+196,Mönchaltorf,22,Commune intermédiaire
+197,Schwerzenbach,11,Commune urbaine d'une grande agglomération
+198,Uster,11,Commune urbaine d'une grande agglomération
+199,Volketswil,11,Commune urbaine d'une grande agglomération
+200,Wangen-Brüttisellen,11,Commune urbaine d'une grande agglomération
+211,Altikon,23,Commune rurale
+213,Brütten,22,Commune intermédiaire
+214,Dägerlen,23,Commune rurale
+215,Dättlikon,23,Commune rurale
+216,Dinhard,23,Commune rurale
+218,Ellikon an der Thur,23,Commune rurale
+219,Elsau,12,Commune urbaine d'une agglomération moyenne
+220,Hagenbuch,23,Commune rurale
+221,Hettlingen,22,Commune intermédiaire
+223,Neftenbach,12,Commune urbaine d'une agglomération moyenne
+224,Pfungen,22,Commune intermédiaire
+225,Rickenbach (ZH),22,Commune intermédiaire
+226,Schlatt (ZH),23,Commune rurale
+227,Seuzach,21,Commune intermédiaire
+228,Turbenthal,22,Commune intermédiaire
+230,Winterthur,12,Commune urbaine d'une agglomération moyenne
+231,Zell (ZH),22,Commune intermédiaire
+241,Aesch (ZH),23,Commune rurale
+242,Birmensdorf (ZH),21,Commune intermédiaire
+243,Dietikon,11,Commune urbaine d'une grande agglomération
+244,Geroldswil,11,Commune urbaine d'une grande agglomération
+245,Oberengstringen,11,Commune urbaine d'une grande agglomération
+246,Oetwil an der Limmat,11,Commune urbaine d'une grande agglomération
+247,Schlieren,11,Commune urbaine d'une grande agglomération
+248,Uitikon,21,Commune intermédiaire
+249,Unterengstringen,11,Commune urbaine d'une grande agglomération
+250,Urdorf,11,Commune urbaine d'une grande agglomération
+251,Weiningen (ZH),11,Commune urbaine d'une grande agglomération
+261,Zürich,11,Commune urbaine d'une grande agglomération
+291,Andelfingen,21,Commune intermédiaire
+292,Stammheim,32,Commune rurale
+293,Wädenswil,11,Commune urbaine d'une grande agglomération
+294,Elgg,22,Commune intermédiaire
+295,Horgen,11,Commune urbaine d'une grande agglomération
+296,Illnau-Effretikon,11,Commune urbaine d'une grande agglomération
+297,Bauma,22,Commune intermédiaire
+298,Wiesendangen,22,Commune intermédiaire
+301,Aarberg,21,Commune intermédiaire
+302,Bargen (BE),21,Commune intermédiaire
+303,Grossaffoltern,22,Commune intermédiaire
+304,Kallnach,32,Commune rurale
+305,Kappelen,22,Commune intermédiaire
+306,Lyss,13,Commune urbaine d'une petite ou hors agglomération
+307,Meikirch,23,Commune rurale
+309,Radelfingen,23,Commune rurale
+310,Rapperswil (BE),23,Commune rurale
+311,Schüpfen,22,Commune intermédiaire
+312,Seedorf (BE),32,Commune rurale
+321,Aarwangen,32,Commune rurale
+322,Auswil,32,Commune rurale
+323,Bannwil,32,Commune rurale
+324,Bleienbach,32,Commune rurale
+325,Busswil bei Melchnau,32,Commune rurale
+326,Gondiswil,32,Commune rurale
+329,Langenthal,13,Commune urbaine d'une petite ou hors agglomération
+331,Lotzwil,13,Commune urbaine d'une petite ou hors agglomération
+332,Madiswil,32,Commune rurale
+333,Melchnau,32,Commune rurale
+335,Oeschenbach,32,Commune rurale
+336,Reisiswil,32,Commune rurale
+337,Roggwil (BE),32,Commune rurale
+338,Rohrbach,32,Commune rurale
+339,Rohrbachgraben,32,Commune rurale
+340,Rütschelen,32,Commune rurale
+341,Schwarzhäusern,32,Commune rurale
+342,Thunstetten,32,Commune rurale
+344,Ursenbach,32,Commune rurale
+345,Wynau,32,Commune rurale
+351,Bern,11,Commune urbaine d'une grande agglomération
+352,Bolligen,11,Commune urbaine d'une grande agglomération
+353,Bremgarten bei Bern,11,Commune urbaine d'une grande agglomération
+354,Kirchlindach,22,Commune intermédiaire
+355,Köniz,11,Commune urbaine d'une grande agglomération
+356,Muri bei Bern,11,Commune urbaine d'une grande agglomération
+357,Oberbalm,23,Commune rurale
+358,Stettlen,11,Commune urbaine d'une grande agglomération
+359,Vechigen,11,Commune urbaine d'une grande agglomération
+360,Wohlen bei Bern,22,Commune intermédiaire
+361,Zollikofen,11,Commune urbaine d'une grande agglomération
+362,Ittigen,11,Commune urbaine d'une grande agglomération
+363,Ostermundigen,11,Commune urbaine d'une grande agglomération
+371,Biel/Bienne,12,Commune urbaine d'une agglomération moyenne
+372,Evilard,12,Commune urbaine d'une agglomération moyenne
+381,Arch,22,Commune intermédiaire
+382,Büetigen,22,Commune intermédiaire
+383,Büren an der Aare,31,Commune intermédiaire
+385,Diessbach bei Büren,32,Commune rurale
+386,Dotzigen,22,Commune intermédiaire
+387,Lengnau (BE),13,Commune urbaine d'une petite ou hors agglomération
+388,Leuzigen,23,Commune rurale
+389,Meienried,32,Commune rurale
+390,Meinisberg,23,Commune rurale
+391,Oberwil bei Büren,32,Commune rurale
+392,Pieterlen,22,Commune intermédiaire
+393,Rüti bei Büren,23,Commune rurale
+394,Wengi,23,Commune rurale
+401,Aefligen,13,Commune urbaine d'une petite ou hors agglomération
+402,Alchenstorf,32,Commune rurale
+403,Bäriswil,22,Commune intermédiaire
+404,Burgdorf,13,Commune urbaine d'une petite ou hors agglomération
+405,Ersigen,13,Commune urbaine d'une petite ou hors agglomération
+406,Hasle bei Burgdorf,22,Commune intermédiaire
+407,Heimiswil,23,Commune rurale
+408,Hellsau,32,Commune rurale
+409,Hindelbank,22,Commune intermédiaire
+410,Höchstetten,32,Commune rurale
+411,Kernenried,23,Commune rurale
+412,Kirchberg (BE),13,Commune urbaine d'une petite ou hors agglomération
+413,Koppigen,22,Commune intermédiaire
+414,Krauchthal,23,Commune rurale
+415,Lyssach,22,Commune intermédiaire
+418,Oberburg,13,Commune urbaine d'une petite ou hors agglomération
+420,Rüdtligen-Alchenflüh,13,Commune urbaine d'une petite ou hors agglomération
+421,Rumendingen,32,Commune rurale
+422,Rüti bei Lyssach,23,Commune rurale
+423,Willadingen,32,Commune rurale
+424,Wynigen,23,Commune rurale
+431,Corgémont,32,Commune rurale
+432,Cormoret,32,Commune rurale
+433,Cortébert,32,Commune rurale
+434,Courtelary,32,Commune rurale
+435,La Ferrière,23,Commune rurale
+437,Mont-Tramelan,32,Commune rurale
+438,Orvin,23,Commune rurale
+441,Renan (BE),23,Commune rurale
+442,Romont (BE),23,Commune rurale
+443,Saint-Imier,31,Commune intermédiaire
+444,Sonceboz-Sombeval,32,Commune rurale
+445,Sonvilier,33,Commune rurale
+446,Tramelan,31,Commune intermédiaire
+448,Villeret,31,Commune intermédiaire
+449,Sauge,23,Commune rurale
+450,Péry-La Heutte,23,Commune rurale
+491,Brüttelen,32,Commune rurale
+492,Erlach,22,Commune intermédiaire
+493,Finsterhennen,32,Commune rurale
+494,Gals,22,Commune intermédiaire
+495,Gampelen,22,Commune intermédiaire
+496,Ins,31,Commune intermédiaire
+497,Lüscherz,32,Commune rurale
+498,Müntschemier,32,Commune rurale
+499,Siselen,32,Commune rurale
+500,Treiten,32,Commune rurale
+501,Tschugg,32,Commune rurale
+502,Vinelz,32,Commune rurale
+533,Bätterkinden,21,Commune intermédiaire
+535,Deisswil bei Münchenbuchsee,23,Commune rurale
+538,Fraubrunnen,22,Commune intermédiaire
+540,Jegenstorf,21,Commune intermédiaire
+541,Iffwil,23,Commune rurale
+543,Mattstetten,22,Commune intermédiaire
+544,Moosseedorf,11,Commune urbaine d'une grande agglomération
+546,Münchenbuchsee,21,Commune intermédiaire
+551,Urtenen-Schönbühl,11,Commune urbaine d'une grande agglomération
+552,Utzenstorf,21,Commune intermédiaire
+553,Wiggiswil,23,Commune rurale
+554,Wiler bei Utzenstorf,23,Commune rurale
+556,Zielebach,22,Commune intermédiaire
+557,Zuzwil (BE),23,Commune rurale
+561,Adelboden,31,Commune intermédiaire
+562,Aeschi bei Spiez,32,Commune rurale
+563,Frutigen,31,Commune intermédiaire
+564,Kandergrund,33,Commune rurale
+565,Kandersteg,33,Commune rurale
+566,Krattigen,22,Commune intermédiaire
+567,Reichenbach im Kandertal,32,Commune rurale
+571,Beatenberg,23,Commune rurale
+572,Bönigen,13,Commune urbaine d'une petite ou hors agglomération
+573,Brienz (BE),31,Commune intermédiaire
+574,Brienzwiler,33,Commune rurale
+575,Därligen,23,Commune rurale
+576,Grindelwald,31,Commune intermédiaire
+577,Gsteigwiler,32,Commune rurale
+578,Gündlischwand,33,Commune rurale
+579,Habkern,23,Commune rurale
+580,Hofstetten bei Brienz,33,Commune rurale
+581,Interlaken,13,Commune urbaine d'une petite ou hors agglomération
+582,Iseltwald,23,Commune rurale
+584,Lauterbrunnen,33,Commune rurale
+585,Leissigen,23,Commune rurale
+586,Lütschental,33,Commune rurale
+587,Matten bei Interlaken,13,Commune urbaine d'une petite ou hors agglomération
+588,Niederried bei Interlaken,23,Commune rurale
+589,Oberried am Brienzersee,33,Commune rurale
+590,Ringgenberg (BE),22,Commune intermédiaire
+591,Saxeten,23,Commune rurale
+592,Schwanden bei Brienz,31,Commune intermédiaire
+593,Unterseen,13,Commune urbaine d'une petite ou hors agglomération
+594,Wilderswil,22,Commune intermédiaire
+602,Arni (BE),32,Commune rurale
+603,Biglen,22,Commune intermédiaire
+605,Bowil,32,Commune rurale
+606,Brenzikofen,23,Commune rurale
+607,Freimettigen,21,Commune intermédiaire
+608,Grosshöchstetten,22,Commune intermédiaire
+609,Häutligen,23,Commune rurale
+610,Herbligen,23,Commune rurale
+611,Kiesen,22,Commune intermédiaire
+612,Konolfingen,21,Commune intermédiaire
+613,Landiswil,32,Commune rurale
+614,Linden,32,Commune rurale
+615,Mirchel,32,Commune rurale
+616,Münsingen,11,Commune urbaine d'une grande agglomération
+617,Niederhünigen,22,Commune intermédiaire
+619,Oberdiessbach,22,Commune intermédiaire
+620,Oberthal,32,Commune rurale
+622,Oppligen,22,Commune intermédiaire
+623,Rubigen,22,Commune intermédiaire
+626,Walkringen,32,Commune rurale
+627,Worb,21,Commune intermédiaire
+628,Zäziwil,22,Commune intermédiaire
+629,Oberhünigen,32,Commune rurale
+630,Allmendingen,23,Commune rurale
+632,Wichtrach,22,Commune intermédiaire
+662,Ferenbalm,23,Commune rurale
+663,Frauenkappelen,22,Commune intermédiaire
+665,Gurbrü,32,Commune rurale
+666,Kriechenwil,32,Commune rurale
+667,Laupen,21,Commune intermédiaire
+668,Mühleberg,23,Commune rurale
+669,Münchenwiler,13,Commune urbaine d'une petite ou hors agglomération
+670,Neuenegg,21,Commune intermédiaire
+671,Wileroltigen,32,Commune rurale
+681,Belprahon,32,Commune rurale
+683,Champoz,32,Commune rurale
+687,Corcelles (BE),32,Commune rurale
+690,Court,32,Commune rurale
+691,Crémines,32,Commune rurale
+692,Eschert,31,Commune intermédiaire
+694,Grandval,32,Commune rurale
+696,Loveresse,32,Commune rurale
+700,Moutier,31,Commune intermédiaire
+701,Perrefitte,32,Commune rurale
+703,Reconvilier,32,Commune rurale
+704,Roches (BE),32,Commune rurale
+706,Saicourt,32,Commune rurale
+707,Saules (BE),32,Commune rurale
+708,Schelten,32,Commune rurale
+709,Seehof,33,Commune rurale
+711,Sorvilier,32,Commune rurale
+713,Tavannes,32,Commune rurale
+715,Rebévelier,32,Commune rurale
+716,Petit-Val,32,Commune rurale
+717,Valbirse,31,Commune intermédiaire
+723,La Neuveville,21,Commune intermédiaire
+724,Nods,23,Commune rurale
+726,Plateau de Diesse,23,Commune rurale
+731,Aegerten,12,Commune urbaine d'une agglomération moyenne
+732,Bellmund,12,Commune urbaine d'une agglomération moyenne
+733,Brügg,12,Commune urbaine d'une agglomération moyenne
+734,Bühl,23,Commune rurale
+735,Epsach,23,Commune rurale
+736,Hagneck,22,Commune intermédiaire
+737,Hermrigen,23,Commune rurale
+738,Jens,22,Commune intermédiaire
+739,Ipsach,12,Commune urbaine d'une agglomération moyenne
+740,Ligerz,23,Commune rurale
+741,Merzligen,23,Commune rurale
+742,Mörigen,22,Commune intermédiaire
+743,Nidau,12,Commune urbaine d'une agglomération moyenne
+744,Orpund,22,Commune intermédiaire
+745,Port,12,Commune urbaine d'une agglomération moyenne
+746,Safnern,22,Commune intermédiaire
+747,Scheuren,22,Commune intermédiaire
+748,Schwadernau,12,Commune urbaine d'une agglomération moyenne
+749,Studen (BE),12,Commune urbaine d'une agglomération moyenne
+750,Sutz-Lattrigen,22,Commune intermédiaire
+751,Täuffelen,22,Commune intermédiaire
+754,Walperswil,23,Commune rurale
+755,Worben,12,Commune urbaine d'une agglomération moyenne
+756,Twann-Tüscherz,23,Commune rurale
+761,Därstetten,33,Commune rurale
+762,Diemtigen,33,Commune rurale
+763,Erlenbach im Simmental,32,Commune rurale
+766,Oberwil im Simmental,33,Commune rurale
+767,Reutigen,23,Commune rurale
+768,Spiez,13,Commune urbaine d'une petite ou hors agglomération
+769,Wimmis,22,Commune intermédiaire
+770,Stocken-Höfen,23,Commune rurale
+782,Guttannen,33,Commune rurale
+783,Hasliberg,33,Commune rurale
+784,Innertkirchen,33,Commune rurale
+785,Meiringen,31,Commune intermédiaire
+786,Schattenhalb,31,Commune intermédiaire
+791,Boltigen,33,Commune rurale
+792,Lenk,33,Commune rurale
+793,St. Stephan,33,Commune rurale
+794,Zweisimmen,33,Commune rurale
+841,Gsteig,33,Commune rurale
+842,Lauenen,33,Commune rurale
+843,Saanen,31,Commune intermédiaire
+852,Guggisberg,33,Commune rurale
+853,Rüschegg,33,Commune rurale
+855,Schwarzenburg,22,Commune intermédiaire
+861,Belp,21,Commune intermédiaire
+863,Burgistein,23,Commune rurale
+866,Gerzensee,23,Commune rurale
+867,Gurzelen,22,Commune intermédiaire
+868,Jaberg,22,Commune intermédiaire
+869,Kaufdorf,22,Commune intermédiaire
+870,Kehrsatz,11,Commune urbaine d'une grande agglomération
+872,Kirchdorf (BE),23,Commune rurale
+877,Niedermuhlern,23,Commune rurale
+879,Riggisberg,31,Commune intermédiaire
+880,Rüeggisberg,33,Commune rurale
+883,Seftigen,22,Commune intermédiaire
+884,Toffen,22,Commune intermédiaire
+885,Uttigen,22,Commune intermédiaire
+886,Wattenwil,22,Commune intermédiaire
+888,Wald (BE),23,Commune rurale
+889,Thurnen,22,Commune intermédiaire
+901,Eggiwil,33,Commune rurale
+902,Langnau im Emmental,31,Commune intermédiaire
+903,Lauperswil,32,Commune rurale
+904,Röthenbach im Emmental,33,Commune rurale
+905,Rüderswil,32,Commune rurale
+906,Schangnau,33,Commune rurale
+907,Signau,32,Commune rurale
+908,Trub,33,Commune rurale
+909,Trubschachen,33,Commune rurale
+921,Amsoldingen,23,Commune rurale
+922,Blumenstein,22,Commune intermédiaire
+923,Buchholterberg,23,Commune rurale
+924,Eriz,23,Commune rurale
+925,Fahrni,23,Commune rurale
+927,Heiligenschwendi,23,Commune rurale
+928,Heimberg,12,Commune urbaine d'une agglomération moyenne
+929,Hilterfingen,12,Commune urbaine d'une agglomération moyenne
+931,Homberg,23,Commune rurale
+932,Horrenbach-Buchen,23,Commune rurale
+934,Oberhofen am Thunersee,12,Commune urbaine d'une agglomération moyenne
+935,Oberlangenegg,23,Commune rurale
+936,Pohlern,23,Commune rurale
+938,Sigriswil,22,Commune intermédiaire
+939,Steffisburg,12,Commune urbaine d'une agglomération moyenne
+940,Teuffenthal (BE),23,Commune rurale
+941,Thierachern,22,Commune intermédiaire
+942,Thun,12,Commune urbaine d'une agglomération moyenne
+943,Uebeschi,23,Commune rurale
+944,Uetendorf,21,Commune intermédiaire
+945,Unterlangenegg,23,Commune rurale
+946,Wachseldorn,33,Commune rurale
+948,Forst-Längenbühl,22,Commune intermédiaire
+951,Affoltern im Emmental,32,Commune rurale
+952,Dürrenroth,32,Commune rurale
+953,Eriswil,32,Commune rurale
+954,Huttwil,31,Commune intermédiaire
+955,Lützelflüh,32,Commune rurale
+956,Rüegsau,22,Commune intermédiaire
+957,Sumiswald,32,Commune rurale
+958,Trachselwald,33,Commune rurale
+959,Walterswil (BE),32,Commune rurale
+960,Wyssachen,32,Commune rurale
+971,Attiswil,32,Commune rurale
+972,Berken,32,Commune rurale
+973,Bettenhausen,32,Commune rurale
+975,Farnern,32,Commune rurale
+976,Graben,32,Commune rurale
+977,Heimenhausen,32,Commune rurale
+979,Herzogenbuchsee,13,Commune urbaine d'une petite ou hors agglomération
+980,Inkwil,32,Commune rurale
+981,Niederbipp,13,Commune urbaine d'une petite ou hors agglomération
+982,Niederönz,13,Commune urbaine d'une petite ou hors agglomération
+983,Oberbipp,32,Commune rurale
+985,Ochlenberg,32,Commune rurale
+987,Rumisberg,32,Commune rurale
+988,Seeberg,32,Commune rurale
+989,Thörigen,32,Commune rurale
+990,Walliswil bei Niederbipp,32,Commune rurale
+991,Walliswil bei Wangen,32,Commune rurale
+992,Wangen an der Aare,32,Commune rurale
+995,Wiedlisbach,32,Commune rurale
+1001,Doppleschwand,32,Commune rurale
+1002,Entlebuch,32,Commune rurale
+1004,Flühli,33,Commune rurale
+1005,Hasle (LU),33,Commune rurale
+1007,Romoos,33,Commune rurale
+1008,Schüpfheim,31,Commune intermédiaire
+1009,Werthenstein,32,Commune rurale
+1010,Escholzmatt-Marbach,33,Commune rurale
+1021,Aesch (LU),32,Commune rurale
+1023,Ballwil,22,Commune intermédiaire
+1024,Emmen,12,Commune urbaine d'une agglomération moyenne
+1025,Ermensee,31,Commune intermédiaire
+1026,Eschenbach (LU),22,Commune intermédiaire
+1030,Hitzkirch,31,Commune intermédiaire
+1031,Hochdorf,13,Commune urbaine d'une petite ou hors agglomération
+1032,Hohenrain,32,Commune rurale
+1033,Inwil,22,Commune intermédiaire
+1037,Rain,22,Commune intermédiaire
+1039,Römerswil,32,Commune rurale
+1040,Rothenburg,12,Commune urbaine d'une agglomération moyenne
+1041,Schongau,32,Commune rurale
+1051,Adligenswil,12,Commune urbaine d'une agglomération moyenne
+1052,Buchrain,12,Commune urbaine d'une agglomération moyenne
+1053,Dierikon,12,Commune urbaine d'une agglomération moyenne
+1054,Ebikon,12,Commune urbaine d'une agglomération moyenne
+1055,Gisikon,21,Commune intermédiaire
+1056,Greppen,22,Commune intermédiaire
+1058,Horw,12,Commune urbaine d'une agglomération moyenne
+1059,Kriens,12,Commune urbaine d'une agglomération moyenne
+1061,Luzern,12,Commune urbaine d'une agglomération moyenne
+1062,Malters,21,Commune intermédiaire
+1063,Meggen,12,Commune urbaine d'une agglomération moyenne
+1064,Meierskappel,22,Commune intermédiaire
+1065,Root,21,Commune intermédiaire
+1066,Schwarzenberg,23,Commune rurale
+1067,Udligenswil,22,Commune intermédiaire
+1068,Vitznau,32,Commune rurale
+1069,Weggis,21,Commune intermédiaire
+1081,Beromünster,31,Commune intermédiaire
+1082,Büron,32,Commune rurale
+1083,Buttisholz,31,Commune intermédiaire
+1084,Eich,32,Commune rurale
+1085,Geuensee,32,Commune rurale
+1086,Grosswangen,31,Commune intermédiaire
+1088,Hildisrieden,32,Commune rurale
+1089,Knutwil,32,Commune rurale
+1091,Mauensee,32,Commune rurale
+1093,Neuenkirch,22,Commune intermédiaire
+1094,Nottwil,32,Commune rurale
+1095,Oberkirch,13,Commune urbaine d'une petite ou hors agglomération
+1097,Rickenbach (LU),32,Commune rurale
+1098,Ruswil,31,Commune intermédiaire
+1099,Schenkon,13,Commune urbaine d'une petite ou hors agglomération
+1100,Schlierbach,32,Commune rurale
+1102,Sempach,32,Commune rurale
+1103,Sursee,13,Commune urbaine d'une petite ou hors agglomération
+1104,Triengen,31,Commune intermédiaire
+1107,Wolhusen,31,Commune intermédiaire
+1121,Alberswil,32,Commune rurale
+1122,Altbüron,32,Commune rurale
+1123,Altishofen,31,Commune intermédiaire
+1125,Dagmersellen,32,Commune rurale
+1127,Egolzwil,32,Commune rurale
+1128,Ettiswil,32,Commune rurale
+1129,Fischbach,32,Commune rurale
+1131,Grossdietwil,32,Commune rurale
+1132,Hergiswil bei Willisau,32,Commune rurale
+1135,Luthern,32,Commune rurale
+1136,Menznau,32,Commune rurale
+1137,Nebikon,31,Commune intermédiaire
+1139,Pfaffnau,32,Commune rurale
+1140,Reiden,32,Commune rurale
+1142,Roggliswil,32,Commune rurale
+1143,Schötz,31,Commune intermédiaire
+1145,Ufhusen,32,Commune rurale
+1146,Wauwil,32,Commune rurale
+1147,Wikon,12,Commune urbaine d'une agglomération moyenne
+1150,Zell (LU),32,Commune rurale
+1151,Willisau,31,Commune intermédiaire
+1201,Altdorf (UR),13,Commune urbaine d'une petite ou hors agglomération
+1202,Andermatt,31,Commune intermédiaire
+1203,Attinghausen,13,Commune urbaine d'une petite ou hors agglomération
+1205,Bürglen (UR),13,Commune urbaine d'une petite ou hors agglomération
+1206,Erstfeld,22,Commune intermédiaire
+1207,Flüelen,13,Commune urbaine d'une petite ou hors agglomération
+1208,Göschenen,33,Commune rurale
+1209,Gurtnellen,33,Commune rurale
+1210,Hospental,33,Commune rurale
+1211,Isenthal,33,Commune rurale
+1212,Realp,33,Commune rurale
+1213,Schattdorf,13,Commune urbaine d'une petite ou hors agglomération
+1214,Seedorf (UR),22,Commune intermédiaire
+1215,Seelisberg,32,Commune rurale
+1216,Silenen,23,Commune rurale
+1217,Sisikon,23,Commune rurale
+1218,Spiringen,23,Commune rurale
+1219,Unterschächen,23,Commune rurale
+1220,Wassen,33,Commune rurale
+1301,Einsiedeln,13,Commune urbaine d'une petite ou hors agglomération
+1311,Gersau,32,Commune rurale
+1321,Feusisberg,22,Commune intermédiaire
+1322,Freienbach,11,Commune urbaine d'une grande agglomération
+1323,Wollerau,11,Commune urbaine d'une grande agglomération
+1331,Küssnacht (SZ),13,Commune urbaine d'une petite ou hors agglomération
+1341,Altendorf,13,Commune urbaine d'une petite ou hors agglomération
+1342,Galgenen,22,Commune intermédiaire
+1343,Innerthal,23,Commune rurale
+1344,Lachen,13,Commune urbaine d'une petite ou hors agglomération
+1345,Reichenburg,22,Commune intermédiaire
+1346,Schübelbach,13,Commune urbaine d'une petite ou hors agglomération
+1347,Tuggen,22,Commune intermédiaire
+1348,Vorderthal,23,Commune rurale
+1349,Wangen (SZ),13,Commune urbaine d'une petite ou hors agglomération
+1361,Alpthal,32,Commune rurale
+1362,Arth,13,Commune urbaine d'une petite ou hors agglomération
+1363,Illgau,32,Commune rurale
+1364,Ingenbohl,31,Commune intermédiaire
+1365,Lauerz,32,Commune rurale
+1366,Morschach,32,Commune rurale
+1367,Muotathal,31,Commune intermédiaire
+1368,Oberiberg,32,Commune rurale
+1369,Riemenstalden,32,Commune rurale
+1370,Rothenthurm,32,Commune rurale
+1371,Sattel,32,Commune rurale
+1372,Schwyz,13,Commune urbaine d'une petite ou hors agglomération
+1373,Steinen,32,Commune rurale
+1374,Steinerberg,32,Commune rurale
+1375,Unteriberg,32,Commune rurale
+1401,Alpnach,32,Commune rurale
+1402,Engelberg,31,Commune intermédiaire
+1403,Giswil,32,Commune rurale
+1404,Kerns,32,Commune rurale
+1405,Lungern,32,Commune rurale
+1406,Sachseln,31,Commune intermédiaire
+1407,Sarnen,13,Commune urbaine d'une petite ou hors agglomération
+1501,Beckenried,32,Commune rurale
+1502,Buochs,32,Commune rurale
+1503,Dallenwil,32,Commune rurale
+1504,Emmetten,32,Commune rurale
+1505,Ennetbürgen,32,Commune rurale
+1506,Ennetmoos,32,Commune rurale
+1507,Hergiswil (NW),21,Commune intermédiaire
+1508,Oberdorf (NW),13,Commune urbaine d'une petite ou hors agglomération
+1509,Stans,13,Commune urbaine d'une petite ou hors agglomération
+1510,Stansstad,13,Commune urbaine d'une petite ou hors agglomération
+1511,Wolfenschiessen,32,Commune rurale
+1630,Glarus Nord,13,Commune urbaine d'une petite ou hors agglomération
+1631,Glarus Süd,33,Commune rurale
+1632,Glarus,13,Commune urbaine d'une petite ou hors agglomération
+1701,Baar,12,Commune urbaine d'une agglomération moyenne
+1702,Cham,12,Commune urbaine d'une agglomération moyenne
+1703,Hünenberg,12,Commune urbaine d'une agglomération moyenne
+1704,Menzingen,22,Commune intermédiaire
+1705,Neuheim,22,Commune intermédiaire
+1706,Oberägeri,12,Commune urbaine d'une agglomération moyenne
+1707,Risch,12,Commune urbaine d'une agglomération moyenne
+1708,Steinhausen,12,Commune urbaine d'une agglomération moyenne
+1709,Unterägeri,12,Commune urbaine d'une agglomération moyenne
+1710,Walchwil,22,Commune intermédiaire
+1711,Zug,12,Commune urbaine d'une agglomération moyenne
+2008,Châtillon (FR),32,Commune rurale
+2011,Cugy (FR),32,Commune rurale
+2016,Fétigny,32,Commune rurale
+2022,Gletterens,32,Commune rurale
+2025,Lully (FR),32,Commune rurale
+2027,Ménières,32,Commune rurale
+2029,Montagny (FR),32,Commune rurale
+2035,Nuvilly,32,Commune rurale
+2038,Prévondavaux,32,Commune rurale
+2041,Saint-Aubin (FR),32,Commune rurale
+2043,Sévaz,32,Commune rurale
+2044,Surpierre,32,Commune rurale
+2045,Vallon,32,Commune rurale
+2050,Les Montets,32,Commune rurale
+2051,Delley-Portalban,32,Commune rurale
+2053,Belmont-Broye,32,Commune rurale
+2054,Estavayer,31,Commune intermédiaire
+2055,Cheyres-Châbles,32,Commune rurale
+2063,Billens-Hennens,32,Commune rurale
+2067,Le Châtelard,32,Commune rurale
+2068,Châtonnaye,32,Commune rurale
+2079,Grangettes,32,Commune rurale
+2086,Massonnens,32,Commune rurale
+2087,Mézières (FR),32,Commune rurale
+2096,Romont (FR),31,Commune intermédiaire
+2097,Rue,23,Commune rurale
+2099,Siviriez,32,Commune rurale
+2102,Ursy,32,Commune rurale
+2113,Vuisternens-devant-Romont,32,Commune rurale
+2114,Villorsonnens,32,Commune rurale
+2115,Torny,32,Commune rurale
+2117,Villaz,32,Commune rurale
+2121,Haut-Intyamon,33,Commune rurale
+2122,Pont-en-Ogoz,23,Commune rurale
+2123,Botterens,32,Commune rurale
+2124,Broc,22,Commune intermédiaire
+2125,Bulle,13,Commune urbaine d'une petite ou hors agglomération
+2128,Châtel-sur-Montsalvens,23,Commune rurale
+2129,Corbières,23,Commune rurale
+2130,Crésuz,32,Commune rurale
+2131,Echarlens,13,Commune urbaine d'une petite ou hors agglomération
+2134,Grandvillard,32,Commune rurale
+2135,Gruyères,22,Commune intermédiaire
+2137,Hauteville,23,Commune rurale
+2138,Jaun,33,Commune rurale
+2140,Marsens,22,Commune intermédiaire
+2143,Morlon,13,Commune urbaine d'une petite ou hors agglomération
+2145,Le Pâquier (FR),23,Commune rurale
+2147,Pont-la-Ville,23,Commune rurale
+2148,Riaz,13,Commune urbaine d'une petite ou hors agglomération
+2149,La Roche,32,Commune rurale
+2152,Sâles,23,Commune rurale
+2153,Sorens,23,Commune rurale
+2155,Vaulruz,23,Commune rurale
+2160,Vuadens,13,Commune urbaine d'une petite ou hors agglomération
+2162,Bas-Intyamon,23,Commune rurale
+2163,Val-de-Charmey,32,Commune rurale
+2173,Autigny,32,Commune rurale
+2174,Avry,22,Commune intermédiaire
+2175,Belfaux,12,Commune urbaine d'une agglomération moyenne
+2177,Chénens,32,Commune rurale
+2183,Corminboeuf,12,Commune urbaine d'une agglomération moyenne
+2186,Cottens (FR),23,Commune rurale
+2194,Ferpicloz,22,Commune intermédiaire
+2196,Fribourg,12,Commune urbaine d'une agglomération moyenne
+2197,Givisiez,12,Commune urbaine d'une agglomération moyenne
+2198,Granges-Paccot,12,Commune urbaine d'une agglomération moyenne
+2206,Marly,21,Commune intermédiaire
+2208,Matran,22,Commune intermédiaire
+2211,Neyruz (FR),22,Commune intermédiaire
+2216,Pierrafortscha,23,Commune rurale
+2220,Le Mouret,22,Commune intermédiaire
+2226,Treyvaux,22,Commune intermédiaire
+2228,Villars-sur-Glâne,12,Commune urbaine d'une agglomération moyenne
+2230,Villarsel-sur-Marly,23,Commune rurale
+2233,Hauterive (FR),22,Commune intermédiaire
+2234,La Brillaz,32,Commune rurale
+2235,La Sonnaz,22,Commune intermédiaire
+2236,Gibloux,22,Commune intermédiaire
+2237,Prez,32,Commune rurale
+2238,Bois-d'Amont,32,Commune rurale
+2239,Grolley-Ponthaux,22,Commune intermédiaire
+2250,Courgevaux,13,Commune urbaine d'une petite ou hors agglomération
+2254,Courtepin,21,Commune intermédiaire
+2257,Cressier (FR),32,Commune rurale
+2258,Fräschels,23,Commune rurale
+2261,Greng,32,Commune rurale
+2262,Gurmels,32,Commune rurale
+2265,Kerzers,21,Commune intermédiaire
+2266,Kleinbösingen,22,Commune intermédiaire
+2271,Meyriez,13,Commune urbaine d'une petite ou hors agglomération
+2272,Misery-Courtion,32,Commune rurale
+2274,Muntelier,13,Commune urbaine d'une petite ou hors agglomération
+2275,Murten,13,Commune urbaine d'une petite ou hors agglomération
+2276,Ried bei Kerzers,32,Commune rurale
+2278,Ulmiz,23,Commune rurale
+2284,Mont-Vully,22,Commune intermédiaire
+2292,Brünisried,32,Commune rurale
+2293,Düdingen,21,Commune intermédiaire
+2294,Giffers,22,Commune intermédiaire
+2295,Bösingen,21,Commune intermédiaire
+2296,Heitenried,32,Commune rurale
+2299,Plaffeien,31,Commune intermédiaire
+2300,Plasselb,32,Commune rurale
+2301,Rechthalten,32,Commune rurale
+2303,St. Silvester,32,Commune rurale
+2304,St. Ursen,23,Commune rurale
+2305,Schmitten (FR),22,Commune intermédiaire
+2306,Tafers,23,Commune rurale
+2307,Tentlingen,22,Commune intermédiaire
+2308,Ueberstorf,23,Commune rurale
+2309,Wünnewil-Flamatt,21,Commune intermédiaire
+2321,Attalens,22,Commune intermédiaire
+2323,Bossonnens,22,Commune intermédiaire
+2325,Châtel-Saint-Denis,21,Commune intermédiaire
+2328,Granges (Veveyse),23,Commune rurale
+2333,Remaufens,22,Commune intermédiaire
+2335,Saint-Martin (FR),32,Commune rurale
+2336,Semsales,23,Commune rurale
+2337,Le Flon,32,Commune rurale
+2338,La Verrerie,32,Commune rurale
+2401,Egerkingen,32,Commune rurale
+2402,Härkingen,22,Commune intermédiaire
+2403,Kestenholz,32,Commune rurale
+2404,Neuendorf,32,Commune rurale
+2405,Niederbuchsiten,32,Commune rurale
+2406,Oberbuchsiten,32,Commune rurale
+2407,Oensingen,13,Commune urbaine d'une petite ou hors agglomération
+2408,Wolfwil,32,Commune rurale
+2421,Aedermannsdorf,32,Commune rurale
+2422,Balsthal,32,Commune rurale
+2424,Herbetswil,32,Commune rurale
+2425,Holderbank (SO),32,Commune rurale
+2426,Laupersdorf,32,Commune rurale
+2427,Matzendorf,32,Commune rurale
+2428,Mümliswil-Ramiswil,32,Commune rurale
+2430,Welschenrohr-Gänsbrunnen,32,Commune rurale
+2445,Biezwil,23,Commune rurale
+2455,Lüterkofen-Ichertswil,22,Commune intermédiaire
+2457,Messen,23,Commune rurale
+2461,Schnottwil,23,Commune rurale
+2463,Unterramsern,23,Commune rurale
+2464,Lüsslingen-Nennigkofen,23,Commune rurale
+2465,Buchegg,23,Commune rurale
+2471,Bättwil,22,Commune intermédiaire
+2472,Büren (SO),23,Commune rurale
+2473,Dornach,11,Commune urbaine d'une grande agglomération
+2474,Gempen,23,Commune rurale
+2475,Hochwald,23,Commune rurale
+2476,Hofstetten-Flüh,22,Commune intermédiaire
+2477,Metzerlen-Mariastein,23,Commune rurale
+2478,Nuglar-St. Pantaleon,23,Commune rurale
+2479,Rodersdorf,23,Commune rurale
+2480,Seewen,23,Commune rurale
+2481,Witterswil,22,Commune intermédiaire
+2491,Hauenstein-Ifenthal,23,Commune rurale
+2492,Kienberg,23,Commune rurale
+2493,Lostorf,22,Commune intermédiaire
+2495,Niedergösgen,12,Commune urbaine d'une agglomération moyenne
+2497,Obergösgen,12,Commune urbaine d'une agglomération moyenne
+2499,Stüsslingen,23,Commune rurale
+2500,Trimbach,12,Commune urbaine d'une agglomération moyenne
+2501,Winznau,12,Commune urbaine d'une agglomération moyenne
+2502,Wisen (SO),23,Commune rurale
+2503,Erlinsbach (SO),12,Commune urbaine d'une agglomération moyenne
+2511,Aeschi (SO),22,Commune intermédiaire
+2513,Biberist,12,Commune urbaine d'une agglomération moyenne
+2514,Bolken,22,Commune intermédiaire
+2516,Deitingen,22,Commune intermédiaire
+2517,Derendingen,12,Commune urbaine d'une agglomération moyenne
+2518,Etziken,22,Commune intermédiaire
+2519,Gerlafingen,12,Commune urbaine d'une agglomération moyenne
+2520,Halten,21,Commune intermédiaire
+2523,Horriwil,22,Commune intermédiaire
+2524,Hüniken,22,Commune intermédiaire
+2525,Kriegstetten,21,Commune intermédiaire
+2526,Lohn-Ammannsegg,22,Commune intermédiaire
+2527,Luterbach,22,Commune intermédiaire
+2528,Obergerlafingen,21,Commune intermédiaire
+2529,Oekingen,21,Commune intermédiaire
+2530,Recherswil,21,Commune intermédiaire
+2532,Subingen,12,Commune urbaine d'une agglomération moyenne
+2534,Zuchwil,12,Commune urbaine d'une agglomération moyenne
+2535,Drei Höfe,23,Commune rurale
+2541,Balm bei Günsberg,23,Commune rurale
+2542,Bellach,12,Commune urbaine d'une agglomération moyenne
+2543,Bettlach,13,Commune urbaine d'une petite ou hors agglomération
+2544,Feldbrunnen-St. Niklaus,12,Commune urbaine d'une agglomération moyenne
+2545,Flumenthal,22,Commune intermédiaire
+2546,Grenchen,13,Commune urbaine d'une petite ou hors agglomération
+2547,Günsberg,23,Commune rurale
+2548,Hubersdorf,22,Commune intermédiaire
+2549,Kammersrohr,32,Commune rurale
+2550,Langendorf,12,Commune urbaine d'une agglomération moyenne
+2551,Lommiswil,23,Commune rurale
+2553,Oberdorf (SO),12,Commune urbaine d'une agglomération moyenne
+2554,Riedholz,22,Commune intermédiaire
+2555,Rüttenen,22,Commune intermédiaire
+2556,Selzach,22,Commune intermédiaire
+2571,Boningen,23,Commune rurale
+2572,Däniken,12,Commune urbaine d'une agglomération moyenne
+2573,Dulliken,12,Commune urbaine d'une agglomération moyenne
+2574,Eppenberg-Wöschnau,12,Commune urbaine d'une agglomération moyenne
+2575,Fulenbach,32,Commune rurale
+2576,Gretzenbach,12,Commune urbaine d'une agglomération moyenne
+2578,Gunzgen,32,Commune rurale
+2579,Hägendorf,12,Commune urbaine d'une agglomération moyenne
+2580,Kappel (SO),12,Commune urbaine d'une agglomération moyenne
+2581,Olten,12,Commune urbaine d'une agglomération moyenne
+2582,Rickenbach (SO),12,Commune urbaine d'une agglomération moyenne
+2583,Schönenwerd,12,Commune urbaine d'une agglomération moyenne
+2584,Starrkirch-Wil,12,Commune urbaine d'une agglomération moyenne
+2585,Walterswil (SO),21,Commune intermédiaire
+2586,Wangen bei Olten,12,Commune urbaine d'une agglomération moyenne
+2601,Solothurn,12,Commune urbaine d'une agglomération moyenne
+2611,Bärschwil,23,Commune rurale
+2612,Beinwil (SO),32,Commune rurale
+2613,Breitenbach,21,Commune intermédiaire
+2614,Büsserach,21,Commune intermédiaire
+2615,Erschwil,23,Commune rurale
+2616,Fehren,23,Commune rurale
+2617,Grindel,23,Commune rurale
+2618,Himmelried,23,Commune rurale
+2619,Kleinlützel,23,Commune rurale
+2620,Meltingen,22,Commune intermédiaire
+2621,Nunningen,22,Commune intermédiaire
+2622,Zullwil,22,Commune intermédiaire
+2701,Basel,11,Commune urbaine d'une grande agglomération
+2702,Bettingen,11,Commune urbaine d'une grande agglomération
+2703,Riehen,11,Commune urbaine d'une grande agglomération
+2761,Aesch (BL),11,Commune urbaine d'une grande agglomération
+2762,Allschwil,11,Commune urbaine d'une grande agglomération
+2763,Arlesheim,11,Commune urbaine d'une grande agglomération
+2764,Biel-Benken,11,Commune urbaine d'une grande agglomération
+2765,Binningen,11,Commune urbaine d'une grande agglomération
+2766,Birsfelden,11,Commune urbaine d'une grande agglomération
+2767,Bottmingen,11,Commune urbaine d'une grande agglomération
+2768,Ettingen,21,Commune intermédiaire
+2769,Münchenstein,11,Commune urbaine d'une grande agglomération
+2770,Muttenz,11,Commune urbaine d'une grande agglomération
+2771,Oberwil (BL),11,Commune urbaine d'une grande agglomération
+2772,Pfeffingen,11,Commune urbaine d'une grande agglomération
+2773,Reinach (BL),11,Commune urbaine d'une grande agglomération
+2774,Schönenbuch,22,Commune intermédiaire
+2775,Therwil,11,Commune urbaine d'une grande agglomération
+2781,Blauen,23,Commune rurale
+2782,Brislach,21,Commune intermédiaire
+2783,Burg im Leimental,23,Commune rurale
+2784,Dittingen,22,Commune intermédiaire
+2785,Duggingen,22,Commune intermédiaire
+2786,Grellingen,22,Commune intermédiaire
+2787,Laufen,21,Commune intermédiaire
+2788,Liesberg,23,Commune rurale
+2789,Nenzlingen,23,Commune rurale
+2790,Roggenburg,32,Commune rurale
+2791,Röschenz,21,Commune intermédiaire
+2792,Wahlen,22,Commune intermédiaire
+2793,Zwingen,22,Commune intermédiaire
+2821,Arisdorf,22,Commune intermédiaire
+2822,Augst,11,Commune urbaine d'une grande agglomération
+2823,Bubendorf,21,Commune intermédiaire
+2824,Frenkendorf,11,Commune urbaine d'une grande agglomération
+2825,Füllinsdorf,11,Commune urbaine d'une grande agglomération
+2826,Giebenach,23,Commune rurale
+2827,Hersberg,23,Commune rurale
+2828,Lausen,11,Commune urbaine d'une grande agglomération
+2829,Liestal,11,Commune urbaine d'une grande agglomération
+2830,Lupsingen,23,Commune rurale
+2831,Pratteln,11,Commune urbaine d'une grande agglomération
+2832,Ramlinsburg,23,Commune rurale
+2833,Seltisberg,22,Commune intermédiaire
+2834,Ziefen,23,Commune rurale
+2841,Anwil,32,Commune rurale
+2842,Böckten,21,Commune intermédiaire
+2843,Buckten,23,Commune rurale
+2844,Buus,23,Commune rurale
+2845,Diepflingen,22,Commune intermédiaire
+2846,Gelterkinden,21,Commune intermédiaire
+2847,Häfelfingen,32,Commune rurale
+2848,Hemmiken,23,Commune rurale
+2849,Itingen,11,Commune urbaine d'une grande agglomération
+2850,Känerkinden,23,Commune rurale
+2851,Kilchberg (BL),32,Commune rurale
+2852,Läufelfingen,23,Commune rurale
+2853,Maisprach,23,Commune rurale
+2854,Nusshof,23,Commune rurale
+2855,Oltingen,32,Commune rurale
+2856,Ormalingen,21,Commune intermédiaire
+2857,Rickenbach (BL),23,Commune rurale
+2858,Rothenfluh,23,Commune rurale
+2859,Rümlingen,23,Commune rurale
+2860,Rünenberg,23,Commune rurale
+2861,Sissach,21,Commune intermédiaire
+2862,Tecknau,23,Commune rurale
+2863,Tenniken,23,Commune rurale
+2864,Thürnen,21,Commune intermédiaire
+2865,Wenslingen,23,Commune rurale
+2866,Wintersingen,23,Commune rurale
+2867,Wittinsburg,23,Commune rurale
+2868,Zeglingen,32,Commune rurale
+2869,Zunzgen,21,Commune intermédiaire
+2881,Arboldswil,23,Commune rurale
+2882,Bennwil,23,Commune rurale
+2883,Bretzwil,23,Commune rurale
+2884,Diegten,23,Commune rurale
+2885,Eptingen,32,Commune rurale
+2886,Hölstein,22,Commune intermédiaire
+2887,Lampenberg,22,Commune intermédiaire
+2888,Langenbruck,32,Commune rurale
+2889,Lauwil,23,Commune rurale
+2890,Liedertswil,23,Commune rurale
+2891,Niederdorf,22,Commune intermédiaire
+2892,Oberdorf (BL),22,Commune intermédiaire
+2893,Reigoldswil,23,Commune rurale
+2894,Titterten,23,Commune rurale
+2895,Waldenburg,22,Commune intermédiaire
+2901,Gächlingen,23,Commune rurale
+2903,Löhningen,23,Commune rurale
+2904,Neunkirch,22,Commune intermédiaire
+2914,Büttenhardt,23,Commune rurale
+2915,Dörflingen,23,Commune rurale
+2917,Lohn (SH),23,Commune rurale
+2919,Stetten (SH),23,Commune rurale
+2920,Thayngen,21,Commune intermédiaire
+2931,Bargen (SH),23,Commune rurale
+2932,Beringen,21,Commune intermédiaire
+2933,Buchberg,23,Commune rurale
+2936,Merishausen,23,Commune rurale
+2937,Neuhausen am Rheinfall,12,Commune urbaine d'une agglomération moyenne
+2938,Rüdlingen,23,Commune rurale
+2939,Schaffhausen,12,Commune urbaine d'une agglomération moyenne
+2951,Beggingen,23,Commune rurale
+2952,Schleitheim,23,Commune rurale
+2953,Siblingen,23,Commune rurale
+2961,Buch (SH),32,Commune rurale
+2962,Hemishofen,32,Commune rurale
+2963,Ramsen,32,Commune rurale
+2964,Stein am Rhein,31,Commune intermédiaire
+2971,Hallau,22,Commune intermédiaire
+2972,Oberhallau,23,Commune rurale
+2973,Trasadingen,22,Commune intermédiaire
+2974,Wilchingen,23,Commune rurale
+3001,Herisau,12,Commune urbaine d'une agglomération moyenne
+3002,Hundwil,23,Commune rurale
+3003,Schönengrund,23,Commune rurale
+3004,Schwellbrunn,23,Commune rurale
+3005,Stein (AR),23,Commune rurale
+3006,Urnäsch,32,Commune rurale
+3007,Waldstatt,22,Commune intermédiaire
+3021,Bühler,22,Commune intermédiaire
+3022,Gais,31,Commune intermédiaire
+3023,Speicher,21,Commune intermédiaire
+3024,Teufen (AR),21,Commune intermédiaire
+3025,Trogen,21,Commune intermédiaire
+3031,Grub (AR),22,Commune intermédiaire
+3032,Heiden,31,Commune intermédiaire
+3033,Lutzenberg,21,Commune intermédiaire
+3034,Rehetobel,23,Commune rurale
+3035,Reute (AR),23,Commune rurale
+3036,Wald (AR),32,Commune rurale
+3037,Walzenhausen,22,Commune intermédiaire
+3038,Wolfhalden,22,Commune intermédiaire
+3101,Appenzell,13,Commune urbaine d'une petite ou hors agglomération
+3102,Gonten,33,Commune rurale
+3104,Schlatt-Haslen,32,Commune rurale
+3111,Oberegg,32,Commune rurale
+3112,Schwende-Rüte,13,Commune urbaine d'une petite ou hors agglomération
+3201,Häggenschwil,23,Commune rurale
+3202,Muolen,23,Commune rurale
+3203,St. Gallen,12,Commune urbaine d'une agglomération moyenne
+3204,Wittenbach,12,Commune urbaine d'une agglomération moyenne
+3211,Berg (SG),22,Commune intermédiaire
+3212,Eggersriet,23,Commune rurale
+3213,Goldach,12,Commune urbaine d'une agglomération moyenne
+3214,Mörschwil,22,Commune intermédiaire
+3215,Rorschach,12,Commune urbaine d'une agglomération moyenne
+3216,Rorschacherberg,12,Commune urbaine d'une agglomération moyenne
+3217,Steinach,12,Commune urbaine d'une agglomération moyenne
+3218,Tübach,12,Commune urbaine d'une agglomération moyenne
+3219,Untereggen,23,Commune rurale
+3231,Au (SG),12,Commune urbaine d'une agglomération moyenne
+3232,Balgach,12,Commune urbaine d'une agglomération moyenne
+3233,Berneck,12,Commune urbaine d'une agglomération moyenne
+3234,Diepoldsau,12,Commune urbaine d'une agglomération moyenne
+3235,Rheineck,21,Commune intermédiaire
+3236,St. Margrethen,12,Commune urbaine d'une agglomération moyenne
+3237,Thal,12,Commune urbaine d'une agglomération moyenne
+3238,Widnau,12,Commune urbaine d'une agglomération moyenne
+3251,Altstätten,12,Commune urbaine d'une agglomération moyenne
+3252,Eichberg,23,Commune rurale
+3253,Marbach (SG),12,Commune urbaine d'une agglomération moyenne
+3254,Oberriet (SG),21,Commune intermédiaire
+3255,Rebstein,12,Commune urbaine d'une agglomération moyenne
+3256,Rüthi (SG),32,Commune rurale
+3271,Buchs (SG),13,Commune urbaine d'une petite ou hors agglomération
+3272,Gams,22,Commune intermédiaire
+3273,Grabs,13,Commune urbaine d'une petite ou hors agglomération
+3274,Sennwald,32,Commune rurale
+3275,Sevelen,22,Commune intermédiaire
+3276,Wartau,32,Commune rurale
+3291,Bad Ragaz,31,Commune intermédiaire
+3292,Flums,31,Commune intermédiaire
+3293,Mels,13,Commune urbaine d'une petite ou hors agglomération
+3294,Pfäfers,33,Commune rurale
+3295,Quarten,32,Commune rurale
+3296,Sargans,13,Commune urbaine d'une petite ou hors agglomération
+3297,Vilters-Wangs,13,Commune urbaine d'une petite ou hors agglomération
+3298,Walenstadt,31,Commune intermédiaire
+3311,Amden,23,Commune rurale
+3312,Benken (SG),32,Commune rurale
+3313,Kaltbrunn,13,Commune urbaine d'une petite ou hors agglomération
+3315,Schänis,22,Commune intermédiaire
+3316,Weesen,22,Commune intermédiaire
+3338,Schmerikon,13,Commune urbaine d'une petite ou hors agglomération
+3339,Uznach,13,Commune urbaine d'une petite ou hors agglomération
+3340,Rapperswil-Jona,13,Commune urbaine d'une petite ou hors agglomération
+3341,Gommiswald,32,Commune rurale
+3342,Eschenbach (SG),22,Commune intermédiaire
+3352,Ebnat-Kappel,31,Commune intermédiaire
+3359,Wildhaus-Alt St. Johann,33,Commune rurale
+3360,Nesslau,33,Commune rurale
+3374,Lichtensteig,13,Commune urbaine d'une petite ou hors agglomération
+3379,Wattwil,13,Commune urbaine d'une petite ou hors agglomération
+3392,Kirchberg (SG),31,Commune intermédiaire
+3393,Lütisburg,32,Commune rurale
+3394,Mosnang,32,Commune rurale
+3395,Bütschwil-Ganterschwil,31,Commune intermédiaire
+3396,Neckertal,32,Commune rurale
+3401,Degersheim,22,Commune intermédiaire
+3402,Flawil,21,Commune intermédiaire
+3405,Jonschwil,22,Commune intermédiaire
+3407,Oberuzwil,12,Commune urbaine d'une agglomération moyenne
+3408,Uzwil,12,Commune urbaine d'une agglomération moyenne
+3422,Niederbüren,23,Commune rurale
+3423,Niederhelfenschwil,23,Commune rurale
+3424,Oberbüren,12,Commune urbaine d'une agglomération moyenne
+3426,Zuzwil (SG),21,Commune intermédiaire
+3427,Wil (SG),12,Commune urbaine d'une agglomération moyenne
+3441,Andwil (SG),22,Commune intermédiaire
+3442,Gaiserwald,12,Commune urbaine d'une agglomération moyenne
+3443,Gossau (SG),12,Commune urbaine d'une agglomération moyenne
+3444,Waldkirch,22,Commune intermédiaire
+3506,Vaz/Obervaz,33,Commune rurale
+3513,Lantsch/Lenz,33,Commune rurale
+3514,Schmitten (GR),33,Commune rurale
+3542,Albula/Alvra,33,Commune rurale
+3543,Surses,33,Commune rurale
+3544,Bergün Filisur,33,Commune rurale
+3551,Brusio,33,Commune rurale
+3561,Poschiavo,31,Commune intermédiaire
+3572,Falera,33,Commune rurale
+3575,Laax,31,Commune intermédiaire
+3581,Sagogn,33,Commune rurale
+3582,Schluein,33,Commune rurale
+3603,Vals,33,Commune rurale
+3618,Lumnezia,33,Commune rurale
+3619,Ilanz/Glion,31,Commune intermédiaire
+3633,Fürstenau,33,Commune rurale
+3637,Rothenbrunnen,32,Commune rurale
+3638,Scharans,33,Commune rurale
+3640,Sils im Domleschg,33,Commune rurale
+3661,Cazis,31,Commune intermédiaire
+3662,Flerden,33,Commune rurale
+3663,Masein,31,Commune intermédiaire
+3668,Thusis,31,Commune intermédiaire
+3669,Tschappina,33,Commune rurale
+3670,Urmein,33,Commune rurale
+3672,Safiental,33,Commune rurale
+3673,Domleschg,33,Commune rurale
+3681,Avers,33,Commune rurale
+3695,Sufers,33,Commune rurale
+3701,Andeer,33,Commune rurale
+3711,Rongellen,33,Commune rurale
+3712,Zillis-Reischen,33,Commune rurale
+3713,Ferrera,33,Commune rurale
+3714,Rheinwald,33,Commune rurale
+3715,Muntogna da Schons,33,Commune rurale
+3721,Bonaduz,21,Commune intermédiaire
+3722,Domat/Ems,21,Commune intermédiaire
+3723,Rhäzüns,21,Commune intermédiaire
+3731,Felsberg,22,Commune intermédiaire
+3732,Flims,31,Commune intermédiaire
+3733,Tamins,23,Commune rurale
+3734,Trin,33,Commune rurale
+3746,Zernez,33,Commune rurale
+3752,Samnaun,33,Commune rurale
+3762,Scuol,31,Commune intermédiaire
+3764,Valsot,33,Commune rurale
+3781,Bever,33,Commune rurale
+3782,Celerina/Schlarigna,33,Commune rurale
+3783,Madulain,33,Commune rurale
+3784,Pontresina,31,Commune intermédiaire
+3785,La Punt Chamues-ch,33,Commune rurale
+3786,Samedan,31,Commune intermédiaire
+3787,St. Moritz,13,Commune urbaine d'une petite ou hors agglomération
+3788,S-chanf,33,Commune rurale
+3789,Sils im Engadin/Segl,33,Commune rurale
+3790,Silvaplana,33,Commune rurale
+3791,Zuoz,33,Commune rurale
+3792,Bregaglia,33,Commune rurale
+3804,Buseno,33,Commune rurale
+3805,Castaneda,33,Commune rurale
+3808,Rossa,33,Commune rurale
+3810,Santa Maria in Calanca,33,Commune rurale
+3821,Lostallo,33,Commune rurale
+3822,Mesocco,33,Commune rurale
+3823,Soazza,33,Commune rurale
+3831,Cama,33,Commune rurale
+3832,Grono,33,Commune rurale
+3834,Roveredo (GR),31,Commune intermédiaire
+3835,San Vittore,22,Commune intermédiaire
+3837,Calanca,33,Commune rurale
+3847,Val Müstair,33,Commune rurale
+3851,Davos,13,Commune urbaine d'une petite ou hors agglomération
+3861,Fideris,33,Commune rurale
+3862,Furna,33,Commune rurale
+3863,Jenaz,33,Commune rurale
+3871,Klosters,31,Commune intermédiaire
+3881,Conters im Prättigau,33,Commune rurale
+3882,Küblis,33,Commune rurale
+3891,Luzein,33,Commune rurale
+3901,Chur,12,Commune urbaine d'une agglomération moyenne
+3911,Churwalden,33,Commune rurale
+3921,Arosa,31,Commune intermédiaire
+3945,Trimmis,22,Commune intermédiaire
+3946,Untervaz,22,Commune intermédiaire
+3947,Zizers,13,Commune urbaine d'une petite ou hors agglomération
+3951,Fläsch,32,Commune rurale
+3952,Jenins,32,Commune rurale
+3953,Maienfeld,32,Commune rurale
+3954,Malans,32,Commune rurale
+3955,Landquart,13,Commune urbaine d'une petite ou hors agglomération
+3961,Grüsch,32,Commune rurale
+3962,Schiers,31,Commune intermédiaire
+3972,Seewis im Prättigau,32,Commune rurale
+3981,Breil/Brigels,33,Commune rurale
+3982,Disentis/Mustér,33,Commune rurale
+3983,Medel (Lucmagn),33,Commune rurale
+3985,Sumvitg,33,Commune rurale
+3986,Tujetsch,33,Commune rurale
+3987,Trun,33,Commune rurale
+3988,Obersaxen Mundaun,33,Commune rurale
+4001,Aarau,12,Commune urbaine d'une agglomération moyenne
+4002,Biberstein,22,Commune intermédiaire
+4003,Buchs (AG),12,Commune urbaine d'une agglomération moyenne
+4004,Densbüren,23,Commune rurale
+4005,Erlinsbach (AG),12,Commune urbaine d'une agglomération moyenne
+4006,Gränichen,12,Commune urbaine d'une agglomération moyenne
+4007,Hirschthal,12,Commune urbaine d'une agglomération moyenne
+4008,Küttigen,12,Commune urbaine d'une agglomération moyenne
+4009,Muhen,12,Commune urbaine d'une agglomération moyenne
+4010,Oberentfelden,12,Commune urbaine d'une agglomération moyenne
+4012,Suhr,12,Commune urbaine d'une agglomération moyenne
+4013,Unterentfelden,12,Commune urbaine d'une agglomération moyenne
+4021,Baden,12,Commune urbaine d'une agglomération moyenne
+4022,Bellikon,22,Commune intermédiaire
+4023,Bergdietikon,11,Commune urbaine d'une grande agglomération
+4024,Birmenstorf (AG),22,Commune intermédiaire
+4026,Ennetbaden,12,Commune urbaine d'une agglomération moyenne
+4027,Fislisbach,12,Commune urbaine d'une agglomération moyenne
+4028,Freienwil,23,Commune rurale
+4029,Gebenstorf,12,Commune urbaine d'une agglomération moyenne
+4030,Killwangen,11,Commune urbaine d'une grande agglomération
+4031,Künten,22,Commune intermédiaire
+4032,Mägenwil,22,Commune intermédiaire
+4033,Mellingen,21,Commune intermédiaire
+4034,Neuenhof,12,Commune urbaine d'une agglomération moyenne
+4035,Niederrohrdorf,13,Commune urbaine d'une petite ou hors agglomération
+4037,Oberrohrdorf,13,Commune urbaine d'une petite ou hors agglomération
+4038,Obersiggenthal,12,Commune urbaine d'une agglomération moyenne
+4039,Remetschwil,13,Commune urbaine d'une petite ou hors agglomération
+4040,Spreitenbach,11,Commune urbaine d'une grande agglomération
+4041,Stetten (AG),13,Commune urbaine d'une petite ou hors agglomération
+4044,Untersiggenthal,12,Commune urbaine d'une agglomération moyenne
+4045,Wettingen,12,Commune urbaine d'une agglomération moyenne
+4046,Wohlenschwil,21,Commune intermédiaire
+4047,Würenlingen,21,Commune intermédiaire
+4048,Würenlos,11,Commune urbaine d'une grande agglomération
+4049,Ehrendingen,22,Commune intermédiaire
+4061,Arni (AG),22,Commune intermédiaire
+4062,Berikon,11,Commune urbaine d'une grande agglomération
+4063,Bremgarten (AG),11,Commune urbaine d'une grande agglomération
+4064,Büttikon,22,Commune intermédiaire
+4065,Dottikon,21,Commune intermédiaire
+4066,Eggenwil,22,Commune intermédiaire
+4067,Fischbach-Göslikon,22,Commune intermédiaire
+4068,Hägglingen,21,Commune intermédiaire
+4071,Jonen,22,Commune intermédiaire
+4072,Niederwil (AG),22,Commune intermédiaire
+4073,Oberlunkhofen,22,Commune intermédiaire
+4074,Oberwil-Lieli,22,Commune intermédiaire
+4075,Rudolfstetten-Friedlisberg,11,Commune urbaine d'une grande agglomération
+4076,Sarmenstorf,32,Commune rurale
+4077,Tägerig,22,Commune intermédiaire
+4078,Uezwil,23,Commune rurale
+4079,Unterlunkhofen,22,Commune intermédiaire
+4080,Villmergen,13,Commune urbaine d'une petite ou hors agglomération
+4081,Widen,11,Commune urbaine d'une grande agglomération
+4082,Wohlen (AG),13,Commune urbaine d'une petite ou hors agglomération
+4083,Zufikon,11,Commune urbaine d'une grande agglomération
+4084,Islisberg,23,Commune rurale
+4091,Auenstein,22,Commune intermédiaire
+4092,Birr,21,Commune intermédiaire
+4093,Birrhard,23,Commune rurale
+4095,Brugg,12,Commune urbaine d'une agglomération moyenne
+4099,Habsburg,22,Commune intermédiaire
+4100,Hausen (AG),12,Commune urbaine d'une agglomération moyenne
+4104,Lupfig,21,Commune intermédiaire
+4105,Mandach,32,Commune rurale
+4106,Mönthal,23,Commune rurale
+4107,Mülligen,22,Commune intermédiaire
+4110,Remigen,23,Commune rurale
+4111,Riniken,22,Commune intermédiaire
+4112,Rüfenach,22,Commune intermédiaire
+4117,Thalheim (AG),23,Commune rurale
+4120,Veltheim (AG),22,Commune intermédiaire
+4121,Villigen,22,Commune intermédiaire
+4122,Villnachern,23,Commune rurale
+4123,Windisch,12,Commune urbaine d'une agglomération moyenne
+4124,Bözberg,23,Commune rurale
+4125,Schinznach,22,Commune intermédiaire
+4131,Beinwil am See,13,Commune urbaine d'une petite ou hors agglomération
+4132,Birrwil,22,Commune intermédiaire
+4134,Dürrenäsch,32,Commune rurale
+4135,Gontenschwil,32,Commune rurale
+4136,Holziken,12,Commune urbaine d'une agglomération moyenne
+4137,Leimbach (AG),22,Commune intermédiaire
+4138,Leutwil,32,Commune rurale
+4139,Menziken,13,Commune urbaine d'une petite ou hors agglomération
+4140,Oberkulm,32,Commune rurale
+4141,Reinach (AG),13,Commune urbaine d'une petite ou hors agglomération
+4142,Schlossrued,32,Commune rurale
+4143,Schmiedrued,32,Commune rurale
+4144,Schöftland,12,Commune urbaine d'une agglomération moyenne
+4145,Teufenthal (AG),32,Commune rurale
+4146,Unterkulm,32,Commune rurale
+4147,Zetzwil,32,Commune rurale
+4161,Eiken,22,Commune intermédiaire
+4163,Frick,13,Commune urbaine d'une petite ou hors agglomération
+4164,Gansingen,32,Commune rurale
+4165,Gipf-Oberfrick,13,Commune urbaine d'une petite ou hors agglomération
+4169,Kaisten,32,Commune rurale
+4170,Laufenburg,32,Commune rurale
+4172,Münchwilen (AG),13,Commune urbaine d'une petite ou hors agglomération
+4173,Oberhof,23,Commune rurale
+4175,Oeschgen,13,Commune urbaine d'une petite ou hors agglomération
+4176,Schwaderloch,32,Commune rurale
+4177,Sisseln,22,Commune intermédiaire
+4181,Wittnau,23,Commune rurale
+4182,Wölflinswil,32,Commune rurale
+4183,Zeihen,23,Commune rurale
+4184,Mettauertal,32,Commune rurale
+4185,Böztal,23,Commune rurale
+4186,Herznach-Ueken,22,Commune intermédiaire
+4191,Ammerswil,23,Commune rurale
+4192,Boniswil,32,Commune rurale
+4193,Brunegg,22,Commune intermédiaire
+4194,Dintikon,21,Commune intermédiaire
+4195,Egliswil,32,Commune rurale
+4196,Fahrwangen,32,Commune rurale
+4197,Hallwil,32,Commune rurale
+4198,Hendschiken,22,Commune intermédiaire
+4199,Holderbank (AG),13,Commune urbaine d'une petite ou hors agglomération
+4200,Hunzenschwil,21,Commune intermédiaire
+4201,Lenzburg,13,Commune urbaine d'une petite ou hors agglomération
+4202,Meisterschwanden,32,Commune rurale
+4203,Möriken-Wildegg,13,Commune urbaine d'une petite ou hors agglomération
+4204,Niederlenz,13,Commune urbaine d'une petite ou hors agglomération
+4205,Othmarsingen,22,Commune intermédiaire
+4206,Rupperswil,21,Commune intermédiaire
+4207,Schafisheim,21,Commune intermédiaire
+4208,Seengen,32,Commune rurale
+4209,Seon,21,Commune intermédiaire
+4210,Staufen,13,Commune urbaine d'une petite ou hors agglomération
+4221,Abtwil,23,Commune rurale
+4222,Aristau,23,Commune rurale
+4223,Auw,22,Commune intermédiaire
+4224,Beinwil (Freiamt),32,Commune rurale
+4226,Besenbüren,23,Commune rurale
+4227,Bettwil,32,Commune rurale
+4228,Boswil,22,Commune intermédiaire
+4229,Bünzen,22,Commune intermédiaire
+4230,Buttwil,32,Commune rurale
+4231,Dietwil,23,Commune rurale
+4232,Geltwil,32,Commune rurale
+4233,Kallern,23,Commune rurale
+4234,Merenschwand,22,Commune intermédiaire
+4235,Mühlau,23,Commune rurale
+4236,Muri (AG),31,Commune intermédiaire
+4237,Oberrüti,23,Commune rurale
+4238,Rottenschwil,23,Commune rurale
+4239,Sins,22,Commune intermédiaire
+4240,Waltenschwil,22,Commune intermédiaire
+4251,Hellikon,23,Commune rurale
+4252,Kaiseraugst,11,Commune urbaine d'une grande agglomération
+4253,Magden,22,Commune intermédiaire
+4254,Möhlin,11,Commune urbaine d'une grande agglomération
+4255,Mumpf,13,Commune urbaine d'une petite ou hors agglomération
+4256,Obermumpf,23,Commune rurale
+4257,Olsberg,23,Commune rurale
+4258,Rheinfelden,11,Commune urbaine d'une grande agglomération
+4259,Schupfart,23,Commune rurale
+4260,Stein (AG),13,Commune urbaine d'une petite ou hors agglomération
+4261,Wallbach,13,Commune urbaine d'une petite ou hors agglomération
+4262,Wegenstetten,23,Commune rurale
+4263,Zeiningen,22,Commune intermédiaire
+4264,Zuzgen,23,Commune rurale
+4271,Aarburg,12,Commune urbaine d'une agglomération moyenne
+4273,Bottenwil,23,Commune rurale
+4274,Brittnau,12,Commune urbaine d'une agglomération moyenne
+4275,Kirchleerau,22,Commune intermédiaire
+4276,Kölliken,22,Commune intermédiaire
+4277,Moosleerau,32,Commune rurale
+4279,Murgenthal,32,Commune rurale
+4280,Oftringen,12,Commune urbaine d'une agglomération moyenne
+4281,Reitnau,32,Commune rurale
+4282,Rothrist,13,Commune urbaine d'une petite ou hors agglomération
+4283,Safenwil,21,Commune intermédiaire
+4284,Staffelbach,23,Commune rurale
+4285,Strengelbach,12,Commune urbaine d'une agglomération moyenne
+4286,Uerkheim,23,Commune rurale
+4287,Vordemwald,22,Commune intermédiaire
+4288,Wiliberg,23,Commune rurale
+4289,Zofingen,12,Commune urbaine d'une agglomération moyenne
+4303,Böttstein,13,Commune urbaine d'une petite ou hors agglomération
+4304,Döttingen,13,Commune urbaine d'une petite ou hors agglomération
+4305,Endingen,22,Commune intermédiaire
+4306,Fisibach,22,Commune intermédiaire
+4307,Full-Reuenthal,32,Commune rurale
+4309,Klingnau,13,Commune urbaine d'une petite ou hors agglomération
+4310,Koblenz,22,Commune intermédiaire
+4311,Leibstadt,32,Commune rurale
+4312,Lengnau (AG),22,Commune intermédiaire
+4313,Leuggern,32,Commune rurale
+4314,Mellikon,23,Commune rurale
+4318,Schneisingen,22,Commune intermédiaire
+4319,Siglistorf,23,Commune rurale
+4320,Tegerfelden,23,Commune rurale
+4324,Zurzach,21,Commune intermédiaire
+4401,Arbon,12,Commune urbaine d'une agglomération moyenne
+4406,Dozwil,22,Commune intermédiaire
+4411,Egnach,22,Commune intermédiaire
+4416,Hefenhofen,22,Commune intermédiaire
+4421,Horn,12,Commune urbaine d'une agglomération moyenne
+4426,Kesswil,22,Commune intermédiaire
+4431,Roggwil (TG),12,Commune urbaine d'une agglomération moyenne
+4436,Romanshorn,13,Commune urbaine d'une petite ou hors agglomération
+4441,Salmsach,13,Commune urbaine d'une petite ou hors agglomération
+4446,Sommeri,32,Commune rurale
+4451,Uttwil,22,Commune intermédiaire
+4461,Amriswil,13,Commune urbaine d'une petite ou hors agglomération
+4471,Bischofszell,31,Commune intermédiaire
+4476,Erlen,32,Commune rurale
+4486,Hauptwil-Gottshaus,32,Commune rurale
+4495,Hohentannen,32,Commune rurale
+4501,Kradolf-Schönenberg,32,Commune rurale
+4506,Sulgen,32,Commune rurale
+4511,Zihlschlacht-Sitterdorf,32,Commune rurale
+4536,Basadingen-Schlattingen,32,Commune rurale
+4545,Diessenhofen,32,Commune rurale
+4546,Schlatt (TG),23,Commune rurale
+4551,Aadorf,21,Commune intermédiaire
+4561,Felben-Wellhausen,22,Commune intermédiaire
+4566,Frauenfeld,13,Commune urbaine d'une petite ou hors agglomération
+4571,Gachnang,22,Commune intermédiaire
+4590,Hüttlingen,23,Commune rurale
+4591,Matzingen,22,Commune intermédiaire
+4601,Neunforn,23,Commune rurale
+4606,Stettfurt,23,Commune rurale
+4611,Thundorf,23,Commune rurale
+4616,Uesslingen-Buch,23,Commune rurale
+4621,Warth-Weiningen,23,Commune rurale
+4641,Altnau,32,Commune rurale
+4643,Bottighofen,13,Commune urbaine d'une petite ou hors agglomération
+4646,Ermatingen,32,Commune rurale
+4651,Gottlieben,21,Commune intermédiaire
+4656,Güttingen,22,Commune intermédiaire
+4666,Kemmental,32,Commune rurale
+4671,Kreuzlingen,13,Commune urbaine d'une petite ou hors agglomération
+4681,Langrickenbach,32,Commune rurale
+4683,Lengwil,32,Commune rurale
+4691,Münsterlingen,32,Commune rurale
+4696,Tägerwilen,21,Commune intermédiaire
+4701,Wäldi,32,Commune rurale
+4711,Affeltrangen,32,Commune rurale
+4716,Bettwiesen,23,Commune rurale
+4721,Bichelsee-Balterswil,22,Commune intermédiaire
+4723,Braunau,23,Commune rurale
+4724,Eschlikon,21,Commune intermédiaire
+4726,Fischingen,32,Commune rurale
+4741,Lommis,23,Commune rurale
+4746,Münchwilen (TG),12,Commune urbaine d'une agglomération moyenne
+4751,Rickenbach (TG),12,Commune urbaine d'une agglomération moyenne
+4756,Schönholzerswilen,32,Commune rurale
+4761,Sirnach,12,Commune urbaine d'une agglomération moyenne
+4776,Tobel-Tägerschen,22,Commune intermédiaire
+4781,Wängi,22,Commune intermédiaire
+4786,Wilen (TG),12,Commune urbaine d'une agglomération moyenne
+4791,Wuppenau,23,Commune rurale
+4801,Berlingen,32,Commune rurale
+4806,Eschenz,31,Commune intermédiaire
+4811,Herdern,23,Commune rurale
+4816,Homburg,32,Commune rurale
+4821,Hüttwilen,23,Commune rurale
+4826,Mammern,32,Commune rurale
+4831,Müllheim,22,Commune intermédiaire
+4841,Pfyn,23,Commune rurale
+4846,Raperswilen,32,Commune rurale
+4851,Salenstein,32,Commune rurale
+4864,Steckborn,32,Commune rurale
+4871,Wagenhausen,31,Commune intermédiaire
+4881,Amlikon-Bissegg,32,Commune rurale
+4891,Berg (TG),32,Commune rurale
+4901,Birwinken,32,Commune rurale
+4911,Bürglen (TG),32,Commune rurale
+4921,Bussnang,32,Commune rurale
+4941,Märstetten,32,Commune rurale
+4946,Weinfelden,13,Commune urbaine d'une petite ou hors agglomération
+4951,Wigoltingen,32,Commune rurale
+5001,Arbedo-Castione,12,Commune urbaine d'une agglomération moyenne
+5002,Bellinzona,12,Commune urbaine d'une agglomération moyenne
+5003,Cadenazzo,21,Commune intermédiaire
+5009,Isone,23,Commune rurale
+5010,Lumino,22,Commune intermédiaire
+5017,Sant'Antonino,21,Commune intermédiaire
+5048,Acquarossa,33,Commune rurale
+5049,Blenio,33,Commune rurale
+5050,Serravalle,33,Commune rurale
+5061,Airolo,33,Commune rurale
+5063,Bedretto,33,Commune rurale
+5071,Dalpe,33,Commune rurale
+5072,Faido,33,Commune rurale
+5073,Giornico,33,Commune rurale
+5076,Personico,33,Commune rurale
+5077,Pollegio,31,Commune intermédiaire
+5079,Quinto,33,Commune rurale
+5091,Ascona,12,Commune urbaine d'une agglomération moyenne
+5096,Brione sopra Minusio,12,Commune urbaine d'une agglomération moyenne
+5097,Brissago,22,Commune intermédiaire
+5108,Gordola,12,Commune urbaine d'une agglomération moyenne
+5112,Lavertezzo,12,Commune urbaine d'une agglomération moyenne
+5113,Locarno,12,Commune urbaine d'une agglomération moyenne
+5115,Losone,12,Commune urbaine d'une agglomération moyenne
+5117,Mergoscia,23,Commune rurale
+5118,Minusio,12,Commune urbaine d'une agglomération moyenne
+5120,Muralto,12,Commune urbaine d'une agglomération moyenne
+5121,Orselina,12,Commune urbaine d'une agglomération moyenne
+5125,Ronco sopra Ascona,23,Commune rurale
+5131,Tenero-Contra,12,Commune urbaine d'une agglomération moyenne
+5136,Onsernone,33,Commune rurale
+5138,Cugnasco-Gerra,12,Commune urbaine d'une agglomération moyenne
+5141,Agno,12,Commune urbaine d'une agglomération moyenne
+5143,Aranno,23,Commune rurale
+5144,Arogno,23,Commune rurale
+5148,Bedano,12,Commune urbaine d'une agglomération moyenne
+5151,Bioggio,12,Commune urbaine d'une agglomération moyenne
+5154,Bissone,22,Commune intermédiaire
+5160,Brusino Arsizio,23,Commune rurale
+5161,Cademario,23,Commune rurale
+5162,Cadempino,12,Commune urbaine d'une agglomération moyenne
+5167,Canobbio,12,Commune urbaine d'une agglomération moyenne
+5171,Caslano,21,Commune intermédiaire
+5176,Comano,12,Commune urbaine d'une agglomération moyenne
+5180,Cureglia,12,Commune urbaine d'une agglomération moyenne
+5186,Grancia,12,Commune urbaine d'une agglomération moyenne
+5187,Gravesano,12,Commune urbaine d'une agglomération moyenne
+5189,Lamone,12,Commune urbaine d'une agglomération moyenne
+5192,Lugano,12,Commune urbaine d'une agglomération moyenne
+5193,Magliaso,21,Commune intermédiaire
+5194,Manno,12,Commune urbaine d'une agglomération moyenne
+5196,Massagno,12,Commune urbaine d'une agglomération moyenne
+5198,Melide,22,Commune intermédiaire
+5199,Mezzovico-Vira,22,Commune intermédiaire
+5203,Morcote,23,Commune rurale
+5205,Muzzano,12,Commune urbaine d'une agglomération moyenne
+5206,Neggio,12,Commune urbaine d'une agglomération moyenne
+5208,Origlio,21,Commune intermédiaire
+5210,Paradiso,12,Commune urbaine d'une agglomération moyenne
+5212,Ponte Capriasca,21,Commune intermédiaire
+5214,Porza,12,Commune urbaine d'une agglomération moyenne
+5216,Pura,21,Commune intermédiaire
+5221,Savosa,12,Commune urbaine d'une agglomération moyenne
+5225,Sorengo,12,Commune urbaine d'une agglomération moyenne
+5226,Capriasca,21,Commune intermédiaire
+5227,Torricella-Taverne,12,Commune urbaine d'une agglomération moyenne
+5230,Vernate,12,Commune urbaine d'une agglomération moyenne
+5231,Vezia,12,Commune urbaine d'une agglomération moyenne
+5233,Vico Morcote,23,Commune rurale
+5236,Collina d'Oro,12,Commune urbaine d'une agglomération moyenne
+5237,Alto Malcantone,23,Commune rurale
+5238,Monteceneri,22,Commune intermédiaire
+5239,Tresa,22,Commune intermédiaire
+5240,Val Mara,22,Commune intermédiaire
+5242,Balerna,12,Commune urbaine d'une agglomération moyenne
+5249,Castel San Pietro,12,Commune urbaine d'une agglomération moyenne
+5250,Chiasso,12,Commune urbaine d'une agglomération moyenne
+5251,Coldrerio,12,Commune urbaine d'une agglomération moyenne
+5254,Mendrisio,12,Commune urbaine d'une agglomération moyenne
+5257,Morbio Inferiore,12,Commune urbaine d'une agglomération moyenne
+5260,Novazzano,12,Commune urbaine d'une agglomération moyenne
+5263,Riva San Vitale,22,Commune intermédiaire
+5266,Stabio,12,Commune urbaine d'une agglomération moyenne
+5268,Vacallo,12,Commune urbaine d'une agglomération moyenne
+5269,Breggia,22,Commune intermédiaire
+5281,Biasca,31,Commune intermédiaire
+5287,Riviera,22,Commune intermédiaire
+5304,Bosco/Gurin,33,Commune rurale
+5307,Campo (Vallemaggia),33,Commune rurale
+5309,Cerentino,33,Commune rurale
+5310,Cevio,33,Commune rurale
+5315,Linescio,33,Commune rurale
+5317,Maggia,23,Commune rurale
+5323,Lavizzara,33,Commune rurale
+5324,Avegno Gordevio,23,Commune rurale
+5395,Lema,22,Commune intermédiaire
+5396,Terre di Pedemonte,22,Commune intermédiaire
+5397,Centovalli,22,Commune intermédiaire
+5398,Gambarogno,22,Commune intermédiaire
+5399,Verzasca,23,Commune rurale
+5401,Aigle,13,Commune urbaine d'une petite ou hors agglomération
+5402,Bex,31,Commune intermédiaire
+5403,Chessel,22,Commune intermédiaire
+5404,Corbeyrier,32,Commune rurale
+5405,Gryon,33,Commune rurale
+5406,Lavey-Morcles,31,Commune intermédiaire
+5407,Leysin,31,Commune intermédiaire
+5408,Noville,13,Commune urbaine d'une petite ou hors agglomération
+5409,Ollon,31,Commune intermédiaire
+5410,Ormont-Dessous,33,Commune rurale
+5411,Ormont-Dessus,33,Commune rurale
+5412,Rennaz,13,Commune urbaine d'une petite ou hors agglomération
+5413,Roche (VD),22,Commune intermédiaire
+5414,Villeneuve (VD),13,Commune urbaine d'une petite ou hors agglomération
+5415,Yvorne,32,Commune rurale
+5422,Aubonne,22,Commune intermédiaire
+5423,Ballens,23,Commune rurale
+5424,Berolle,23,Commune rurale
+5425,Bière,32,Commune rurale
+5426,Bougy-Villars,23,Commune rurale
+5427,Féchy,23,Commune rurale
+5428,Gimel,22,Commune intermédiaire
+5429,Longirod,23,Commune rurale
+5430,Marchissy,23,Commune rurale
+5431,Mollens (VD),32,Commune rurale
+5434,Saint-George,23,Commune rurale
+5435,Saint-Livres,23,Commune rurale
+5436,Saint-Oyens,23,Commune rurale
+5437,Saubraz,22,Commune intermédiaire
+5451,Avenches,32,Commune rurale
+5456,Cudrefin,23,Commune rurale
+5458,Faoug,32,Commune rurale
+5464,Vully-les-Lacs,32,Commune rurale
+5471,Bettens,23,Commune rurale
+5472,Bournens,23,Commune rurale
+5473,Boussens,23,Commune rurale
+5474,La Chaux (Cossonay),23,Commune rurale
+5475,Chavannes-le-Veyron,23,Commune rurale
+5476,Chevilly,23,Commune rurale
+5477,Cossonay,22,Commune intermédiaire
+5479,Cuarnens,23,Commune rurale
+5480,Daillens,23,Commune rurale
+5481,Dizy,23,Commune rurale
+5482,Eclépens,22,Commune intermédiaire
+5483,Ferreyres,23,Commune rurale
+5484,Gollion,23,Commune rurale
+5485,Grancy,23,Commune rurale
+5486,L'Isle,32,Commune rurale
+5487,Lussery-Villars,23,Commune rurale
+5488,Mauraz,23,Commune rurale
+5489,Mex (VD),23,Commune rurale
+5490,Moiry,32,Commune rurale
+5491,Mont-la-Ville,32,Commune rurale
+5492,Montricher,32,Commune rurale
+5493,Orny,32,Commune rurale
+5495,Penthalaz,21,Commune intermédiaire
+5496,Penthaz,21,Commune intermédiaire
+5497,Pompaples,32,Commune rurale
+5498,La Sarraz,22,Commune intermédiaire
+5499,Senarclens,23,Commune rurale
+5501,Sullens,23,Commune rurale
+5503,Vufflens-la-Ville,22,Commune intermédiaire
+5511,Assens,23,Commune rurale
+5512,Bercher,22,Commune intermédiaire
+5514,Bottens,23,Commune rurale
+5515,Bretigny-sur-Morrens,22,Commune intermédiaire
+5516,Cugy (VD),11,Commune urbaine d'une grande agglomération
+5518,Echallens,21,Commune intermédiaire
+5520,Essertines-sur-Yverdon,23,Commune rurale
+5521,Etagnières,22,Commune intermédiaire
+5522,Fey,23,Commune rurale
+5523,Froideville,22,Commune intermédiaire
+5527,Morrens (VD),22,Commune intermédiaire
+5529,Oulens-sous-Echallens,23,Commune rurale
+5530,Pailly,23,Commune rurale
+5531,Penthéréaz,23,Commune rurale
+5533,Poliez-Pittet,23,Commune rurale
+5534,Rueyres,22,Commune intermédiaire
+5535,Saint-Barthélemy (VD),23,Commune rurale
+5537,Villars-le-Terroir,22,Commune intermédiaire
+5539,Vuarrens,23,Commune rurale
+5540,Montilliez,23,Commune rurale
+5541,Goumoëns,23,Commune rurale
+5551,Bonvillars,22,Commune intermédiaire
+5552,Bullet,33,Commune rurale
+5553,Champagne,22,Commune intermédiaire
+5554,Concise,23,Commune rurale
+5555,Corcelles-près-Concise,23,Commune rurale
+5556,Fiez,23,Commune rurale
+5557,Fontaines-sur-Grandson,23,Commune rurale
+5559,Giez,23,Commune rurale
+5560,Grandevent,23,Commune rurale
+5561,Grandson,22,Commune intermédiaire
+5562,Mauborget,32,Commune rurale
+5563,Mutrux,32,Commune rurale
+5564,Novalles,23,Commune rurale
+5565,Onnens (VD),23,Commune rurale
+5566,Provence,32,Commune rurale
+5568,Sainte-Croix,31,Commune intermédiaire
+5571,Tévenon,23,Commune rurale
+5581,Belmont-sur-Lausanne,11,Commune urbaine d'une grande agglomération
+5582,Cheseaux-sur-Lausanne,21,Commune intermédiaire
+5583,Crissier,11,Commune urbaine d'une grande agglomération
+5584,Epalinges,11,Commune urbaine d'une grande agglomération
+5585,Jouxtens-Mézery,11,Commune urbaine d'une grande agglomération
+5586,Lausanne,11,Commune urbaine d'une grande agglomération
+5587,Le Mont-sur-Lausanne,11,Commune urbaine d'une grande agglomération
+5588,Paudex,11,Commune urbaine d'une grande agglomération
+5589,Prilly,11,Commune urbaine d'une grande agglomération
+5590,Pully,11,Commune urbaine d'une grande agglomération
+5591,Renens (VD),11,Commune urbaine d'une grande agglomération
+5592,Romanel-sur-Lausanne,11,Commune urbaine d'une grande agglomération
+5601,Chexbres,21,Commune intermédiaire
+5604,Forel (Lavaux),23,Commune rurale
+5606,Lutry,11,Commune urbaine d'une grande agglomération
+5607,Puidoux,21,Commune intermédiaire
+5609,Rivaz,21,Commune intermédiaire
+5610,Saint-Saphorin (Lavaux),22,Commune intermédiaire
+5611,Savigny,23,Commune rurale
+5613,Bourg-en-Lavaux,22,Commune intermédiaire
+5621,Aclens,22,Commune intermédiaire
+5622,Bremblens,23,Commune rurale
+5623,Buchillon,21,Commune intermédiaire
+5624,Bussigny,11,Commune urbaine d'une grande agglomération
+5627,Chavannes-près-Renens,11,Commune urbaine d'une grande agglomération
+5628,Chigny,11,Commune urbaine d'une grande agglomération
+5629,Clarmont,23,Commune rurale
+5631,Denens,22,Commune intermédiaire
+5632,Denges,11,Commune urbaine d'une grande agglomération
+5633,Echandens,11,Commune urbaine d'une grande agglomération
+5634,Echichens,22,Commune intermédiaire
+5635,Ecublens (VD),11,Commune urbaine d'une grande agglomération
+5636,Etoy,21,Commune intermédiaire
+5637,Lavigny,22,Commune intermédiaire
+5638,Lonay,11,Commune urbaine d'une grande agglomération
+5639,Lully (VD),11,Commune urbaine d'une grande agglomération
+5640,Lussy-sur-Morges,22,Commune intermédiaire
+5642,Morges,11,Commune urbaine d'une grande agglomération
+5643,Préverenges,11,Commune urbaine d'une grande agglomération
+5645,Romanel-sur-Morges,23,Commune rurale
+5646,Saint-Prex,21,Commune intermédiaire
+5648,Saint-Sulpice (VD),11,Commune urbaine d'une grande agglomération
+5649,Tolochenaz,11,Commune urbaine d'une grande agglomération
+5650,Vaux-sur-Morges,23,Commune rurale
+5651,Villars-Sainte-Croix,11,Commune urbaine d'une grande agglomération
+5652,Villars-sous-Yens,23,Commune rurale
+5653,Vufflens-le-Château,22,Commune intermédiaire
+5654,Vullierens,23,Commune rurale
+5655,Yens,23,Commune rurale
+5656,Hautemorges,23,Commune rurale
+5661,Boulens,23,Commune rurale
+5663,Bussy-sur-Moudon,32,Commune rurale
+5665,Chavannes-sur-Moudon,32,Commune rurale
+5669,Curtilles,32,Commune rurale
+5671,Dompierre (VD),32,Commune rurale
+5673,Hermenches,23,Commune rurale
+5674,Lovatens,32,Commune rurale
+5675,Lucens,32,Commune rurale
+5678,Moudon,21,Commune intermédiaire
+5680,Ogens,23,Commune rurale
+5683,Prévonloup,32,Commune rurale
+5684,Rossenges,23,Commune rurale
+5688,Syens,23,Commune rurale
+5690,Villars-le-Comte,32,Commune rurale
+5692,Vucherens,23,Commune rurale
+5693,Montanaire,23,Commune rurale
+5701,Arnex-sur-Nyon,22,Commune intermédiaire
+5702,Arzier-Le Muids,22,Commune intermédiaire
+5703,Bassins,22,Commune intermédiaire
+5704,Begnins,22,Commune intermédiaire
+5705,Bogis-Bossey,11,Commune urbaine d'une grande agglomération
+5706,Borex,22,Commune intermédiaire
+5707,Chavannes-de-Bogis,11,Commune urbaine d'une grande agglomération
+5708,Chavannes-des-Bois,23,Commune rurale
+5709,Chéserex,22,Commune intermédiaire
+5710,Coinsins,23,Commune rurale
+5711,Commugny,11,Commune urbaine d'une grande agglomération
+5712,Coppet,11,Commune urbaine d'une grande agglomération
+5713,Crans (VD),22,Commune intermédiaire
+5714,Crassier,22,Commune intermédiaire
+5715,Duillier,23,Commune rurale
+5716,Eysins,11,Commune urbaine d'une grande agglomération
+5717,Founex,11,Commune urbaine d'une grande agglomération
+5718,Genolier,22,Commune intermédiaire
+5719,Gingins,22,Commune intermédiaire
+5720,Givrins,22,Commune intermédiaire
+5721,Gland,11,Commune urbaine d'une grande agglomération
+5722,Grens,22,Commune intermédiaire
+5723,Mies,11,Commune urbaine d'une grande agglomération
+5724,Nyon,11,Commune urbaine d'une grande agglomération
+5725,Prangins,11,Commune urbaine d'une grande agglomération
+5726,La Rippe,23,Commune rurale
+5727,Saint-Cergue,22,Commune intermédiaire
+5728,Signy-Avenex,22,Commune intermédiaire
+5729,Tannay,11,Commune urbaine d'une grande agglomération
+5730,Trélex,22,Commune intermédiaire
+5731,Le Vaud,22,Commune intermédiaire
+5732,Vich,11,Commune urbaine d'une grande agglomération
+5741,L'Abergement,23,Commune rurale
+5742,Agiez,32,Commune rurale
+5743,Arnex-sur-Orbe,32,Commune rurale
+5744,Ballaigues,32,Commune rurale
+5745,Baulmes,23,Commune rurale
+5746,Bavois,23,Commune rurale
+5747,Bofflens,32,Commune rurale
+5748,Bretonnières,32,Commune rurale
+5749,Chavornay,21,Commune intermédiaire
+5750,Les Clées,32,Commune rurale
+5752,Croy,32,Commune rurale
+5754,Juriens,32,Commune rurale
+5755,Lignerolle,32,Commune rurale
+5756,Montcherand,23,Commune rurale
+5757,Orbe,21,Commune intermédiaire
+5758,La Praz,32,Commune rurale
+5759,Premier,32,Commune rurale
+5760,Rances,23,Commune rurale
+5761,Romainmôtier-Envy,32,Commune rurale
+5762,Sergey,23,Commune rurale
+5763,Valeyres-sous-Rances,23,Commune rurale
+5764,Vallorbe,31,Commune intermédiaire
+5765,Vaulion,32,Commune rurale
+5766,Vuiteboeuf,23,Commune rurale
+5785,Corcelles-le-Jorat,23,Commune rurale
+5790,Maracon,23,Commune rurale
+5792,Montpreveyres,23,Commune rurale
+5798,Ropraz,23,Commune rurale
+5799,Servion,23,Commune rurale
+5803,Vulliens,23,Commune rurale
+5804,Jorat-Menthue,23,Commune rurale
+5805,Oron,22,Commune intermédiaire
+5806,Jorat-Mézières,22,Commune intermédiaire
+5812,Champtauroz,32,Commune rurale
+5813,Chevroux,32,Commune rurale
+5816,Corcelles-près-Payerne,13,Commune urbaine d'une petite ou hors agglomération
+5817,Grandcour,32,Commune rurale
+5819,Henniez,32,Commune rurale
+5821,Missy,32,Commune rurale
+5822,Payerne,13,Commune urbaine d'une petite ou hors agglomération
+5827,Trey,32,Commune rurale
+5828,Treytorrens (Payerne),32,Commune rurale
+5830,Villarzel,32,Commune rurale
+5831,Valbroye,32,Commune rurale
+5841,Château-d'Oex,31,Commune intermédiaire
+5842,Rossinière,33,Commune rurale
+5843,Rougemont,33,Commune rurale
+5851,Allaman,22,Commune intermédiaire
+5852,Bursinel,22,Commune intermédiaire
+5853,Bursins,22,Commune intermédiaire
+5854,Burtigny,23,Commune rurale
+5855,Dully,22,Commune intermédiaire
+5856,Essertines-sur-Rolle,23,Commune rurale
+5857,Gilly,22,Commune intermédiaire
+5858,Luins,22,Commune intermédiaire
+5859,Mont-sur-Rolle,21,Commune intermédiaire
+5860,Perroy,22,Commune intermédiaire
+5861,Rolle,21,Commune intermédiaire
+5862,Tartegnin,22,Commune intermédiaire
+5863,Vinzel,22,Commune intermédiaire
+5871,L'Abbaye,33,Commune rurale
+5872,Le Chenit,31,Commune intermédiaire
+5873,Le Lieu,33,Commune rurale
+5882,Chardonne,12,Commune urbaine d'une agglomération moyenne
+5883,Corseaux,12,Commune urbaine d'une agglomération moyenne
+5884,Corsier-sur-Vevey,12,Commune urbaine d'une agglomération moyenne
+5885,Jongny,12,Commune urbaine d'une agglomération moyenne
+5886,Montreux,12,Commune urbaine d'une agglomération moyenne
+5889,La Tour-de-Peilz,12,Commune urbaine d'une agglomération moyenne
+5890,Vevey,12,Commune urbaine d'une agglomération moyenne
+5891,Veytaux,12,Commune urbaine d'une agglomération moyenne
+5892,Blonay - Saint-Légier,12,Commune urbaine d'une agglomération moyenne
+5902,Belmont-sur-Yverdon,23,Commune rurale
+5903,Bioley-Magnoux,23,Commune rurale
+5904,Chamblon,22,Commune intermédiaire
+5905,Champvent,23,Commune rurale
+5907,Chavannes-le-Chêne,32,Commune rurale
+5908,Chêne-Pâquier,32,Commune rurale
+5909,Cheseaux-Noréaz,13,Commune urbaine d'une petite ou hors agglomération
+5910,Cronay,23,Commune rurale
+5911,Cuarny,23,Commune rurale
+5912,Démoret,23,Commune rurale
+5913,Donneloye,23,Commune rurale
+5914,Ependes (VD),23,Commune rurale
+5919,Mathod,23,Commune rurale
+5921,Molondin,23,Commune rurale
+5922,Montagny-près-Yverdon,13,Commune urbaine d'une petite ou hors agglomération
+5923,Oppens,23,Commune rurale
+5924,Orges,23,Commune rurale
+5925,Orzens,23,Commune rurale
+5926,Pomy,23,Commune rurale
+5928,Rovray,23,Commune rurale
+5929,Suchy,23,Commune rurale
+5930,Suscévaz,23,Commune rurale
+5931,Treycovagnes,22,Commune intermédiaire
+5932,Ursins,23,Commune rurale
+5933,Valeyres-sous-Montagny,13,Commune urbaine d'une petite ou hors agglomération
+5934,Valeyres-sous-Ursins,23,Commune rurale
+5935,Villars-Epeney,23,Commune rurale
+5937,Vugelles-La Mothe,23,Commune rurale
+5938,Yverdon-les-Bains,13,Commune urbaine d'une petite ou hors agglomération
+5939,Yvonand,22,Commune intermédiaire
+6002,Brig-Glis,13,Commune urbaine d'une petite ou hors agglomération
+6004,Eggerberg,22,Commune intermédiaire
+6007,Naters,13,Commune urbaine d'une petite ou hors agglomération
+6008,Ried-Brig,22,Commune intermédiaire
+6009,Simplon,33,Commune rurale
+6010,Termen,22,Commune intermédiaire
+6011,Zwischbergen,33,Commune rurale
+6021,Ardon,12,Commune urbaine d'une agglomération moyenne
+6022,Chamoson,22,Commune intermédiaire
+6023,Conthey,12,Commune urbaine d'une agglomération moyenne
+6024,Nendaz,22,Commune intermédiaire
+6025,Vétroz,12,Commune urbaine d'une agglomération moyenne
+6032,Bourg-Saint-Pierre,33,Commune rurale
+6033,Liddes,33,Commune rurale
+6034,Orsières,33,Commune rurale
+6035,Sembrancher,33,Commune rurale
+6037,Val de Bagnes,31,Commune intermédiaire
+6052,Bellwald,33,Commune rurale
+6054,Binn,33,Commune rurale
+6056,Ernen,33,Commune rurale
+6057,Fiesch,33,Commune rurale
+6058,Fieschertal,33,Commune rurale
+6061,Lax,33,Commune rurale
+6076,Obergoms,33,Commune rurale
+6077,Goms,33,Commune rurale
+6082,Ayent,22,Commune intermédiaire
+6083,Evolène,33,Commune rurale
+6084,Hérémence,23,Commune rurale
+6087,Saint-Martin (VS),23,Commune rurale
+6089,Vex,23,Commune rurale
+6090,Mont-Noble,23,Commune rurale
+6101,Agarn,33,Commune rurale
+6102,Albinen,33,Commune rurale
+6104,Ergisch,33,Commune rurale
+6109,Inden,33,Commune rurale
+6110,Leuk,31,Commune intermédiaire
+6111,Leukerbad,31,Commune intermédiaire
+6112,Oberems,33,Commune rurale
+6113,Salgesch,22,Commune intermédiaire
+6116,Varen,33,Commune rurale
+6117,Guttet-Feschel,33,Commune rurale
+6118,Gampel-Bratsch,31,Commune intermédiaire
+6119,Turtmann-Unterems,33,Commune rurale
+6131,Bovernier,23,Commune rurale
+6133,Fully,21,Commune intermédiaire
+6134,Isérables,23,Commune rurale
+6135,Leytron,22,Commune intermédiaire
+6136,Martigny,13,Commune urbaine d'une petite ou hors agglomération
+6137,Martigny-Combe,13,Commune urbaine d'une petite ou hors agglomération
+6139,Riddes,22,Commune intermédiaire
+6140,Saillon,22,Commune intermédiaire
+6141,Saxon,21,Commune intermédiaire
+6142,Trient,33,Commune rurale
+6151,Champéry,33,Commune rurale
+6152,Collombey-Muraz,13,Commune urbaine d'une petite ou hors agglomération
+6153,Monthey,13,Commune urbaine d'une petite ou hors agglomération
+6154,Port-Valais,32,Commune rurale
+6155,Saint-Gingolph,32,Commune rurale
+6156,Troistorrents,13,Commune urbaine d'une petite ou hors agglomération
+6157,Val-d'Illiez,33,Commune rurale
+6158,Vionnaz,22,Commune intermédiaire
+6159,Vouvry,22,Commune intermédiaire
+6172,Bister,23,Commune rurale
+6173,Bitsch,22,Commune intermédiaire
+6177,Grengiols,23,Commune rurale
+6181,Riederalp,33,Commune rurale
+6191,Ausserberg,23,Commune rurale
+6192,Blatten,33,Commune rurale
+6193,Bürchen,23,Commune rurale
+6194,Eischoll,23,Commune rurale
+6195,Ferden,33,Commune rurale
+6197,Kippel,33,Commune rurale
+6198,Niedergesteln,22,Commune intermédiaire
+6199,Raron,22,Commune intermédiaire
+6201,Unterbäch,23,Commune rurale
+6202,Wiler (Lötschen),33,Commune rurale
+6203,Mörel-Filet,23,Commune rurale
+6204,Steg-Hohtenn,31,Commune intermédiaire
+6205,Bettmeralp,33,Commune rurale
+6211,Collonges,32,Commune rurale
+6212,Dorénaz,32,Commune rurale
+6213,Evionnaz,32,Commune rurale
+6214,Finhaut,33,Commune rurale
+6215,Massongex,22,Commune intermédiaire
+6217,Saint-Maurice,31,Commune intermédiaire
+6218,Salvan,23,Commune rurale
+6219,Vernayaz,22,Commune intermédiaire
+6220,Vérossaz,32,Commune rurale
+6232,Chalais,22,Commune intermédiaire
+6235,Chippis,13,Commune urbaine d'une petite ou hors agglomération
+6238,Grône,22,Commune intermédiaire
+6239,Icogne,33,Commune rurale
+6240,Lens,33,Commune rurale
+6246,Saint-Léonard,22,Commune intermédiaire
+6248,Sierre,13,Commune urbaine d'une petite ou hors agglomération
+6252,Anniviers,33,Commune rurale
+6253,Crans-Montana,13,Commune urbaine d'une petite ou hors agglomération
+6254,Noble-Contrée,13,Commune urbaine d'une petite ou hors agglomération
+6261,Arbaz,22,Commune intermédiaire
+6263,Grimisuat,12,Commune urbaine d'une agglomération moyenne
+6265,Savièse,12,Commune urbaine d'une agglomération moyenne
+6266,Sion,12,Commune urbaine d'une agglomération moyenne
+6267,Veysonnaz,22,Commune intermédiaire
+6281,Baltschieder,13,Commune urbaine d'une petite ou hors agglomération
+6282,Eisten,23,Commune rurale
+6283,Embd,23,Commune rurale
+6285,Grächen,33,Commune rurale
+6286,Lalden,13,Commune urbaine d'une petite ou hors agglomération
+6287,Randa,33,Commune rurale
+6288,Saas-Almagell,33,Commune rurale
+6289,Saas-Balen,33,Commune rurale
+6290,Saas-Fee,31,Commune intermédiaire
+6291,Saas-Grund,33,Commune rurale
+6292,St. Niklaus,33,Commune rurale
+6293,Stalden (VS),23,Commune rurale
+6294,Staldenried,23,Commune rurale
+6295,Täsch,33,Commune rurale
+6296,Törbel,23,Commune rurale
+6297,Visp,13,Commune urbaine d'une petite ou hors agglomération
+6298,Visperterminen,23,Commune rurale
+6299,Zeneggen,23,Commune rurale
+6300,Zermatt,13,Commune urbaine d'une petite ou hors agglomération
+6404,Boudry,12,Commune urbaine d'une agglomération moyenne
+6408,Cortaillod,12,Commune urbaine d'une agglomération moyenne
+6413,Rochefort,23,Commune rurale
+6416,Milvignes,21,Commune intermédiaire
+6417,La Grande Béroche,22,Commune intermédiaire
+6421,La Chaux-de-Fonds,12,Commune urbaine d'une agglomération moyenne
+6422,Les Planchettes,23,Commune rurale
+6423,La Sagne,23,Commune rurale
+6432,La Brévine,33,Commune rurale
+6433,Brot-Plamboz,33,Commune rurale
+6434,Le Cerneux-Péquignot,23,Commune rurale
+6435,La Chaux-du-Milieu,23,Commune rurale
+6436,Le Locle,12,Commune urbaine d'une agglomération moyenne
+6437,Les Ponts-de-Martel,23,Commune rurale
+6451,Cornaux,22,Commune intermédiaire
+6452,Cressier (NE),22,Commune intermédiaire
+6455,Le Landeron,21,Commune intermédiaire
+6456,Lignières,23,Commune rurale
+6458,Neuchâtel,12,Commune urbaine d'une agglomération moyenne
+6487,Val-de-Ruz,22,Commune intermédiaire
+6504,La Côte-aux-Fées,33,Commune rurale
+6511,Les Verrières,33,Commune rurale
+6512,Val-de-Travers,31,Commune intermédiaire
+6513,Laténa,12,Commune urbaine d'une agglomération moyenne
+6601,Aire-la-Ville,22,Commune intermédiaire
+6602,Anières,11,Commune urbaine d'une grande agglomération
+6603,Avully,23,Commune rurale
+6604,Avusy,23,Commune rurale
+6605,Bardonnex,22,Commune intermédiaire
+6606,Bellevue,11,Commune urbaine d'une grande agglomération
+6607,Bernex,11,Commune urbaine d'une grande agglomération
+6608,Carouge (GE),11,Commune urbaine d'une grande agglomération
+6609,Cartigny,23,Commune rurale
+6610,Céligny,22,Commune intermédiaire
+6611,Chancy,22,Commune intermédiaire
+6612,Chêne-Bougeries,11,Commune urbaine d'une grande agglomération
+6613,Chêne-Bourg,11,Commune urbaine d'une grande agglomération
+6614,Choulex,22,Commune intermédiaire
+6615,Collex-Bossy,22,Commune intermédiaire
+6616,Collonge-Bellerive,11,Commune urbaine d'une grande agglomération
+6617,Cologny,11,Commune urbaine d'une grande agglomération
+6618,Confignon,11,Commune urbaine d'une grande agglomération
+6619,Corsier (GE),11,Commune urbaine d'une grande agglomération
+6620,Dardagny,23,Commune rurale
+6621,Genève,11,Commune urbaine d'une grande agglomération
+6622,Genthod,11,Commune urbaine d'une grande agglomération
+6623,Le Grand-Saconnex,11,Commune urbaine d'une grande agglomération
+6624,Gy,22,Commune intermédiaire
+6625,Hermance,22,Commune intermédiaire
+6626,Jussy,23,Commune rurale
+6627,Laconnex,23,Commune rurale
+6628,Lancy,11,Commune urbaine d'une grande agglomération
+6629,Meinier,11,Commune urbaine d'une grande agglomération
+6630,Meyrin,11,Commune urbaine d'une grande agglomération
+6631,Onex,11,Commune urbaine d'une grande agglomération
+6632,Perly-Certoux,11,Commune urbaine d'une grande agglomération
+6633,Plan-les-Ouates,11,Commune urbaine d'une grande agglomération
+6634,Pregny-Chambésy,11,Commune urbaine d'une grande agglomération
+6635,Presinge,23,Commune rurale
+6636,Puplinge,11,Commune urbaine d'une grande agglomération
+6637,Russin,23,Commune rurale
+6638,Satigny,22,Commune intermédiaire
+6639,Soral,23,Commune rurale
+6640,Thônex,11,Commune urbaine d'une grande agglomération
+6641,Troinex,11,Commune urbaine d'une grande agglomération
+6642,Vandoeuvres,11,Commune urbaine d'une grande agglomération
+6643,Vernier,11,Commune urbaine d'une grande agglomération
+6644,Versoix,11,Commune urbaine d'une grande agglomération
+6645,Veyrier,11,Commune urbaine d'une grande agglomération
+6702,Boécourt,32,Commune rurale
+6703,Bourrignon,32,Commune rurale
+6704,Châtillon (JU),23,Commune rurale
+6706,Courchapoix,23,Commune rurale
+6708,Courrendlin,22,Commune intermédiaire
+6709,Courroux,13,Commune urbaine d'une petite ou hors agglomération
+6710,Courtételle,22,Commune intermédiaire
+6711,Delémont,13,Commune urbaine d'une petite ou hors agglomération
+6712,Develier,23,Commune rurale
+6713,Ederswiler,32,Commune rurale
+6715,Mervelier,23,Commune rurale
+6716,Mettembert,23,Commune rurale
+6718,Movelier,23,Commune rurale
+6719,Pleigne,23,Commune rurale
+6721,Rossemaison,13,Commune urbaine d'une petite ou hors agglomération
+6722,Saulcy,32,Commune rurale
+6724,Soyhières,23,Commune rurale
+6729,Haute-Sorne,31,Commune intermédiaire
+6730,Val Terbi,22,Commune intermédiaire
+6741,Le Bémont (JU),33,Commune rurale
+6742,Les Bois,33,Commune rurale
+6743,Les Breuleux,32,Commune rurale
+6745,Les Enfers,33,Commune rurale
+6748,Les Genevez (JU),32,Commune rurale
+6750,Lajoux (JU),32,Commune rurale
+6751,Montfaucon,33,Commune rurale
+6753,Muriaux,33,Commune rurale
+6754,Le Noirmont,31,Commune intermédiaire
+6757,Saignelégier,31,Commune intermédiaire
+6758,Saint-Brais,33,Commune rurale
+6759,Soubey,33,Commune rurale
+6771,Alle,33,Commune rurale
+6774,Boncourt,33,Commune rurale
+6778,Bure,33,Commune rurale
+6781,Coeuve,33,Commune rurale
+6782,Cornol,32,Commune rurale
+6783,Courchavon,33,Commune rurale
+6784,Courgenay,32,Commune rurale
+6785,Courtedoux,33,Commune rurale
+6789,Fahy,33,Commune rurale
+6790,Fontenais,13,Commune urbaine d'une petite ou hors agglomération
+6792,Grandfontaine,33,Commune rurale
+6800,Porrentruy,13,Commune urbaine d'une petite ou hors agglomération
+6806,Vendlincourt,33,Commune rurale
+6807,Basse-Allaine,33,Commune rurale
+6808,Clos du Doubs,33,Commune rurale
+6809,Haute-Ajoie,33,Commune rurale
+6810,La Baroche,33,Commune rurale
+6811,Damphreux-Lugnez,33,Commune rurale
+6812,Basse-Vendline,33,Commune rurale

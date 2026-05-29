@@ -1,0 +1,33 @@
+{
+"type": "FeatureCollection",
+"name": "cantons_2026",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::2056" } },
+"features": [
+{ "type": "Feature", "properties": { "KTNR": 1, "KTKZ": "ZH", "KTNAME": "Zürich" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 2, "KTKZ": "BE", "KTNAME": "Bern / Berne" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 3, "KTKZ": "LU", "KTNAME": "Luzern" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 4, "KTKZ": "UR", "KTNAME": "Uri" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 5, "KTKZ": "SZ", "KTNAME": "Schwyz" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 6, "KTKZ": "OW", "KTNAME": "Obwalden" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 7, "KTKZ": "NW", "KTNAME": "Nidwalden" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 8, "KTKZ": "GL", "KTNAME": "Glarus" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 9, "KTKZ": "ZG", "KTNAME": "Zug" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 10, "KTKZ": "FR", "KTNAME": "Fribourg / Freiburg" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 11, "KTKZ": "SO", "KTNAME": "Solothurn" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 12, "KTKZ": "BS", "KTNAME": "Basel-Stadt" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 13, "KTKZ": "BL", "KTNAME": "Basel-Landschaft" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 14, "KTKZ": "SH", "KTNAME": "Schaffhausen" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 15, "KTKZ": "AR", "KTNAME": "Appenzell Ausserrhoden" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 16, "KTKZ": "AI", "KTNAME": "Appenzell Innerrhoden" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 17, "KTKZ": "SG", "KTNAME": "St. Gallen" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 18, "KTKZ": "GR", "KTNAME": "Graubünden / Grigioni / Grischun" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 19, "KTKZ": "AG", "KTNAME": "Aargau" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 20, "KTKZ": "TG", "KTNAME": "Thurgau" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 21, "KTKZ": "TI", "KTNAME": "Ticino" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 22, "KTKZ": "VD", "KTNAME": "Vaud" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 23, "KTKZ": "VS", "KTNAME": "Valais / Wallis" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 24, "KTKZ": "NE", "KTNAME": "Neuchâtel" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 25, "KTKZ": "GE", "KTNAME": "Genève" }, "geometry": null },
+{ "type": "Feature", "properties": { "KTNR": 26, "KTKZ": "JU", "KTNAME": "Jura" }, "geometry": null }
+]
+}
