@@ -8,6 +8,24 @@
 
 [Milestone 1](#milestone-1-20th-march-5pm) • [Milestone 2](#milestone-2-17th-april-5pm) • [Milestone 3](#milestone-3-29th-may-5pm)
 
+# Swiss Transport Accessibility
+
+Interactive data visualization project for COM-480 Data Visualization at EPFL.
+
+This project explores accessibility to major Swiss InterCity (IC) railway hubs using public transport travel times, geographic data, and socioeconomic indicators such as population density, employment, taxable income, real estate prices, and public transport usage.
+
+## Live Demo
+
+The visualization is hosted with GitHub Pages:
+
+https://com-480-data-visualization.github.io/les-vizionnaires/
+
+## Process Book (TODO)
+
+The final process book is available here:
+
+[Process Book]()
+
 ## Milestone 1 (20th March, 5pm)
 
 **10% of the final grade**
@@ -152,7 +170,87 @@ The core engine for the "Nearest IC travel time" is already implemented: the use
 
 **80% of the final grade**
 
+### Project Structure
 
+```text
+docs/                 Static website served by GitHub Pages
+docs/index.html       Main visualization page
+docs/js/              JavaScript modules for map, controls, and charts
+docs/css/             Styling for the interface
+docs/data/            Optimized GeoJSON/JSON files used by the frontend
+
+data/                 Source datasets used for preprocessing
+notebooks/            Exploratory analysis and data-processing notebooks
+scripts/              Helper scripts for generating frontend-ready data
+outputs/              Intermediate computed accessibility results
+outputs_ptA_ptB/      Point-to-point travel-time outputs
+```
+
+### Technical Setup
+The frontend is a static web application. It uses:
+
+- HTML, CSS, and JavaScript
+- Leaflet.js for interactive maps
+- D3.js for statistical visualizations
+- h3-js for spatial indexing/grid logic
+- Python notebooks/scripts for data preprocessing
+- r5py for public transport travel-time computation
+
+No frontend build step is required.
+
+### Running locally
+
+Because the visualization loads local JSON and GeoJSON files, it should be served through a local web server rather than opened directly as a file.
+
+From the repository root, run:
+
+```bash
+python3 -m http.server 8000 --directory docs
+```
+
+Then open:
+
+```text
+http://localhost:8000
+```
+
+### Intended Usage
+
+The visualization allows users to explore how public transport accessibility varies across Switzerland.
+
+Users can:
+
+- View travel time to the nearest IC railway hub
+- Compare weekday and weekend accessibility
+- Change departure times such as 09:00, 12:00, 17:00, and 22:00
+- Adjust the maximum travel-time threshold
+- Explore socioeconomic layers including population density, employment, taxable income, real estate prices, and public transport usage
+- Use the analysis view to compare accessibility patterns across cantons and socioeconomic indicators
+- Inspect point-to-point travel times between selected locations
+
+The project is intended for students, researchers, planners, and the general public interested in Swiss transport accessibility and regional inequalities.
+
+### Data
+
+The project combines open mobility, geographic, and socioeconomic datasets, including Swiss public transport timetable data, OpenStreetMap-based routing information, population density, employment statistics, taxable income, real estate indicators, and passenger frequency data.
+
+Frontend-ready processed data is stored in `docs/data/`.
+
+Some raw or intermediate datasets are too large to be added to the GitHub repository. Here is a link that enables you to download it.
+
+### Reproducing the Data Pipeline
+
+The main analysis and preprocessing steps are documented in the notebooks under notebooks/.
+
+Important files include:
+
+- `notebooks/analysis.ipynb`: contains the analysis we have done in previous milestones.
+- `notebooks/map_views_generation.ipynb`: contains the data processing for the maps used in the Map View.
+- `notebooks/correlation_analysis.ipynb`: contains the data processing pipeline for the D3.js interactive dashboard
+- `scripts/build_nearestic_2000m.py`: contains the code that transforms of the data from parquet to readable data for the website
+- `scripts/generate_correlations.py`: contains the code that generates correlation data for D3.js visualizations.
+
+The generated outputs are converted into lightweight JSON/GeoJSON files used by the web visualization.
 
 ## Late policy
 
