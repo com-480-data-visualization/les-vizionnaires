@@ -20,6 +20,8 @@ The visualization is hosted with GitHub Pages:
 
 https://com-480-data-visualization.github.io/les-vizionnaires/
 
+Here is a link to the video
+
 ## Process Book (TODO)
 
 The final process book is available here:
@@ -182,8 +184,9 @@ docs/data/            Optimized GeoJSON/JSON files used by the frontend
 data/                 Source datasets used for preprocessing
 notebooks/            Exploratory analysis and data-processing notebooks
 scripts/              Helper scripts for generating frontend-ready data
-outputs/              Intermediate computed accessibility results
-outputs_ptA_ptB/      Point-to-point travel-time outputs
+outputs/              Generated intermediate outputs
+outputs/outputs_nearest_ic/  Nearest-IC accessibility outputs
+outputs/outputs_ptA_ptB/     Point-to-point travel-time outputs
 ```
 
 ### Technical Setup
@@ -256,4 +259,3 @@ The generated outputs are converted into lightweight JSON/GeoJSON files used by 
 
 - < 24h: 80% of the grade for the milestone
 - < 48h: 70% of the grade for the milestone
-

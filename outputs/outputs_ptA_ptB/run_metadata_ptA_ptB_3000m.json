@@ -17,7 +17,7 @@
   "percentiles": [
     50
   ],
-  "grid_points_file": "outputs/grid_points_3000m.parquet",
+  "grid_points_file": "outputs/outputs_nearest_ic/grid_points_3000m.parquet",
   "osm_file": "data/switzerland-latest.osm.pbf",
   "gtfs_file": "data/gtfs/gtfs_filtered_no_taxi.zip",
   "chunk_count": 76

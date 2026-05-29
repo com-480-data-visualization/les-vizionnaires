@@ -31,7 +31,7 @@ import pandas as pd
 from shapely import wkb
 
 ROOT = Path(__file__).resolve().parent.parent
-OUTPUTS = ROOT / "outputs"
+OUTPUTS = ROOT / "outputs" / "outputs_nearest_ic"
 DATA = ROOT / "docs" / "data"
 
 DEPARTURES = ["0900", "1200", "1700", "2200"]
@@ -171,5 +171,4 @@ if __name__ == "__main__":
     
     print(f"\n✓ Complete! Generated {total_features} feature sets and {total_origins} origin sets")
     print(f"  Output organized in docs/data/nearestIC/{{weekday,weekend}}/{{hour}}/{{maxTime}}/")
-
 

@@ -1,7 +1,8 @@
 *.DS_Store
 
-hs_err_pid54453.log
+.vscode
 
+hs_err_pid54453.log
 
 # Fichiers d'archives et de cartes de plus de 100MB
 gtfs_fp2026_20260314.zip

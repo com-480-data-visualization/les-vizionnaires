@@ -1,0 +1,525 @@
+{
+  "run_date": "2026-03-20",
+  "departure_times": [
+    "09:00",
+    "12:00",
+    "17:00",
+    "22:00"
+  ],
+  "departure_time_window_minutes": 60,
+  "max_time_minutes": [
+    30,
+    60,
+    90,
+    120,
+    150,
+    180,
+    210,
+    240
+  ],
+  "transport_modes": [
+    "WALK",
+    "TRANSIT"
+  ],
+  "percentiles": [
+    50
+  ],
+  "grid_resolution_meters": 3000,
+  "grid_crs": "EPSG:2056",
+  "routing_crs": "EPSG:4326",
+  "osm_file": "data/switzerland-latest.osm.pbf",
+  "gtfs_file": "data/processed/gtfs_filtered_no_taxi.zip",
+  "n_origins": 4626,
+  "n_destinations": 134,
+  "origin_filter": {
+    "enabled": true,
+    "max_distance_to_transit_m": 5000,
+    "n_origins_before_filter": 4888,
+    "n_origins_after_filter": 4626,
+    "n_origins_removed": 262
+  },
+  "travel_time_outputs": [
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 30,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_030min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 60,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_060min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 90,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_090min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 120,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_120min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 150,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_150min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 180,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_180min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 210,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_210min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "0900",
+      "departure_hour": 9,
+      "max_time_minutes": 240,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_0900_max_240min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 30,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_030min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 60,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_060min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 90,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_090min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 120,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_120min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 150,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_150min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 180,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_180min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 210,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_210min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1200",
+      "departure_hour": 12,
+      "max_time_minutes": 240,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1200_max_240min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 30,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_030min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 60,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_060min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 90,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_090min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 120,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_120min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 150,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_150min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 180,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_180min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 210,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_210min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "1700",
+      "departure_hour": 17,
+      "max_time_minutes": 240,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_1700_max_240min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 30,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_030min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 60,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_060min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 90,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_090min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 120,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_120min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 150,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_150min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 180,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_180min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 210,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_210min.parquet",
+      "n_rows": 321230
+    },
+    {
+      "departure_label": "2200",
+      "departure_hour": 22,
+      "max_time_minutes": 240,
+      "file": "outputs/outputs_nearest_ic/travel_times_3000m_departure_2200_max_240min.parquet",
+      "n_rows": 321230
+    }
+  ],
+  "summary_outputs": [
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 30,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_030min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_030min.parquet",
+      "n_valid_rows": 125,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 60,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_060min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_060min.parquet",
+      "n_valid_rows": 1508,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 90,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_090min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_090min.parquet",
+      "n_valid_rows": 6988,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 120,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_120min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_120min.parquet",
+      "n_valid_rows": 19496,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 150,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_150min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_150min.parquet",
+      "n_valid_rows": 40468,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 180,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_180min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_180min.parquet",
+      "n_valid_rows": 68014,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 210,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_210min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_210min.parquet",
+      "n_valid_rows": 100712,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "0900",
+      "max_time_minutes": 240,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_0900_max_240min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_0900_max_240min.parquet",
+      "n_valid_rows": 135570,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 30,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_030min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_030min.parquet",
+      "n_valid_rows": 125,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 60,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_060min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_060min.parquet",
+      "n_valid_rows": 1577,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 90,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_090min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_090min.parquet",
+      "n_valid_rows": 7226,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 120,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_120min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_120min.parquet",
+      "n_valid_rows": 20305,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 150,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_150min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_150min.parquet",
+      "n_valid_rows": 41907,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 180,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_180min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_180min.parquet",
+      "n_valid_rows": 70126,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 210,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_210min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_210min.parquet",
+      "n_valid_rows": 102809,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1200",
+      "max_time_minutes": 240,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1200_max_240min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1200_max_240min.parquet",
+      "n_valid_rows": 137590,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 30,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_030min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_030min.parquet",
+      "n_valid_rows": 136,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 60,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_060min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_060min.parquet",
+      "n_valid_rows": 1698,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 90,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_090min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_090min.parquet",
+      "n_valid_rows": 7686,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 120,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_120min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_120min.parquet",
+      "n_valid_rows": 21164,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 150,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_150min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_150min.parquet",
+      "n_valid_rows": 43114,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 180,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_180min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_180min.parquet",
+      "n_valid_rows": 71511,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 210,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_210min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_210min.parquet",
+      "n_valid_rows": 103371,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "1700",
+      "max_time_minutes": 240,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_1700_max_240min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_1700_max_240min.parquet",
+      "n_valid_rows": 135928,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 30,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_030min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_030min.parquet",
+      "n_valid_rows": 93,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 60,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_060min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_060min.parquet",
+      "n_valid_rows": 1192,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 90,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_090min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_090min.parquet",
+      "n_valid_rows": 5158,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 120,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_120min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_120min.parquet",
+      "n_valid_rows": 13388,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 150,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_150min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_150min.parquet",
+      "n_valid_rows": 25159,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 180,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_180min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_180min.parquet",
+      "n_valid_rows": 37304,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 210,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_210min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_210min.parquet",
+      "n_valid_rows": 47639,
+      "n_overlay_points": 4626
+    },
+    {
+      "departure_label": "2200",
+      "max_time_minutes": 240,
+      "od_pairs_file": "outputs/outputs_nearest_ic/od_pairs_3000m_departure_2200_max_240min.parquet",
+      "accessibility_summary_file": "outputs/outputs_nearest_ic/accessibility_summary_3000m_departure_2200_max_240min.parquet",
+      "n_valid_rows": 55190,
+      "n_overlay_points": 4626
+    }
+  ]
+}
