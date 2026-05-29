@@ -153,6 +153,7 @@ The core engine for the "Nearest IC travel time" is already implemented: the use
 **80% of the final grade**
 
 
+
 ## Late policy
 
 - < 24h: 80% of the grade for the milestone
