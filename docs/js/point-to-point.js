@@ -4,6 +4,8 @@ const pointToPointMap = window.map;
 
 const POINT_TO_POINT_GRID = "data/ptA_IC/accessibility_0900_240min.geojson";
 const POINT_TO_POINT_MANIFEST = "data/ptA_ptB/manifest.json";
+const POINT_TO_POINT_TILE_SIZE_METERS = 3000;
+const EARTH_RADIUS_METERS = 6371008.8;
 
 const TRAVEL_BUCKETS = [
   { label: "<= 30 min", max: 30, color: "#1a9850" },
@@ -31,6 +33,7 @@ let state = {
 
 let manifest = null;
 let gridFeatures = [];
+let selectableFeatures = [];
 let featureById = {};
 let chunkCache = {};
 let polygonLayer = null;
@@ -38,7 +41,15 @@ let selectedLayer = null;
 let infoControl = null;
 let legendControl = null;
 let gridBounds = null;
+let cellsByFeatureId = {};
 let currentHexResolution = null;
+const tileRenderer = L.canvas({ padding: 0.5 });
+
+function setRendererPointerEvents(renderer, value) {
+  if (renderer._container) {
+    renderer._container.style.pointerEvents = value;
+  }
+}
 
 function hourKey() {
   return state.departureTime.replace(":", "");
@@ -76,15 +87,6 @@ function travelTimeTo(feature) {
   return minutes;
 }
 
-function averageReachableTime(features) {
-  const values = features
-    .map(travelTimeTo)
-    .filter((minutes) => minutes != null && minutes <= state.maxTravelTime);
-
-  if (!values.length) return null;
-  return values.reduce((sum, minutes) => sum + minutes, 0) / values.length;
-}
-
 function nearestFeature(features, latlng) {
   let bestFeature = null;
   let bestDistance = Infinity;
@@ -101,10 +103,72 @@ function nearestFeature(features, latlng) {
   return bestFeature;
 }
 
+function destinationPoint(lat, lon, bearingDegrees, distanceMeters) {
+  const bearing = (bearingDegrees * Math.PI) / 180;
+  const lat1 = (lat * Math.PI) / 180;
+  const lon1 = (lon * Math.PI) / 180;
+  const angularDistance = distanceMeters / EARTH_RADIUS_METERS;
+
+  const lat2 = Math.asin(
+    Math.sin(lat1) * Math.cos(angularDistance) +
+      Math.cos(lat1) * Math.sin(angularDistance) * Math.cos(bearing)
+  );
+  const lon2 =
+    lon1 +
+    Math.atan2(
+      Math.sin(bearing) * Math.sin(angularDistance) * Math.cos(lat1),
+      Math.cos(angularDistance) - Math.sin(lat1) * Math.sin(lat2)
+    );
+
+  return [(lat2 * 180) / Math.PI, (lon2 * 180) / Math.PI];
+}
+
+function sourceTileBoundary(feature) {
+  const [lon, lat] = feature.geometry.coordinates;
+  const cornerDistance = (POINT_TO_POINT_TILE_SIZE_METERS / 2) * Math.SQRT2;
+
+  return [
+    destinationPoint(lat, lon, 315, cornerDistance),
+    destinationPoint(lat, lon, 45, cornerDistance),
+    destinationPoint(lat, lon, 135, cornerDistance),
+    destinationPoint(lat, lon, 225, cornerDistance)
+  ];
+}
+
+function cellsForFeature(feature, resolution) {
+  const id = String(feature.properties.id);
+  const cacheKey = `${resolution}:${id}`;
+  if (cellsByFeatureId[cacheKey]) return cellsByFeatureId[cacheKey];
+
+  const [lon, lat] = feature.geometry.coordinates;
+  const cells = h3.polygonToCells([sourceTileBoundary(feature)], resolution);
+
+  cellsByFeatureId[cacheKey] = cells.length
+    ? cells
+    : [h3.latLngToCell(lat, lon, resolution)];
+
+  return cellsByFeatureId[cacheKey];
+}
+
 function clearSelectionLayer() {
   if (selectedLayer) {
     pointToPointMap.removeLayer(selectedLayer);
     selectedLayer = null;
+  }
+}
+
+function clearPolygonSurface(removeRenderer = false) {
+  if (polygonLayer) {
+    pointToPointMap.removeLayer(polygonLayer);
+    polygonLayer = null;
+  }
+
+  if (removeRenderer) {
+    setRendererPointerEvents(tileRenderer, "none");
+  }
+
+  if (removeRenderer && pointToPointMap.hasLayer(tileRenderer)) {
+    pointToPointMap.removeLayer(tileRenderer);
   }
 }
 
@@ -253,13 +317,18 @@ async function loadGrid() {
   const geojson = await res.json();
   const originIds = new Set(Object.keys((await loadManifest()).origin_index[hourKey()] || {}));
 
-  gridFeatures = (geojson.features || []).filter((feature) =>
+  gridFeatures = geojson.features || [];
+  selectableFeatures = gridFeatures.filter((feature) =>
     originIds.has(String(feature.properties.id))
   );
 
   featureById = {};
-  const latlngs = gridFeatures.map((feature) => {
+  selectableFeatures.forEach((feature) => {
     featureById[String(feature.properties.id)] = feature;
+  });
+  cellsByFeatureId = {};
+
+  const latlngs = gridFeatures.map((feature) => {
     const [lon, lat] = feature.geometry.coordinates;
     return [lat, lon];
   });
@@ -290,43 +359,119 @@ function muniForFeature(feature) {
   if (!feature) return { gdename: null, ktname: null };
   return {
     gdename: feature.properties?.GDENAME ?? null,
-    ktname: feature.properties?.KTNAME ?? null,
+    ktname: feature.properties?.KTNAME ?? null
   };
 }
 
+function averageReachableTime(features) {
+  const values = features
+    .map(travelTimeTo)
+    .filter((minutes) => minutes != null && minutes <= state.maxTravelTime);
+
+  if (!values.length) return null;
+  return values.reduce((sum, minutes) => sum + minutes, 0) / values.length;
+}
+
+function fillHexGaps(cells, resolution) {
+  const filled = Array.from(cells.keys());
+  if (filled.length < 3) return;
+
+  h3.cellsToMultiPolygon(filled, false).forEach((polygon) => {
+    const outer = polygon[0];
+    if (!outer || outer.length < 3) return;
+
+    h3.polygonToCells([outer], resolution).forEach((cell) => {
+      if (!cells.has(cell)) {
+        cells.set(cell, {
+          features: [],
+          selectableFeatures: [],
+          value: null,
+          interpolated: true
+        });
+      }
+    });
+  });
+
+  let pending = [];
+  cells.forEach((entry, cell) => {
+    if (entry.interpolated && entry.value == null) pending.push(cell);
+  });
+
+  let guard = 0;
+  while (pending.length && guard++ < 40) {
+    const stillPending = [];
+    pending.forEach((cell) => {
+      const neighbourValues = h3
+        .gridDisk(cell, 1)
+        .filter((nb) => nb !== cell && cells.has(nb) && cells.get(nb).value != null)
+        .map((nb) => cells.get(nb).value);
+
+      if (neighbourValues.length) {
+        cells.get(cell).value =
+          neighbourValues.reduce((sum, value) => sum + value, 0) / neighbourValues.length;
+      } else {
+        stillPending.push(cell);
+      }
+    });
+
+    if (stillPending.length === pending.length) break;
+    pending = stillPending;
+  }
+}
 
 function drawPolygonSurface() {
   if (!state.visible || !gridFeatures.length || typeof h3 === "undefined") return;
 
-  if (polygonLayer) {
-    pointToPointMap.removeLayer(polygonLayer);
-    polygonLayer = null;
-  }
+  clearPolygonSurface();
+  setRendererPointerEvents(tileRenderer, "auto");
 
   const resolution = hexResolutionForZoom(pointToPointMap.getZoom());
   currentHexResolution = resolution;
 
   const cells = new Map();
   gridFeatures.forEach((feature) => {
-    const [lon, lat] = feature.geometry.coordinates;
-    const cell = h3.latLngToCell(lat, lon, resolution);
-    if (!cells.has(cell)) cells.set(cell, []);
-    cells.get(cell).push(feature);
+    const isSelectable = Boolean(featureById[String(feature.properties.id)]);
+
+    cellsForFeature(feature, resolution).forEach((cell) => {
+      if (!cells.has(cell)) {
+        cells.set(cell, {
+          features: [],
+          selectableFeatures: [],
+          value: null,
+          interpolated: false
+        });
+      }
+
+      const entry = cells.get(cell);
+      entry.features.push(feature);
+      if (isSelectable) entry.selectableFeatures.push(feature);
+    });
   });
 
+  cells.forEach((entry) => {
+    entry.value = averageReachableTime(entry.features);
+  });
+
+  fillHexGaps(cells, resolution);
+
   const polygons = [];
-  cells.forEach((features, cell) => {
-    const value = averageReachableTime(features);
+  cells.forEach((entry, cell) => {
+    const fillColor = colorForTravelTime(entry.value);
+    const clickFeatures = entry.selectableFeatures.length
+      ? entry.selectableFeatures
+      : selectableFeatures;
+
     const polygon = L.polygon(h3.cellToBoundary(cell), {
-      color: "#ffffff",
-      weight: 1,
-      fillColor: colorForTravelTime(value),
+      color: fillColor,
+      weight: 0.8,
+      fillColor,
       fillOpacity: state.pointA ? 0.72 : 0.28,
-      opacity: 0.65
+      opacity: state.pointA ? 0.72 : 0.28,
+      renderer: tileRenderer
     });
 
     const municipalityNames = [...new Set(
-      features.map((f) => f.properties.GDENAME).filter(Boolean)
+      entry.features.map((feature) => feature.properties.GDENAME).filter(Boolean)
     )].sort();
 
     const namesHtml = municipalityNames.length
@@ -334,16 +479,26 @@ function drawPolygonSurface() {
       : "";
 
     polygon.bindPopup(`
-      <strong>${features.length} grid point${features.length === 1 ? "" : "s"}</strong><br/>
+      <strong>${
+        entry.interpolated
+          ? "3 km hex area"
+          : `${entry.features.length} source tile${entry.features.length === 1 ? "" : "s"}`
+      }</strong><br/>
       ${namesHtml}
-      ${state.pointA
-        ? (value == null ? "Not reachable from A" : `${Math.round(value)} min avg from A`)
-        : "Click to select point A"}
+      ${
+        state.pointA
+          ? entry.value == null
+            ? "Not reachable from A"
+            : `${Math.round(entry.value)} min from A`
+          : entry.selectableFeatures.length
+            ? "Click to select point A"
+            : "No Point A-B data in this hex"
+      }
     `);
 
     polygon.on("click", (event) => {
-      const feature = nearestFeature(features, event.latlng);
-      if (feature) handlePointClick(feature);
+      const nextFeature = nearestFeature(clickFeatures, event.latlng);
+      if (nextFeature) handlePointClick(nextFeature);
     });
 
     polygons.push(polygon);
@@ -407,7 +562,6 @@ async function selectPointA(feature) {
   chunkCache = {};
   state.pointA = feature;
   state.travelTimesFromA = await loadTravelTimes(feature.properties.id);
-  console.log("travelTimesFromA sample:", Object.entries(state.travelTimesFromA).slice(0, 3));
   drawPolygonSurface();
   drawSelectedPoints();
   renderPointAInfo();
@@ -460,11 +614,8 @@ function hidePointToPointOverlay() {
   state.visible = false;
   clearSelection();
   pointToPointMap.closePopup();
-
-  if (polygonLayer) {
-    pointToPointMap.removeLayer(polygonLayer);
-    polygonLayer = null;
-  }
+  clearPolygonSurface(true);
+  currentHexResolution = null;
 
   if (infoControl) {
     pointToPointMap.removeControl(infoControl);
@@ -496,9 +647,8 @@ async function updatePointToPointOverlay(nextState = {}) {
 }
 
 pointToPointMap.on("zoomend", () => {
-  if (!state.visible || hexResolutionForZoom(pointToPointMap.getZoom()) === currentHexResolution) {
-    return;
-  }
+  if (!state.visible) return;
+  if (hexResolutionForZoom(pointToPointMap.getZoom()) === currentHexResolution) return;
   drawPolygonSurface();
 });
 
