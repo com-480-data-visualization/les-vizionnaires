@@ -20,13 +20,11 @@ The visualization is hosted with GitHub Pages:
 
 https://com-480-data-visualization.github.io/les-vizionnaires/
 
-Here is a link to the video
+Here is a link to the [video](https://drive.google.com/drive/folders/1H7NChuC4g_xP0seIk80xhsisf9juk7oG?usp=sharing)
 
 ## Process Book (TODO)
 
-The final process book is available here:
-
-[Process Book]()
+The final process book is available here: [Process Book](./Process_Book.pdf)
 
 ## Milestone 1 (20th March, 5pm)
 
@@ -175,18 +173,18 @@ The core engine for the "Nearest IC travel time" is already implemented: the use
 ### Project Structure
 
 ```text
-docs/                 Static website served by GitHub Pages
-docs/index.html       Main visualization page
-docs/js/              JavaScript modules for map, controls, and charts
-docs/css/             Styling for the interface
-docs/data/            Optimized GeoJSON/JSON files used by the frontend
+docs/                           Static website served by GitHub Pages
+docs/index.html                 Main visualization page
+docs/js/                        JavaScript modules for map, controls, and charts
+docs/css/                       Styling for the interface
+docs/data/                      Optimized GeoJSON/JSON files used by the frontend
 
-data/                 Source datasets used for preprocessing
-notebooks/            Exploratory analysis and data-processing notebooks
-scripts/              Helper scripts for generating frontend-ready data
-outputs/              Generated intermediate outputs
-outputs/outputs_nearest_ic/  Nearest-IC accessibility outputs
-outputs/outputs_ptA_ptB/     Point-to-point travel-time outputs
+data/                           Source datasets used for preprocessing
+notebooks/                      Exploratory analysis and data-processing notebooks
+scripts/                        Helper scripts for generating frontend-ready data
+outputs/                        Generated intermediate outputs
+outputs/outputs_nearest_ic/     Nearest-IC accessibility outputs
+outputs/outputs_ptA_ptB/        Point-to-point travel-time outputs
 ```
 
 ### Technical Setup
@@ -239,21 +237,36 @@ The project combines open mobility, geographic, and socioeconomic datasets, incl
 
 Frontend-ready processed data is stored in `docs/data/`.
 
-Some raw or intermediate datasets are too large to be added to the GitHub repository. Here is a link that enables you to download it.
+Some raw or intermediate datasets are too large to be added to the GitHub repository. You can download it [here](https://drive.google.com/drive/folders/1H7NChuC4g_xP0seIk80xhsisf9juk7oG?usp=sharing).
 
 ### Reproducing the Data Pipeline
 
-The main analysis and preprocessing steps are documented in the notebooks under notebooks/.
+The data pipeline is split between exploratory notebooks, routing notebooks, and export scripts. The expensive travel-time computations use `r5py`, the Swiss GTFS timetable, OpenStreetMap data, and the precomputed grid points. Intermediate outputs are stored in `outputs/`, while the optimized files used directly by the website are stored in `docs/data/`.
 
-Important files include:
+#### Notebooks
 
-- `notebooks/analysis.ipynb`: contains the analysis we have done in previous milestones.
-- `notebooks/map_views_generation.ipynb`: contains the data processing for the maps used in the Map View.
-- `notebooks/correlation_analysis.ipynb`: contains the data processing pipeline for the D3.js interactive dashboard
-- `scripts/build_nearestic_2000m.py`: contains the code that transforms of the data from parquet to readable data for the website
-- `scripts/generate_correlations.py`: contains the code that generates correlation data for D3.js visualizations.
+- `notebooks/analysis.ipynb`: initial exploratory analysis used during the first milestones. It loads and inspects the GTFS tables (`stops`, `routes`, `trips`, `stop_times`, `transfers`, and `calendar`) and explores the socioeconomic datasets used later in the project, including population, real estate, employment, and passenger-frequency data.
+- `notebooks/map_views_generation.ipynb`: preprocessing pipeline for the thematic map layers. It cleans and joins municipal boundary data with real estate prices, employment volume, taxable income, population density, and public-transport modal share, then exports the frontend-ready GeoJSON layers in `docs/data/`.
+- `notebooks/correlation_analysis.ipynb`: data-processing pipeline for the D3.js analysis dashboard. It combines IC accessibility outputs with municipal socioeconomic indicators, performs spatial joins with official commune boundaries, computes cantonal and municipal aggregates, and exports the JSON files used by the correlation charts.
 
-The generated outputs are converted into lightweight JSON/GeoJSON files used by the web visualization.
+#### Scripts and Routing Notebooks
+
+- `scripts/r5py.ipynb`: early routing prototype. It downloads/prepares GTFS and OpenStreetMap inputs, filters out taxi services from the GTFS feed, builds a Swiss grid, identifies IC stations, and tests the first `r5py` travel-time matrix computations.
+- `scripts/ptA_IC_calc.ipynb`: main notebook for computing accessibility from grid points to IC hubs. It builds the transport network, generates grid points, identifies InterCity destinations, computes weekday/weekend travel-time matrices for several departure times and maximum travel-time thresholds, and writes the nearest-IC parquet outputs to `outputs/outputs_nearest_ic/`.
+- `scripts/ptA_ptB_calc.ipynb`: computes point-to-point travel times between grid points. Because the full matrix is large, it processes origins in chunks and writes chunked parquet files, a manifest, and an origin-to-chunk index under `outputs/outputs_ptA_ptB/`.
+- `scripts/convert_outputs_for_docs.ipynb`: converts heavy parquet outputs into compact website assets. It creates the `docs/data/ptA_IC/` and `docs/data/ptA_ptB/` JSON/GeoJSON files, writes manifests for the frontend, and includes validation cells to check sample exported files.
+- `scripts/build_nearestic_2000m.py`: converts the 2000m nearest-IC parquet outputs into the nested frontend structure used by the map controls: `docs/data/nearestIC/{weekday,weekend}/{departure}/{maxTime}/`. For each combination it creates `accessibility.geojson` and `reachable.json`.
+- `scripts/generate_correlations.py`: standalone helper for generating D3-ready correlation datasets from the processed GeoJSON layers. The main finalized dashboard data is produced by `notebooks/correlation_analysis.ipynb`, but this script documents the same export logic in script form.
+
+The final web application does not recompute the routing results in the browser. It loads the lightweight JSON and GeoJSON files generated by these pipeline steps.
+
+
+### Submission details
+
+As a reminder :
+- The final process book is available here: [Process Book](./Process_Book.pdf)
+- The Screencast is available here: [Video Recording](https://drive.google.com/drive/folders/1H7NChuC4g_xP0seIk80xhsisf9juk7oG?usp=sharing)
+- The additional data to run all of our notebooks is available here: [Data](https://drive.google.com/drive/folders/1H7NChuC4g_xP0seIk80xhsisf9juk7oG?usp=sharing)
 
 ## Late policy
 
