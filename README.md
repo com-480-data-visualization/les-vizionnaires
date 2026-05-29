@@ -22,7 +22,7 @@ https://com-480-data-visualization.github.io/les-vizionnaires/
 
 Here is a link to the [video](https://drive.google.com/drive/folders/1H7NChuC4g_xP0seIk80xhsisf9juk7oG?usp=sharing)
 
-## Process Book (TODO)
+## Process Book
 
 The final process book is available here: [Process Book](./Process_Book.pdf)
 
